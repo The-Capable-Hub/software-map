@@ -1,0 +1,126 @@
+project_summary:
+  category: "distribution"
+  home_url: "https://www.cheribsd.org/"
+  short_description: "CHERI fork of FreeBSD"
+  description: "CheriBSD is a Capability Enabled, Unix-like Operating System that extends FreeBSD to take advantage of Capability Hardware on Arm’s Morello and CHERI-RISC-V platforms. CheriBSD implements memory protection and software compartmentalization features, and is developed by SRI International and the University of Cambridge."
+  status: |-
+    CheriBSD is a research operating system derived from FreeBSD. It is maintained and developed by a team including members from SRI, the University of Cambridge, and Capabilities Limited. Brooks Davis leads the overall project. Work is currently focused on developing linker-based compartmentalization user space program and the kernel (funded by DARPA) and upstreaming more stable functionality to FreeBSD (funded by Innovate UK).
+
+    The main branch of CheriBSD implements a wide range of features including kernel and user space spatial safety, user space heap temporal safety, and user space linker-based compartmentalization (at library and sub-library granularity). Spatial safety is stable and performant for common use cases (anything documented in the Getting Started Guide) and temporal safety is stable with performance and memory use that varies significantly based on workload.  Basic linker-based compartmentalization is approaching stability, but ABIs continue to evolve.  As a rule, it should be safe to upgrade from one release to the next provided you rebuild all your software before upgrading to the following release.
+  vulnerability_contact: "cl-cheribsd-security@lists.cam.ac.uk"
+  download_notes: "Please note that there are no RISC-V artifacts, please see instructions for building from source."
+
+project_contribution:
+  src_tree: |-
+    Development occurs in the [CheriBSD GitHub repository](https://github.com/CTSRD-CHERI/cheribsd) which represents the latest software which releases are formed from. Contributions are accepted via GitHub Pull Requests or via their mailing list. Bugs can be reported via GitHub Issues.
+
+    Portions of CheriBSD are being posted for upstreaming in a fork of [FreeBSD hosted at the CHERI Alliance](https://github.com/CHERI-Alliance/freebsd-src). This exists for staging purposes and is not currently capable of producing a usable system."
+  mailing_lists: |-
+    The following lists should be used: 
+      - [CheriBSD announcement mailing list (low volume)](https://lists.cam.ac.uk/sympa/info/cl-cheribsd-announce)
+      - [CheriBSD general discussion](https://lists.cam.ac.uk/sympa/info/cl-cheribsd-discuss)
+      - [CheriBSD ports and packages discussion](https://lists.cam.ac.uk/sympa/info/cl-cheribsd-ports)
+  slack: |-
+    Support for CheriBSD is provided via the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html), where a number of topic-specific channels can be found:
+      - #cheribsd: CheriBSD, its features, releases and future plans.
+      - #debuggers: GDB extended to support CHERI.
+      - #qemu: QEMU-CHERI, QEMU system and user modes for Morello and CHERI-RISC-V.
+      - #software-porting: Third-party software adaptations to CheriABI and CHERI-enabled achitectures, CheriBSD ports and Poudriere."
+  meetings: |-
+    There are no public meetings for this project
+
+buildingFromSource: "Please keep an eye out for our [blog](/blog/) as we will soon share instructions for building from source."
+
+software:
+  - arch: "aarch64c"
+    releases:
+     - version: "25.03"
+       version_date: 2025-03-28
+       version_url: "https://github.com/CTSRD-CHERI/cheribsd/releases/tag/release%2F25.03"
+       latest: true
+       upstream_version: "15-CURRENT (1500026)"
+       upstream_date: 2024-10-26
+       upstream_url: "https://github.com/freebsd/freebsd-src/commit/87c2aab0a0b3db2a4690773b869e8cfc8b3ac6c2"
+       images:
+         - label: "Installer Image"
+           link: "https://download.cheribsd.org/releases/arm64/aarch64c/25.03/cheribsd-memstick-arm64-aarch64c-25.03.img.xz"
+       docs:
+         - label: "Release Notes"
+           link: "https://www.cheribsd.org/release-notes/25.03/index.html"
+         - label: "Installation Guide"
+           link: "https://ctsrd-cheri.github.io/cheribsd-getting-started/morello-install/index.html"
+     - arch: "aarch64c"
+       version: "24.05"
+       version_date: 2024-07-19
+       version_url: "https://github.com/CTSRD-CHERI/cheribsd/releases/tag/release%2F24.05"
+       upstream_version: "15-CURRENT (1500011)"
+       upstream_date: 2024-01-20
+       upstream_url: "https://github.com/freebsd/freebsd-src/commit/4b3ffc5918b9968ea6ddee6f6cdf3538072e5ef4"
+       images:
+         - label: "Installer Image"
+           link: "https://download.cheribsd.org/releases/arm64/aarch64c/25.03/cheribsd-memstick-arm64-aarch64c-24.05.img.xz"
+       docs:
+         - label: "Release Notes"
+           link: "https://www.cheribsd.org/release-notes/24.05/index.html"
+         - label: "Installation Guide"
+           link: "https://ctsrd-cheri.github.io/cheribsd-getting-started/morello-install/index.html"
+     - arch: "aarch64c"
+       version: "23.11"
+       version_date: 2023-12-12
+       version_url: "https://github.com/CTSRD-CHERI/cheribsd/releases/tag/release%2F23.11"
+       upstream_version: "14-CURRENT (1400094)"
+       upstream_date: 2023-08-18
+       upstream_url: "https://github.com/freebsd/freebsd-src/commit/d8bb58586d90a27852cc79f37aa890ac6397cc03"
+       images:
+         - label: "Installer Image"
+           link: "https://download.cheribsd.org/releases/arm64/aarch64c/25.03/cheribsd-memstick-arm64-aarch64c-23.11.img.xz"
+       docs:
+         - label: "Release Notes"
+           link: "https://www.cheribsd.org/release-notes/23.11/index.html"
+         - label: "Installation Guide"
+           link: "https://ctsrd-cheri.github.io/cheribsd-getting-started/morello-install/index.html"
+     - arch: "aarch64c"
+       version: "22.12"
+       version_date: 2022-12-14
+       version_url: "https://github.com/CTSRD-CHERI/cheribsd/releases/tag/release%2F22.12"
+       upstream_version: "14-CURRENT (1400064)"
+       upstream_date: 2022-07-29
+       upstream_url: "https://github.com/freebsd/freebsd-src/commit/43eebd036447f5399dd4bfa9b9d3e4e6f6596f48"
+       images:
+         - label: "Installer Image"
+           link: "https://download.cheribsd.org/releases/arm64/aarch64c/25.03/cheribsd-memstick-arm64-aarch64c-22.12.img.xz"
+       docs:
+         - label: "Release Notes"
+           link: "https://www.cheribsd.org/release-notes/22.12/index.html"
+         - label: "Installation Guide"
+           link: "https://ctsrd-cheri.github.io/cheribsd-getting-started/morello-install/index.html"
+     - arch: "aarch64c"
+       version: "22.05p1"
+       version_date: 2022-07-05
+       version_url: "https://github.com/CTSRD-CHERI/cheribsd/releases/tag/release%2F22.05p1"
+       upstream_version: "14-CURRENT (1400053)"
+       upstream_date: 2022-03-04
+       upstream_url: "https://github.com/freebsd/freebsd-src/commit/25375b1415f8a0b0290b56c00c31d20e218ffab9"
+       images:
+         - label: "Installer Image"
+           link: "https://download.cheribsd.org/releases/arm64/aarch64c/25.03/cheribsd-memstick-arm64-aarch64c-22.05p1.img.xz"
+       docs:
+         - label: "Release Notes"
+           link: "https://www.cheribsd.org/release-notes/22.05p1/index.html"
+         - label: "Installation Guide"
+           link: "https://ctsrd-cheri.github.io/cheribsd-getting-started/morello-install/index.html"
+     - arch: "aarch64c"
+       version: "22.05"
+       version_date: 2022-05-23
+       version_url: "https://github.com/CTSRD-CHERI/cheribsd/releases/tag/release%2F22.05"
+       upstream_version: "14-CURRENT (1400053)"
+       upstream_date: 2022-03-04
+       upstream_url: "https://github.com/freebsd/freebsd-src/commit/25375b1415f8a0b0290b56c00c31d20e218ffab9"
+       images:
+         - label: "Installer Image"
+           link: "https://download.cheribsd.org/releases/arm64/aarch64c/25.03/cheribsd-memstick-arm64-aarch64c-22.05.img.xz"
+       docs:
+         - label: "Release Notes"
+           link: "https://www.cheribsd.org/release-notes/22.05/index.html"
+         - label: "Installation Guide"
+           link: "https://ctsrd-cheri.github.io/cheribsd-getting-started/morello-install/index.html"
