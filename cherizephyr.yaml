@@ -1,0 +1,45 @@
+project_summary:
+  category: "distribution"
+  home_url: "https://research.birmingham.ac.uk/en/publications/cheri-zephyr/"
+  short_description: "CHERI fork of Zephyr"
+  description: "CHERI Zephyr is a fork of Zephyr: a new generation, scalable, optimized, secure RTOS for multiple hardware architectures."
+  status: |-
+    TBD
+  vulnerability_contact: "unknown"
+  download_notes: "Please note that there are no release images to download."
+  last_update: "22nd December 2025"
+
+project_contribution:
+  src_tree: |-
+    Development occurs in the [CHERI Alliance Zephyr GitHub repository](https://github.com/CHERI-Alliance/CHERI-zephyr/) which represents the latest software which releases are formed from. Contributions are accepted via GitHub Pull Requests or via their mailing list. Bugs can be reported via GitHub Issues.
+  mailing_lists: |-
+    The following lists should be used:
+      - [WG - Zephyr](https://lists.cheri-alliance.org/mailman3/postorius/lists/wg-zephyr.cheri-alliance.org/) - Please note the list and its archives may only be available to CHERI Alliance members.
+  meetings: |-
+    There are no public meetings for this project
+
+buildingFromSource: "Please see our [blog post](/blog/cheri-zephyr-getting-started/) for instructions for building from source."
+
+software:
+  - arch: "aarch64c"
+    releases:
+     - version: "v0.2.0"
+       version_date: 2025-08-22
+       version_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/CHERI-Zephyr-v0.2.0"
+       latest: true
+       upstream_version: "4.1.0"
+       upstream_date: 2025-05-20
+       upstream_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/commit/90a48e814b9699d34d41e42038bef0132427a5c3"
+       docs:
+         - label: "Release Notes"
+           link: "https://github.com/CHERI-Alliance/CHERI-zephyr/blob/docker-release/CHERI-Zephyr-v0.2.0/README.md"
+     - arch: "aarch64c"
+       version: "v0.1.0"
+       version_date: 2024-08-22
+       version_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/CHERI-Zephyr-v0.1.0"
+       upstream_version: "3.5.0"
+       upstream_date: 2023-11-07
+       upstream_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/commit/ec031029f4cab3c0fbb116f5cd63afcf59205a84"
+       docs:
+         - label: "Release Notes"
+           link: "https://github.com/CHERI-Alliance/CHERI-zephyr/blob/CHERI-RISCV64-v1.0/README.md"
