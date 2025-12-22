@@ -9,6 +9,7 @@ project_summary:
     The main branch of CheriBSD implements a wide range of features including kernel and user space spatial safety, user space heap temporal safety, and user space linker-based compartmentalization (at library and sub-library granularity). Spatial safety is stable and performant for common use cases (anything documented in the Getting Started Guide) and temporal safety is stable with performance and memory use that varies significantly based on workload.  Basic linker-based compartmentalization is approaching stability, but ABIs continue to evolve.  As a rule, it should be safe to upgrade from one release to the next provided you rebuild all your software before upgrading to the following release.
   vulnerability_contact: "cl-cheribsd-security@lists.cam.ac.uk"
   download_notes: "Please note that there are no RISC-V artifacts, please see instructions for building from source."
+  last_update: "22nd December 2025"
 
 project_contribution:
   src_tree: |-
