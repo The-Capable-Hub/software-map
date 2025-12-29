@@ -15,7 +15,7 @@ project_contribution:
   src_tree: |-
     Development occurs in the [CheriBSD GitHub repository](https://github.com/CTSRD-CHERI/cheribsd) which represents the latest software which releases are formed from. Contributions are accepted via GitHub Pull Requests or via their mailing list. Bugs can be reported via GitHub Issues.
 
-    Portions of CheriBSD are being posted for upstreaming in a fork of [FreeBSD hosted at the CHERI Alliance](https://github.com/CHERI-Alliance/freebsd-src). This exists for staging purposes and is not currently capable of producing a usable system."
+    Portions of CheriBSD are being posted for upstreaming in a fork of [FreeBSD hosted at the CHERI Alliance](https://github.com/CHERI-Alliance/freebsd-src). This exists for staging purposes and is not currently capable of producing a usable system.
   mailing_lists: |-
     The following lists should be used: 
       - [CheriBSD announcement mailing list (low volume)](https://lists.cam.ac.uk/sympa/info/cl-cheribsd-announce)
@@ -26,7 +26,7 @@ project_contribution:
       - #cheribsd: CheriBSD, its features, releases and future plans.
       - #debuggers: GDB extended to support CHERI.
       - #qemu: QEMU-CHERI, QEMU system and user modes for Morello and CHERI-RISC-V.
-      - #software-porting: Third-party software adaptations to CheriABI and CHERI-enabled achitectures, CheriBSD ports and Poudriere."
+      - #software-porting: Third-party software adaptations to CheriABI and CHERI-enabled achitectures, CheriBSD ports and Poudriere.
   meetings: |-
     There are no public meetings for this project
 
