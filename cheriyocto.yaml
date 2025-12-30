@@ -1,0 +1,49 @@
+project_summary:
+  category: "distribution"
+  home_url: "https://github.com/The-Capable-Hub/meta-morello"
+  short_description: "BSP Yocto layer for the ARM Morello board"
+  description: "This layer is an implementation of a Yocto distribution for the ARM morello hardware. Morello is an implementation of the CHERI instruction extensions on top of ARMv8-A architecture on Neoverse-N1 core. The layer provides two sysroots, one for the A64 with applications linked against standard glibc and compiled with GCC and one for C64 with applications linked against Morello musl libc and built using Morello LLVM. The layer is currently based on kirkstone Yocto version."
+  status: |-
+    Not active, the Morello program has concluded and so did the development.
+  vulnerability_contact: pawel.zalewski@thecapablehub.org
+  download_notes: "There are two artefacts, the firmware goes on the SD card, the distribution and wic image go on the USB stick."
+  last_update: "30th December 2025"
+
+project_contribution:
+  src_tree: |-
+    Development occurs in the [meta-morello GitHub repository](https://github.com/The-Capable-Hub/meta-morello) which represents the latest software which releases are formed from. Contributions are accepted via GitHub Pull Requests or via the mailing list. Bugs can be reported via GitHub Issues.
+
+    The meta-morello layer is also hosted at ARM's gitlab [Morello project](https://git.morello-project.org/morello/meta-morello)  - but since the Morello project is for the time being discontinued by ARM there is no active
+    development being done there.
+
+    The layer can be used with its sister distro layer [meta-morello-distro](https://github.com/The-Capable-Hub/meta-morello-distro) that provides CHERIfied user space applications.
+  mailing_lists: |-
+    The following lists should be used: 
+      - [Original ARM Morello mailing list](https://op-lists.linaro.org/mailman3/lists/linux-morello-distros.op-lists.linaro.org/)
+  slack: |-
+    Support for meta-morello is provided via the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html), please post your questions under the #cheri-linux channel. 
+  meetings: |-
+    There are no public meetings for this project.
+
+buildingFromSource: "Please see our [blog post](/blog/meta-morello-getting-started/) for instructions for building the distro."
+
+software:
+  - arch: "Morello (aarch64 + aarch64c)"
+    releases:
+     - version: "1.9"
+       version_date: 2025-12-30
+       version_url: "https://github.com/The-Capable-Hub/meta-morello/tree/morello-release-1.9"
+       latest: true
+       upstream_version: "5.0.14 Scarthgap LTS"
+       upstream_date: 2025-12-01
+       upstream_url: "https://git.yoctoproject.org/meta-yocto/tag/?h=scarthgap-5.0.14"
+       images:
+         - label: "Board firmware"
+           link: "https://github.com/The-Capable-Hub/meta-morello/actions/runs/20309370327/artifacts/4902064802"
+         - label: "Yocto distro wic file"
+           link: "https://github.com/The-Capable-Hub/meta-morello/actions/runs/20309370327/artifacts/4902064269"
+       docs:
+         - label: "README"
+           link: "https://github.com/The-Capable-Hub/meta-morello/tree/kirkstone/meta-morello"
+
+     
