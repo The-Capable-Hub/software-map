@@ -1,0 +1,32 @@
+project_summary:
+  category: "virtual-machine-or-runtime"
+  home_url: "https://capablevms.github.io/"
+  short_description: "CHERI fork of BoehmGC"
+  description: |-
+    The Boehm–Demers–Weiser garbage collector, often simply known as the Boehm GC or Boehm collector, is a conservative garbage collector for C and C++. It has been ported to CheriBSD/Morello and CheriBSD/RISC-V.
+
+    This work has been documented in a short research paper at [VEE 2022](https://dl.acm.org/doi/10.1145/3516807.3516823).
+  status: |-
+    Some CHERI purecap support is upstreamed at https://github.com/ivmai/BDWGC with slightly more extensive downstream support at https://github.com/capablevms/BDWGC
+    
+    At the moment, the GC only works in single-threaded, non-incremental mode.
+  vulnerability_contact: "support@thecapablehub.org"
+  download_notes: "Please note that there are no release artifacts for this project."
+  last_update: "2nd January 2026"
+
+project_contribution:
+  src_tree: |-
+    Development occurs in the [CapableVMs GitHub repository](https://github.com/capablevms/BDWGC) which represents the latest downstream software. Contributions are accepted via GitHub Pull Requests. Bugs can be reported via GitHub Issues.
+
+    Upstream contributions have been made to the [bdwgc GitHub repository](https://github.com/bdwgc/bdwgc) via pull requests.
+
+  mailing_lists: |-
+    There are no public mailing lists associated with this project.
+  slack: |-
+    Support for CheriBSD may be provided via the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html)
+  meetings: |-
+    There are no public meetings for this project
+  contacts: |-
+    Reach out to [Dejice Jacob](dejice.jacob@glasgow.ac.uk) and [Jeremy Singer](jeremy.singer@glasgow.ac.uk), University of Glasgow for more information.
+
+buildingFromSource: "There are no instructions available for building this CHERI fork from source. Please refer to the upstream project [Readme](https://github.com/bdwgc/bdwgc/blob/master/README.md) for further information on building the upstream project."
