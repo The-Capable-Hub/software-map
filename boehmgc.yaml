@@ -27,6 +27,6 @@ project_contribution:
   meetings: |-
     There are no public meetings for this project
   contacts: |-
-    Reach out to [Dejice Jacob](dejice.jacob@glasgow.ac.uk) and [Jeremy Singer](jeremy.singer@glasgow.ac.uk), University of Glasgow for more information.
+    Reach out to [Dejice Jacob](mailto:dejice.jacob@glasgow.ac.uk) and [Jeremy Singer](mailto:jeremy.singer@glasgow.ac.uk), University of Glasgow for more information.
 
 buildingFromSource: "There are no instructions available for building this CHERI fork from source. Please refer to the upstream project [Readme](https://github.com/bdwgc/bdwgc/blob/master/README.md) for further information on building the upstream project."
