@@ -4,34 +4,51 @@ project_summary:
   short_description: "CHERI-enabled fork of the seL4 microkernel"
   description: "seL4 is a Microkernel that aims to improve speed and reliability, whilst having guaranteed behaviour with formal mathematical proofs. The CHERI fork of this adds RISC-V and Morello CHERI support to seL4. It utilizes the seL4 Microkit (a collection of abstractions for basic features) to provide a functional environment."
   status: |-
-    The [CTSRD-CHERI repository](https://github.com/CTSRD-CHERI/seL4) is considered abandoned; active development has moved to the [CHERI-Alliance repository](https://github.com/CHERI-Alliance/CHERI-seL4) on the `cheri-microkit` branch. The CHERI-aware seL4 microkernel (CHERI-seL4) is currently not formally verified, and is experimental.
+    Active development takes place in the [CHERI-Alliance repository](https://github.com/CHERI-Alliance/CHERI-seL4) on the `cheri-microkit` branch. The CHERI-aware seL4 microkernel (CHERI-seL4) is currently not formally verified, and is experimental.
 
     Technical discussion and design proposals for integrating CHERI into seL4: [RFC-15: Support CHERI/Morello in seL4](https://github.com/seL4/rfcs/pull/21).
-  vulnerability_contact: "support@thecapablehub.org"
+  vulnerability_contact: "hesham.almatary@cl.cam.ac.uk"
   download_notes: "There are no pre-built binaries or versioned releases. Users must build from source using cheribuild"
-  last_update: "15th January 2026" 
+  last_update: "21st January 2026" 
 
 project_contribution:
   src_tree: |-
     The active repository is [CHERI-Alliance/CHERI-seL4](https://github.com/CHERI-Alliance/CHERI-seL4) and [CHERI-Alliance/CHERI-Microkit](https://github.com/CHERI-Alliance/CHERI-Microkit).
     
-    Builds are managed via the [cheribuild](https://github.com/CTSRD-CHERI/cheribuild) tool (specifically the `sel4-microkit` branch). Dependencies include a specific CHERI-forked QEMU, LLVM, and GDB, as well as Rust for the Microkit.
+    Builds are managed via the [cheribuild](https://github.com/CTSRD-CHERI/cheribuild) tool. Dependencies include a specific CHERI-forked QEMU, LLVM, and GDB, as well as Rust for the Microkit.
   slack: |-
     Support is generally discussed in the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html) in the `#seL4` channel.
   mailing_lists: |-
       - [WG -seL4](https://lists.cheri-alliance.org/mailman3/postorius/lists/wg-sel4.cheri-alliance.org/)
   meetings: |-
-    There are no public meetings for this project.
+    The CHERI Alliance seL4 working group hold meetings on the last Thursday of every month.
 
 buildingFromSource: "Please keep an eye out for our [blog](/blog/) as we will soon share instructions for building from source."
 
 software:
   - arch: "riscv64, morello"
     releases:
+     - version: "9d115ee"
+       version_date: 2025-01-21
+       version_url: "https://github.com/CHERI-Alliance/CHERI-seL4/commit/9d115ee9b6da2ebe949efeae4f1dd347166d0743"
+       latest: true
+       upstream_version: "v13.0.0-dev"
+       upstream_date: 2025-05-24
+       upstream_url: "https://github.com/seL4/seL4/commit/3aafe9e0b9527794c547d12090117e1000302da0"
+       images: 
+         - label: "Source (seL4)"
+           link: "https://github.com/CHERI-Alliance/CHERI-seL4/commit/9d115ee9b6da2ebe949efeae4f1dd347166d0743"
+         - label: "Source (microkit)"
+           link: "https://github.com/CHERI-Alliance/CHERI-Microkit/commit/9b1fa7c64c44b8fc04eac9e517a9652fdf070d10"
+       docs:
+         - label: "seL4 Exercises"
+           link: "https://cheri-alliance.github.io/CHERI-seL4-Exercises"
+  - arch: "riscv64, morello"
+    releases:
      - version: "b3ed50e"
        version_date: 2025-07-29
        version_url: "https://github.com/CHERI-Alliance/CHERI-seL4/tree/b3ed50ed457be1c950fd3753fe2ad74aa60d55ca"
-       latest: true
+       latest: false
        upstream_version: "v13.0.0-dev"
        upstream_date: 2025-05-24
        upstream_url: "https://github.com/seL4/seL4/commit/3aafe9e0b9527794c547d12090117e1000302da0"
