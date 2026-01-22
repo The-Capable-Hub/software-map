@@ -1,5 +1,5 @@
 project_summary:
-  category: "distribution"
+  category: "rtos"
   home_url: "https://github.com/CHERI-Alliance/CHERI-zephyr"
   short_description: "CHERI fork of Zephyr"
   description: "CHERI Zephyr is a fork of Zephyr: a new generation, scalable, optimized, secure RTOS for multiple hardware architectures."
