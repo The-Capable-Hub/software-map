@@ -18,7 +18,7 @@ project_summary:
     | CHERIoT ISA v1.0 | [CHERIoT-Platform/llvm-project](https://github.com/CHERIoT-Platform/llvm-project) |
 
     As of 2026, there are currently multiple streams of development for CHERI LLVM.
-    The University of Cambridge [CTSRD-CHERI/llvm-project](https://github.com/CTSRD-CHERI/llvm-project) has integrated the morello changes, supports the ISAv9 and contains a lot of the history relating to the development in different branches.
+    The University of Cambridge [CTSRD-CHERI/llvm-project](https://github.com/CTSRD-CHERI/llvm-project) supports the ISAv9 reference spec and contains a lot of the history relating to the development in different branches.
 
     The CHERI Alliance [CHERI-Alliance/llvm-project](https://github.com/CHERI-Alliance/llvm-project) has branches that mirror the work Codasip is doing to increase the LLVM version towards the upstream version (currently what will be LLVM 23).
     Hence LLVM18 and LLVM19 branches, with LLVM20 due in the near future. 
@@ -29,6 +29,7 @@ project_summary:
 
   # vulnerability_contact: "support@thecapablehub.org"
   last_update: "22nd January 2025"
+  download_notes: "Please note that the release tarballs for Morello LLVM are based on upstream version 15. Build the [`morello/dev`](https://git.morello-project.org/morello/llvm-project/tree/morello/dev) branch from source (via [cheribuild](https://github.com/CTSRD-CHERI/cheribuild)) to get the latest changes and LLVM 17."
 
 project_contribution:
   src_tree: |-
@@ -48,7 +49,7 @@ buildingFromSource: |-
   Instructions for building from source depend on which reference specification you are targeting.
   
   CTSRD and Morello versions are built using the [`cheribuild.py`](https://github.com/CTSRD-CHERI/cheribuild) script.
-  Please refer to `cheribuild.py` usage for help.
+  Please refer to the [cheribuild](https://github.com/CTSRD-CHERI/cheribuild) repo for usage.
 
   The CHERI Alliance LLVM does not have formal build instructions.
   Checkout the [Building LLVM](/blog/cheri-linux-getting-started/#building-llvm) section in our blog post on [Getting started with CHERI Linux on RISC-V](/blog/cheri-linux-getting-started/#building-llvm), as we cover it there.
@@ -120,15 +121,28 @@ software:
         - label: "Source"
           link: "https://github.com/CHERIoT-Platform/llvm-project"
           
+  # Older Releases
   - arch: "aarch64c"
     releases:
+     - version: "morello/dev"
+       version_date: 2025-05-19
+       version_url: "https://git.morello-project.org/morello/llvm-project/-/commit/d8be2b0ab199c07b6bd3eb38a5b2ca5bc9cc62e5"
+       latest: false
+       upstream_version: "17"
+       upstream_date: 2024-10-26
+       upstream_url: "https://github.com/llvm/llvm-project.git/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
+       cheri_spec: "ARM Morello"
+       images:
+         - label: "Source"
+           link: "https://git.morello-project.org/morello/llvm-project/tree/morello/dev"
+
      - version: "morello/linux-release-1.9"
        version_date: 2025-01-21
        version_url: "https://git.morello-project.org/morello/llvm-project-releases/-/tree/morello/linux-release-1.9"
-       latest: true
+       latest: false
        upstream_version: "15"
-       upstream_date: 2024-10-26
-       upstream_url: "https://github.com/freebsd/freebsd-src/commit/87c2aab0a0b3db2a4690773b869e8cfc8b3ac6c2"
+       upstream_date: 2022-07-26
+       upstream_url: "https://github.com/llvm/llvm-project.git/commit/1f8ae9d7e7e4afcc4e76728b28e64941660ca3eb"
        cheri_spec: "ARM Morello"
        images:
          - label: "linux/aarch64c"
@@ -141,16 +155,13 @@ software:
          - label: "Source"
            link: "https://git.morello-project.org/morello/llvm-project/-/tree/morello/release-1.9"
 
-  # Older Releases
-  - arch: "aarch64c"
-    releases:
      - version: "morello/linux-release-1.8"
        version_date: 2024-02-20
        version_url: "https://git.morello-project.org/morello/llvm-project-releases/-/tree/morello/linux-release-1.8"
        latest: false
        upstream_version: "15"
-       upstream_date: 2024-10-26
-       upstream_url: "https://github.com/freebsd/freebsd-src/commit/87c2aab0a0b3db2a4690773b869e8cfc8b3ac6c2"
+       upstream_date: 2022-07-26
+       upstream_url: "https://github.com/llvm/llvm-project.git/commit/1f8ae9d7e7e4afcc4e76728b28e64941660ca3eb"
        cheri_spec: "morello"
        images:
          - label: "linux/aarch64c"
@@ -172,8 +183,8 @@ software:
        version_url: "https://git.morello-project.org/morello/llvm-project-releases/-/tree/morello/linux-release-1.8"
        latest: false
        upstream_version: "15"
-       upstream_date: 2024-10-26
-       upstream_url: "https://github.com/freebsd/freebsd-src/commit/87c2aab0a0b3db2a4690773b869e8cfc8b3ac6c2"
+       upstream_date: 2022-07-26
+       upstream_url: "https://github.com/llvm/llvm-project.git/commit/1f8ae9d7e7e4afcc4e76728b28e64941660ca3eb"
        cheri_spec: "morello"
        images:
          - label: "linux/aarch64c"
