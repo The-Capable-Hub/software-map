@@ -7,23 +7,35 @@ project_summary:
     LLVM is a collection of modular and reusable compiler and toolchain technologies.
     These forks integrate CHERI support into LLVM (e.g `clang` and `lld`), enabling the creation of memory-safe software for Morello and RISC-V architectures.
   status: |-
-    As of 2026 there are multiple supported CHERI reference architectures. Each with their own repositories where development takes place.
+    Historically development for the different reference architectures occurred in parallel.
+    However, all repos descend from work done in the [CTSRD-CHERI/llvm-project](https://github.com/CTSRD-CHERI/llvm-project) repo.
+
     | Reference Architecture | Development Repository |
     | :--- | :--- |
-    | ARM Morello Prototype | [Morello llvm-project](https://git.morello-project.org/morello/llvm-project) |
-    | University of Cambridge RISC-V ISA v9 | [CTSRD llvm-project](https://github.com/CTSRD-CHERI/llvm-project) |
-    | CHERI RISC-V Draft Standard 0.9.3 | [CHERI Alliance llvm-project](https://github.com/CHERI-Alliance/llvm-project) |
-    | CHERIoT ISA v1.0 | [CHERIoT llvm-project](https://github.com/CHERIoT-Platform/llvm-project) |
+    | University of Cambridge RISC-V ISA v9 | [CTSRD-CHERI/llvm-project](https://github.com/CTSRD-CHERI/llvm-project) |
+    | CHERI RISC-V Draft Standard 0.9.3 | [CHERI-Alliance/llvm-project](https://github.com/CHERI-Alliance/llvm-project) |
+    | ARM Morello Prototype | [morello/llvm-project](https://git.morello-project.org/morello/llvm-project) |
+    | CHERIoT ISA v1.0 | [CHERIoT-Platform/llvm-project](https://github.com/CHERIoT-Platform/llvm-project) |
+
+    As of 2026, there are currently multiple streams of development for CHERI LLVM.
+    The University of Cambridge [CTSRD-CHERI/llvm-project](https://github.com/CTSRD-CHERI/llvm-project) has integrated the morello changes, supports the ISAv9 and contains a lot of the history relating to the development in different branches.
+
+    The CHERI Alliance [CHERI-Alliance/llvm-project](https://github.com/CHERI-Alliance/llvm-project) has branches that mirror the work Codasip is doing to increase the LLVM version towards the upstream version (currently what will be LLVM 23).
+    Hence LLVM18 and LLVM19 branches, with LLVM20 due in the near future. 
+    This work started originally from the Cambridge LLVM15 CHERI compiler but also supports the draft CHERI-RISC-V standard 0.9.3
+
+    There are already shared features and patches between the versions, with an aim to converge these in future (and with the CHERIoT work) to support upstreaming. 
+    With [CTSRD-CHERI/llvm-project](https://github.com/CTSRD-CHERI/llvm-project) being retained for research.
 
   # vulnerability_contact: "support@thecapablehub.org"
   last_update: "22nd January 2025"
 
 project_contribution:
   src_tree: |-
-    - [Morello llvm-project](https://git.morello-project.org/morello/llvm-project)
     - [The University of Cambridge llvm-project repo](https://github.com/CTSRD-CHERI/llvm-project)
     - [CHERI Alliance LLVM Repo](https://github.com/CHERI-Alliance/llvm-project)
     - [CHERIot llvm-project](https://github.com/CHERIoT-Platform/llvm-project)
+    - [Morello llvm-project](https://git.morello-project.org/morello/llvm-project)
   mailing_lists: |-
     There is no direct LLVM mailing list.
   slack: |-
@@ -44,26 +56,7 @@ buildingFromSource: |-
   Instructions on building CHERIoT LLVM can be found in their [Getting Started Guide](https://github.com/CHERIoT-Platform/cheriot-rtos/blob/main/docs/GettingStarted.md#building-cheriot-llvm).
 
 software:
-  - arch: "aarch64c"
-    releases:
-     - version: "morello/linux-release-1.9"
-       version_date: 2025-01-21
-       version_url: "https://git.morello-project.org/morello/llvm-project-releases/-/tree/morello/linux-release-1.9"
-       latest: true
-       upstream_version: "15"
-       upstream_date: 2024-10-26
-       upstream_url: "https://github.com/freebsd/freebsd-src/commit/87c2aab0a0b3db2a4690773b869e8cfc8b3ac6c2"
-       cheri_spec: "ARM Morello"
-       images:
-         - label: "linux/aarch64c"
-           link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/linux-aarch64-release-1.9/llvm-project-releases-morello-linux-aarch64-release-1.9.tar.gz"
-         - label: "linux/x86"
-           link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/linux-release-1.9/llvm-project-releases-morello-linux-release-1.9.tar.gz"
-       docs:
-         - label: "Release Notes"
-           link: "https://git.morello-project.org/morello/llvm-project-releases"
-         - label: "Source"
-           link: "https://git.morello-project.org/morello/llvm-project/-/tree/morello/release-1.9"
+
   - arch: "riscv64c"
     releases:
      - version: "74d200f (master)"
@@ -126,6 +119,27 @@ software:
       images:
         - label: "Source"
           link: "https://github.com/CHERIoT-Platform/llvm-project"
+          
+  - arch: "aarch64c"
+    releases:
+     - version: "morello/linux-release-1.9"
+       version_date: 2025-01-21
+       version_url: "https://git.morello-project.org/morello/llvm-project-releases/-/tree/morello/linux-release-1.9"
+       latest: true
+       upstream_version: "15"
+       upstream_date: 2024-10-26
+       upstream_url: "https://github.com/freebsd/freebsd-src/commit/87c2aab0a0b3db2a4690773b869e8cfc8b3ac6c2"
+       cheri_spec: "ARM Morello"
+       images:
+         - label: "linux/aarch64c"
+           link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/linux-aarch64-release-1.9/llvm-project-releases-morello-linux-aarch64-release-1.9.tar.gz"
+         - label: "linux/x86"
+           link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/linux-release-1.9/llvm-project-releases-morello-linux-release-1.9.tar.gz"
+       docs:
+         - label: "Release Notes"
+           link: "https://git.morello-project.org/morello/llvm-project-releases"
+         - label: "Source"
+           link: "https://git.morello-project.org/morello/llvm-project/-/tree/morello/release-1.9"
 
   # Older Releases
   - arch: "aarch64c"
