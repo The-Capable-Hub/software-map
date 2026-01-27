@@ -34,9 +34,9 @@ software:
        version_date: 2025-12-30
        version_url: "https://github.com/The-Capable-Hub/meta-morello/tree/morello-release-1.9"
        latest: true
-       upstream_version: "5.0.14 Scarthgap LTS"
-       upstream_date: 2025-12-01
-       upstream_url: "https://git.yoctoproject.org/meta-yocto/tag/?h=scarthgap-5.0.14"
+       upstream_version: "4.0.32 Kikrstone LTS"
+       upstream_date: 2025-12-24
+       upstream_url: "https://downloads.yoctoproject.org/releases/yocto/yocto-4.0.32/poky-2c05660b21c7cc1082aeac8b75d8a2d82e249f63.tar.bz2"
        images:
          - label: "Board firmware"
            link: "https://yocto-morello.dl.thecapablehub.org/morello-release-1.9/board-firmware-sd-image.img"
