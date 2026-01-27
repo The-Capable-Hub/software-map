@@ -1,0 +1,91 @@
+project_summary:
+  category: "tools"
+  #home_url: "https://github.com/CTSRD-CHERI/qemu"
+  home_text: "_Reference spec dependent, see the [Get Involved](#get-involved) section._"
+  short_description: "CHERI-enabled fork of QEMU"
+  description: |-
+    [QEMU](https://www.qemu.org/) is a versatile open-source emulator and virtualiser.
+    By emulating popular CPU architectures like Arm and RISC-V, it allows guest operating systems and applications to run on any host hardware.
+    For CHERI, this provides a critical sandbox for system testing and software development without the need for physical silicon.
+  status: |-
+    Towards the end of 2025, the work Codasip contributed to the QEMU project for supporting the 0.9.3 draft spec were rebased ontop of the [CTSRD-CHERI/qemu](https://github.com/CTSRD-CHERI/qemu).
+    The `main` branch of this repo is now pushed as the reference implementation for the 0.9.3 specification, and will soon be tagged as work moves onto supporting the 0.9.6 spec (both versions will not be simultaneously supported).
+
+    Whilst contribution guidelines for this project are yet to be published, the intention will be to keep both the [CHERI-Alliance/qemu](https://github.com/CHERI-Alliance/qemu) and the [CTSRD-CHERI/qemu](https://github.com/CTSRD-CHERI/qemu) repositories in sync where possible.
+    There is a potential mid-term goal of a CHERI ISA v10 based on the standard RVY, which may include the current experimental instructions and features that did not make it into the spec.
+    Although what this looks like is yet to be decided.
+    
+  #vulnerability_contact: "support@thecapablehub.org"
+  download_notes: "There are no pre-built binaries or versioned releases yet, users must build from source."
+  last_update: "27th January 2026" 
+
+project_contribution:
+  src_tree: |-
+    - [CHERI-Alliance/qemu](https://github.com/CHERI-Alliance/qemu) - 0.9.3 spec changes rebased onto [CTSRD-CHERI/qemu](https://github.com/CTSRD-CHERI/qemu)
+    - [CTSRD-CHERI/qemu](https://github.com/CTSRD-CHERI/qemu) - Support ISAv9 and morello
+  slack: |-
+    Support is generally discussed in the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html) in the `#qemu` channel.
+  mailing_lists: |-
+      - [WG -qemu](https://lists.cheri-alliance.org/mailman3/postorius/lists/wg-qemu.cheri-alliance.org/)
+  meetings: |-
+    The CHERI Alliance [QEMU working group](https://cheri-alliance.org/who-we-are/working-groups/cheri-qemu/) hold regular meetings 
+
+buildingFromSource: |-
+  To build [CHERI-Alliance/qemu](https://github.com/CHERI-Alliance/qemu) from source directly:
+  ```bash
+  # Install Dependencies
+  sudo apt install pkg-config libglib2.0-dev libpixman-1-dev python3-setuptools
+  # Clone the repo
+  git clone https://github.com/CHERI-Alliance/qemu.git
+  cd qemu
+  # Set a variable of where we will install qemu to
+  export QEMU_CHERI_INSTALL_DIR="/opt/qemu" 
+  mkdir build && cd build
+  ../configure 
+      --prefix=${QEMU_CHERI_INSTALL_DIR}/install \
+      --target-list="riscv32xcheri-softmmu riscv64xcheri-softmmu" \
+      --disable-gtk --audio-drv-list="" --disable-brlapi --disable-libiscsi \
+      --disable-libnfs --disable-rbd --disable-sdl --disable-snappy \
+      --disable-vnc --disable-vnc-jpeg --disable-vnc-sasl --disable-l2tpv3 \
+      --disable-oss --disable-alsa --disable-tpm --disable-werror --meson=git
+  # Build
+  ninja
+  ninja install
+  ```
+
+  For building [CTSRD-CHERI/CHERI-qemu](https://github.com/CTSRD-CHERI/qemu) it is recommended to use [CTSRD-CHERI/cheribuild](https://github.com/CTSRD-CHERI/cheribuild) script.
+  Please see the cheribuild repo for full usage, but to build qemu with support for `riscv32c`, `riscv64c` and `morello`:
+  ```bash
+  ./cheribuild.py qemu
+  ```
+  This will install to `$HOME/cheri/output/sdk/bin/qemu-system-<arch>`
+
+software:
+
+  - arch: "aarch64c, riscv32c, riscv64c"
+    releases:
+     - version: "HEAD"
+       version_date: 2026-01-08
+       version_url: "https://github.com/CHERI-Alliance/qemu"
+       latest: true
+       cheri_spec: CHERI RISC-V Draft 0.9.3
+       upstream_version: "v7.0.0"
+       upstream_date: 2022-04-19
+       upstream_url: "https://github.com/qemu/qemu/releases/tag/v7.0.0"
+       images: 
+         - label: "Source"
+           link: "https://github.com/CHERI-Alliance/qemu"
+
+  - arch: "aarch64c, riscv32c, riscv64c"
+    releases:
+     - version: "0f0babd"
+       version_date: 2026-01-08
+       version_url: "https://github.com/CTSRD-CHERI/qemu/commit/0f0babda7d12acacccc43cca341645dd8c47e693"
+       latest: true
+       cheri_spec: Morello, University of Cambridge ISAv9
+       upstream_version: "v7.0.0"
+       upstream_date: 2022-04-19
+       upstream_url: "https://github.com/qemu/qemu/releases/tag/v7.0.0"
+       images: 
+         - label: "Source"
+           link: "https://github.com/CTSRD-CHERI/qemu/commit/0f0babda7d12acacccc43cca341645dd8c47e693"
