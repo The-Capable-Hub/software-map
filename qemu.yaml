@@ -26,7 +26,7 @@ project_contribution:
   slack: |-
     Support is generally discussed in the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html) in the `#qemu` channel.
   mailing_lists: |-
-      - [WG -qemu](https://lists.cheri-alliance.org/mailman3/postorius/lists/wg-qemu.cheri-alliance.org/)
+      - [WG - qemu](https://lists.cheri-alliance.org/mailman3/postorius/lists/wg-qemu.cheri-alliance.org/)
   meetings: |-
     The CHERI Alliance [QEMU working group](https://cheri-alliance.org/who-we-are/working-groups/cheri-qemu/) hold regular meetings 
 
