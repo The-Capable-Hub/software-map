@@ -11,7 +11,7 @@ project_summary:
     These patches are based on the upstream [Linux Kernel](https://github.com/torvalds/linux/), and the CHERI modifications made by the [ARM Morello project](https://git.morello-project.org/morello/kernel/linux).
 
     The CHERI-enabled RISC-V kernel uses the CHERI enabled purecap UABI and the kernel itself also runs in capability mode. 
-    Support for legacy non-CHERI aware userspace programs is incomplete and broken at present.
+    Support for legacy non-CHERI aware userspace programs is currently incomplete (some driver ioctls are still missing), but running some unmodified binaries is possible as of 6.18.
 
     The code is under continued active development and the history is not guaranteed. Please expect rebases and history re-writes.
 
@@ -29,7 +29,7 @@ project_contribution:
     Support for CHERI Linux is provided via the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html).
       - #cheri-linux: The main channel for linux 
   meetings: |-
-    The CHERI Alliance [Linux working group](https://cheri-alliance.org/who-we-are/working-groups/cheri-qemu/) hold regular meetings
+    The CHERI Alliance [Linux working group](https://cheri-alliance.org/who-we-are/working-groups/cheri-linux/) hold regular meetings
 
 buildingFromSource: |-
   For instructions on building the RISC-V CHERI-Linux from source, check out our blog post on [Getting started with CHERI Linux on RISC-V](/blog/cheri-linux-getting-started/)
@@ -53,7 +53,7 @@ software:
            link: "https://github.com/CHERI-Alliance/linux/tree/codasip-cheri-riscv-6.18"
 
   # Morello Master
-  - arch: "aarch64c"
+  - arch: "aarch64, aarch64c"
     releases:
      - version: "morello/master"
        version_date: 2025-10-22
