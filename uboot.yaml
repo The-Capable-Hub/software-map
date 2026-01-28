@@ -1,0 +1,38 @@
+project_summary:
+  category: "bootloader"
+  home_url: "https://github.com/CHERI-Alliance/u-boot"
+  short_description: "CHERI-enabled fork of the Das U-Boot bootloader"
+  description: "CHERI-enabled fork of the Das U-Boot bootloader"
+  status: |-
+    Active development takes place in the [CHERI-Alliance/u-boot repository](https://github.com/CHERI-Alliance/u-boot) on the codasip-cheri-riscv branch.
+  vulnerability_contact: "hesham.almatary@cl.cam.ac.uk"
+  download_notes: "There are no pre-built binaries or versioned releases."
+  last_update: "28th January 2026" 
+
+project_contribution:
+  src_tree: |-
+    The active repository is [CHERI-Alliance/u-boot](https://github.com/CHERI-Alliance/u-boot) on the codasip-cheri-riscv branch.
+
+    Earlier work can be found in [CTSRD-CHERI/u-boot](https://github.com/CTSRD-CHERI/u-boot) which includes unmaintained software for ARM and MIPS.
+  slack: |-
+    There are no dedicated Slack channels, however support may be available in the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html) in the `#general` channel.
+  mailing_lists: |-
+    There are no mailing lists associated with this project.
+  meetings: |-
+    There are no regular meetings associated with this project.
+
+buildingFromSource: "Please keep an eye out for our [blog](/blog/) as we will soon share instructions for building from source."
+
+software:
+  - arch: "riscv64"
+    releases:
+     - version: "57524f1 (codasip-cheri-riscv)"
+       version_date: 2025-02-15
+       version_url: "https://github.com/CHERI-Alliance/u-boot/commit/57524f1599083d95809c3bc4345ebfecbf31ea7e"
+       latest: true
+       upstream_version: "2024.10"
+       upstream_date: 2024-10-07
+       upstream_url: "https://github.com/u-boot/u-boot/commit/f919c3a889f0ec7d63a48b5d0ed064386b0980bd"
+       images: 
+         - label: "Source"
+           link: "https://github.com/CHERI-Alliance/u-boot/commit/57524f1599083d95809c3bc4345ebfecbf31ea7e"
