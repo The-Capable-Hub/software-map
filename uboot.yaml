@@ -5,7 +5,7 @@ project_summary:
   description: "CHERI-enabled fork of the Das U-Boot bootloader"
   status: |-
     Active development takes place in the [CHERI-Alliance/u-boot repository](https://github.com/CHERI-Alliance/u-boot) on the codasip-cheri-riscv branch.
-  vulnerability_contact: "hesham.almatary@cl.cam.ac.uk"
+  vulnerability_contact: "support@thecapablehub.org"
   download_notes: "There are no pre-built binaries or versioned releases."
   last_update: "28th January 2026" 
 
@@ -24,7 +24,7 @@ project_contribution:
 buildingFromSource: "Please keep an eye out for our [blog](/blog/) as we will soon share instructions for building from source."
 
 software:
-  - arch: "riscv64"
+  - arch: "riscv64c"
     releases:
      - version: "57524f1 (codasip-cheri-riscv)"
        version_date: 2025-02-15
