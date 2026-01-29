@@ -1,0 +1,38 @@
+project_summary:
+  category: "bootloader"
+  home_url: "https://github.com/CHERI-Alliance/opensbi"
+  short_description: "CHERI-enabled fork of OpenSBI"
+  description: "CHERI-enabled fork of OpenSBI"
+  status: |-
+    Active development takes place in the [CHERI-Alliance/opensbi repository](https://github.com/CHERI-Alliance/opensbi) on the codasip-cheri-riscv branch.
+  vulnerability_contact: "support@thecapablehub.org"
+  download_notes: "There are no pre-built binaries or versioned releases."
+  last_update: "29th January 2026" 
+
+project_contribution:
+  src_tree: |-
+    The active repository is [CHERI-Alliance/opensbi](https://github.com/CHERI-Alliance/opensbi) on the codasip-cheri-riscv branch.
+
+    Earlier work can be found in [CTSRD-CHERI/opensbi](https://github.com/CTSRD-CHERI/opensbi) which is based on an old version of OpenSBI (0.8). However, this isn't maintained or used and lacks support for the open RVY extension.
+  slack: |-
+    There are no dedicated Slack channels, however support may be available in the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html) in the `#general` channel.
+  mailing_lists: |-
+    There are no mailing lists associated with this project.
+  meetings: |-
+    There are no regular meetings associated with this project.
+
+buildingFromSource: "Please keep an eye out for our [blog](/blog/) as we will soon share instructions for building from source."
+
+software:
+  - arch: "riscv64c"
+    releases:
+     - version: "669eba1 (codasip-cheri-riscv)"
+       version_date: 2025-11-14
+       version_url: "https://github.com/CHERI-Alliance/opensbi/commit/669eba10526ea9fd2f0442e0bb9aab433f3fb59a"
+       latest: true
+       upstream_version: "1.5"
+       upstream_date: 2024-08-02
+       upstream_url: "https://github.com/riscv-software-src/opensbi/commit/43cace6c3671e5172d0df0a8963e552bb04b7b20"
+       images: 
+         - label: "Source"
+           link: "https://github.com/CHERI-Alliance/opensbi/commit/669eba10526ea9fd2f0442e0bb9aab433f3fb59a"
