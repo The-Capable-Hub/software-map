@@ -2,7 +2,7 @@ project_summary:
   category: "bootloader"
   home_url: "https://github.com/CHERI-Alliance/u-boot"
   short_description: "CHERI-enabled fork of the Das U-Boot bootloader"
-  description: "CHERI-enabled fork of the Das U-Boot bootloader"
+  description: "CHERI-enabled fork of the Das U-Boot bootloader: A versatile, feature-rich bootloader supporting a wide range of architectures and embedded devices."
   status: |-
     Active development takes place in the [CHERI-Alliance/u-boot repository](https://github.com/CHERI-Alliance/u-boot) on the codasip-cheri-riscv branch.
   vulnerability_contact: "support@thecapablehub.org"
