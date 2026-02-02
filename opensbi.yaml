@@ -2,7 +2,7 @@ project_summary:
   category: "bootloader"
   home_url: "https://github.com/CHERI-Alliance/opensbi"
   short_description: "CHERI-enabled fork of OpenSBI"
-  description: "CHERI-enabled fork of OpenSBI"
+  description: "CHERI-enabled fork of OpenSBI: An open-source reference implementation of the RISC-V SBI specifications for platform-specific firmwares executing in M-mode."
   status: |-
     Active development takes place in the [CHERI-Alliance/opensbi repository](https://github.com/CHERI-Alliance/opensbi) on the codasip-cheri-riscv branch.
   vulnerability_contact: "support@thecapablehub.org"
@@ -11,7 +11,7 @@ project_summary:
 
 project_contribution:
   src_tree: |-
-    The active repository is [CHERI-Alliance/opensbi](https://github.com/CHERI-Alliance/opensbi) on the codasip-cheri-riscv branch.
+    The active repository is [CHERI-Alliance/opensbi](https://github.com/CHERI-Alliance/opensbi) on the codasip-cheri-riscv branch which supports RISC-V RVY.
 
     Earlier work can be found in [CTSRD-CHERI/opensbi](https://github.com/CTSRD-CHERI/opensbi) which is based on an old version of OpenSBI (0.8). However, this isn't maintained or used and lacks support for the open RVY extension.
   slack: |-
