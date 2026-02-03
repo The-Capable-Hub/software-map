@@ -34,7 +34,7 @@ buildingFromSource: "Please keep an eye out for our [blog](/blog/) as we will so
 
 software:
 
-  - arch: "riscv64c"
+  - arch: "riscv64c, aarch64c"
     releases:
      - version: "df929d4 (codasip-cheri-riscv)"
        version_date: 2025-18-02
@@ -54,7 +54,7 @@ software:
        version_date: 2025-11-05
        version_url: "https://github.com/CTSRD-CHERI/gdb/commit/a686ecf4aeedc6fe776a2194aa70f8c2751c3801"
        latest: true
-       cheri_spec: CHERI RISC-V ISAv9
+       cheri_spec: CHERI RISC-V ISAv9, Morello
        upstream_version: "v14.1"
        upstream_date: 2023-12-03
        upstream_url: "https://sourceware.org/git/?p=binutils-gdb.git;a=commit;h=6bda1c19bcd16eff8488facb8a67d52a436f70e7"
