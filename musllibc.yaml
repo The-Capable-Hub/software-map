@@ -1,0 +1,78 @@
+project_summary:
+  category: "library"
+  home_text: "_There are multiple homes, see the [Get Involved](#get-involved) section for more info._"
+  short_description: "CHERI-enabled forks of musl libc"
+  description: |-
+    Musl libc is a lightweight, high-performance implementation of the C standard library designed for use in Linux-based operating systems.
+    It aims to provide a clean, modern codebase that eliminates the bloat and complex overhead often found in traditional library implementations.
+  status: |-   
+    The last official release of musl libc for the Morello platform was in 2024, but since then there have been sporadic updates to the master branch with various fixes.
+    
+    Codasip's work to add support for RVY (CHERI-RISC-V) to musl libc has recently been open-sourced, and is now available on the CHERI-Alliance Github.
+    This version is based on the Morello musl libc, and the work to unify development of both streams in the CHERI-Alliance repo is ongoing.
+    This approach is to avoid fragmentation and duplication of effort.
+    
+    Both of these versions are based on upstream musl libc 1.2.4.
+    The latest upstream release is 1.2.5, which was released February 29th 2024. 
+
+    RVY support in musl libc will enable RISC-V RVY Linux userspace to be able to be compiled with cheribuild. You can track the progress of cheribuild support [here](https://github.com/CTSRD-CHERI/cheribuild/pull/451).
+
+  last_update: "3rd February 2026" 
+  download_notes: "There are no pre-built binaries or versioned releases yet, users must build from source."
+
+project_contribution:
+  src_tree: |-
+    - [morello/musl-libc](https://git.morello-project.org/morello/musl-libc)
+    - [CHERI-Alliance/musl](https://github.com/CHERI-Alliance/musl)
+  chat: |-
+    Support is generally discussed in the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html).
+  meetings: |-
+    There are no regular meetings for these projects
+
+buildingFromSource: |-
+  The [morello/musl-libc](https://git.morello-project.org/morello/musl-libc) has instructions on how to build the latest version from source. 
+
+  Full instructions on how to build the [CHERI-Alliance/musl](https://github.com/CHERI-Alliance/musl) version can be found in the project's [README](https://github.com/CHERI-Alliance/musl/blob/codasip-cheri-riscv/README.md).
+
+software:
+  # CHERI-Alliance / Codasip RISC-V
+  - arch: "riscv64c"
+    releases:
+     - version: "788ff7c (HEAD)"
+       version_date: 2026-01-21
+       version_url: "https://github.com/CHERI-Alliance/musl"
+       latest: true
+       cheri_spec: "CHERI RISC-V Draft Standard 0.9.3"
+       upstream_version: "v1.2.4"
+       upstream_date: 2023-05-01
+       upstream_url: "https://git.musl-libc.org/cgit/musl/tag/?h=v1.2.4"
+       images: 
+         - label: "Source"
+           link: "https://github.com/CHERI-Alliance/musl"
+
+  # Morello musl-libc
+  - arch: "aarch64c"
+    releases:
+     - version: "e379080 (HEAD)"
+       version_date: 2025-09-18
+       version_url: "https://git.morello-project.org/morello/musl-libc"
+       latest: true
+       cheri_spec: Morello
+       upstream_version: "v1.2.4"
+       upstream_date: 2023-05-01
+       upstream_url: "https://git.musl-libc.org/cgit/musl/tag/?h=v1.2.4"
+       images: 
+         - label: "Source"
+           link: "https://git.morello-project.org/morello/musl-libc"
+     - version: "morello-release-1.9.0"
+       version_date: 2024-07-24
+       version_url: "https://git.morello-project.org/morello/musl-libc/-/tree/morello-release-1.9.0?ref_type=tags"
+       latest: false
+       cheri_spec: Morello
+       upstream_version: "v1.2.4"
+       upstream_date: 2023-05-01
+       upstream_url: "https://git.musl-libc.org/cgit/musl/tag/?h=v1.2.4"
+       images: 
+         - label: "Source"
+           link: "https://git.morello-project.org/morello/musl-libc/-/tree/morello-release-1.9.0?ref_type=tags"
+ 
