@@ -7,11 +7,11 @@ project_summary:
     The current cheri-alliance release has very limited support. It is tested only with a handful of samples as listed in the release notes. We are currently working to increase more CHERI support including for 32 bit as well as 64 bit CHERI-RISC-V.
   vulnerability_contact: "support@thecapablehub.org"
   download_notes: "Please note that there are no release images to download."
-  last_update: "22nd December 2025"
+  last_update: "27th February 2026"
 
 project_contribution:
   src_tree: |-
-    Development occurs in the [CHERI Alliance Zephyr GitHub repository](https://github.com/CHERI-Alliance/CHERI-zephyr/) which represents the latest software which releases are formed from. Contributions are accepted via GitHub Pull Requests or via their mailing list. Bugs can be reported via GitHub Issues.
+    Development occurs in the [CHERI Alliance Zephyr GitHub repository](https://github.com/CHERI-Alliance/CHERI-zephyr/) which represents the latest software where releases are formed from. Contributions are accepted via GitHub Pull Requests or via their mailing list. Bugs can be reported via GitHub Issues.
   mailing_lists: |-
     The following lists should be used:
       - [WG - Zephyr](https://lists.cheri-alliance.org/mailman3/postorius/lists/wg-zephyr.cheri-alliance.org/)
@@ -21,31 +21,47 @@ project_contribution:
 buildingFromSource: "Please see our [blog post](/blog/cheri-zephyr-getting-started/) for instructions for building from source."
 
 software:
-  - arch: "riscv64c"
+  - arch: "riscv64c, riscv32c"
     releases:
-     - version: "v0.2.0"
-       version_date: 2025-08-22
-       version_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/CHERI-Zephyr-v0.2.0"
+     - version: "v0.3.0"
+       arch: "riscv64c, riscv32c"
+       version_date: 2026-02-24
+       version_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/v0.3.0-cheri-branch"
        latest: true
        upstream_version: "4.1.0"
        upstream_date: 2025-05-20
        upstream_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/commit/90a48e814b9699d34d41e42038bef0132427a5c3"
        images:
          - label: "Source"
-           link: "https://github.com/CHERI-Alliance/CHERI-zephyr/releases/tag/CHERI-Zephyr-v0.2.0"
+           link: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/v0.3.0-cheri-branch"
        docs:
          - label: "Release Notes"
-           link: "https://github.com/CHERI-Alliance/CHERI-zephyr/blob/docker-release/CHERI-Zephyr-v0.2.0/README.md"
-     - arch: "riscv64c"
-       version: "v0.1.0"
+           link: "https://github.com/CHERI-Alliance/CHERI-zephyr/releases/tag/CHERI-Zephyr-v0.3.0"
+     - version: "v0.2.0"
+       arch: "riscv64c"
+       version_date: 2025-08-22
+       version_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/CHERI-Zephyr-v0.2.0"
+       latest: false
+       upstream_version: "4.1.0"
+       upstream_date: 2025-05-20
+       upstream_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/commit/90a48e814b9699d34d41e42038bef0132427a5c3"
+       images:
+         - label: "Source"
+           link: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/CHERI-Zephyr-v0.2.0"
+       docs:
+         - label: "Release Notes"
+           link: "https://github.com/CHERI-Alliance/CHERI-zephyr/releases/tag/CHERI-Zephyr-v0.2.0"
+     - version: "v0.1.0"
+       arch: "riscv64c"
        version_date: 2024-08-22
        version_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/CHERI-Zephyr-v0.1.0"
+       latest: false
        upstream_version: "3.5.0"
        upstream_date: 2023-11-07
        upstream_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/commit/ec031029f4cab3c0fbb116f5cd63afcf59205a84"
        images:
          - label: "Source"
-           link: "https://github.com/CHERI-Alliance/CHERI-zephyr/releases/tag/CHERI-Zephyr-v0.1.0"
+           link: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/CHERI-Zephyr-v0.1.0"
        docs:
          - label: "Release Notes"
-           link: "https://github.com/CHERI-Alliance/CHERI-zephyr/blob/CHERI-RISCV64-v1.0/README.md"
+           link: "https://github.com/CHERI-Alliance/CHERI-zephyr/releases/tag/CHERI-Zephyr-v0.1.0"
