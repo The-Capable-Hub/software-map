@@ -6,8 +6,8 @@ project_summary:
   status: |-
     Not active, the Morello program has concluded and so did the development.
   vulnerability_contact: pawel.zalewski@thecapablehub.org
-  download_notes: "There are two artefacts, the firmware goes on the SD card, the distribution and wic image go on the USB stick."
-  last_update: "30th December 2025"
+  download_notes: "There are two artifacts, the firmware goes on the SD card, the distribution and wic image go on the USB stick."
+  last_update: "23rd March 2026"
 
 project_contribution:
   src_tree: |-
@@ -19,21 +19,32 @@ project_contribution:
     The layer can be used with its sister distro layer [meta-morello-distro](https://github.com/The-Capable-Hub/meta-morello-distro) that provides CHERIfied user space applications.
   mailing_lists: |-
     The following lists should be used: 
-      - [Original ARM Morello mailing list](https://op-lists.linaro.org/mailman3/lists/linux-morello-distros.op-lists.linaro.org/)
+      - [Original ARM Morello mailing list](https://op-lists.linaro.org/mailman3/lists/linux-morello-distros.op-lists.linaro.org)
   slack: |-
     Support for meta-morello is provided via the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html), please post your questions under the #cheri-linux channel. 
   meetings: |-
     There are no public meetings for this project.
 
-buildingFromSource: "Please see our [blog post](/blog/meta-morello-getting-started/) for instructions for building the distro."
+buildingFromSource: "Please see our [blog post](/blog/meta-morello-getting-started) for instructions for building the distro."
 
 software:
   - arch: "aarch64, aarch64c"
     releases:
+     - version: "2.0"
+       version_date: 2026-03-23
+       version_url: "https://github.com/The-Capable-Hub/meta-morello/releases/tag/v2.0"
+       latest: true
+       upstream_version: "5.0.16 Scarthgap LTS"
+       upstream_date: 2026-02-16
+       upstream_url: "https://downloads.yoctoproject.org/releases/yocto/yocto-5.0.16/poky-1d54d1c4736a114e1cecbe85a0306e3814d5ce70.tar.bz2"
+       images:
+         - label: "Board firmware"
+           link: "https://yocto-morello.dl.thecapablehub.org/morello-release-2.0/board-firmware-sd-image.img"
+         - label: "Yocto distro wic file"
+           link: "https://yocto-morello.dl.thecapablehub.org/morello-release-2.0/usb-image-morello-soc.wic"
      - version: "1.9"
        version_date: 2025-12-30
        version_url: "https://github.com/The-Capable-Hub/meta-morello/tree/morello-release-1.9"
-       latest: true
        upstream_version: "4.0.32 Kikrstone LTS"
        upstream_date: 2025-12-24
        upstream_url: "https://downloads.yoctoproject.org/releases/yocto/yocto-4.0.32/poky-2c05660b21c7cc1082aeac8b75d8a2d82e249f63.tar.bz2"
@@ -42,4 +53,3 @@ software:
            link: "https://yocto-morello.dl.thecapablehub.org/morello-release-1.9/board-firmware-sd-image.img"
          - label: "Yocto distro wic file"
            link: "https://yocto-morello.dl.thecapablehub.org/morello-release-1.9/usb-image-morello-soc.wic"
-     
