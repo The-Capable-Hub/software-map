@@ -71,31 +71,6 @@ software:
        images:
          - label: "Source"
            link: "https://github.com/CTSRD-CHERI/llvm-project/tree/74d200f2bb65b06633ca87f86b1b9145ebf63a46"
-
-     - version: "678272e (codasip-cheri-riscv)"
-       version_date: 2025-11-19
-       latest: true
-       version_url: "https://github.com/CHERI-Alliance/llvm-project/commit/678272e8548fa3f021e591854d062d694086bf83"
-       upstream_version: "17"
-       upstream_date: 2023-07-25
-       upstream_url: "https://github.com/llvm/llvm-project/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
-       cheri_spec: CHERI RISC-V Draft 0.9.3
-       images:
-         - label: "Source"
-           link: "https://github.com/CHERI-Alliance/llvm-project/tree/678272e8548fa3f021e591854d062d694086bf83"
-
-     - version: "7ca5cdc (codasip-cheri-riscv-18)"
-       version_date: 2025-12-03
-       latest: true
-       version_url: "https://github.com/CHERI-Alliance/llvm-project/commit/7ca5cdc690a7c41d3c45c53971a766812e730136"
-       upstream_version: "18"
-       upstream_date: 2024-01-24
-       upstream_url: "https://github.com/llvm/llvm-project/commit/93248729cfae82a5ca2323d4a8e15aa3b9b9c707"
-       cheri_spec: CHERI RISC-V Draft 0.9.3
-       images:
-         - label: "Source"
-           link: "https://github.com/CHERI-Alliance/llvm-project/tree/7ca5cdc690a7c41d3c45c53971a766812e730136"
-
      - version: "a2ac247 (codasip-cheri-riscv-19)"
        version_date: 2025-12-03
        latest: true
@@ -107,6 +82,7 @@ software:
        images:
          - label: "Source"
            link: "https://github.com/CHERI-Alliance/llvm-project/tree/a2ac247413e163c49d60b8a111a67b65351b2510"
+
   - arch: "CHERIoT"
     releases:
     - version: "6ec39b3"
@@ -200,3 +176,29 @@ software:
            link: "https://git.morello-project.org/morello/llvm-project-releases"
          - label: "Source"
            link: "https://git.morello-project.org/morello/llvm-project/-/tree/morello/release-1.6"
+
+  - arch: "riscv64c"
+    releases:
+      - version: "678272e (codasip-cheri-riscv)"
+        version_date: 2025-11-19
+        latest: false
+        version_url: "https://github.com/CHERI-Alliance/llvm-project/commit/678272e8548fa3f021e591854d062d694086bf83"
+        upstream_version: "17"
+        upstream_date: 2023-07-25
+        upstream_url: "https://github.com/llvm/llvm-project/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
+        cheri_spec: CHERI RISC-V Draft 0.9.3
+        images:
+          - label: "Source"
+            link: "https://github.com/CHERI-Alliance/llvm-project/tree/678272e8548fa3f021e591854d062d694086bf83"
+
+      - version: "7ca5cdc (codasip-cheri-riscv-18)"
+        version_date: 2025-12-03
+        latest: false
+        version_url: "https://github.com/CHERI-Alliance/llvm-project/commit/7ca5cdc690a7c41d3c45c53971a766812e730136"
+        upstream_version: "18"
+        upstream_date: 2024-01-24
+        upstream_url: "https://github.com/llvm/llvm-project/commit/93248729cfae82a5ca2323d4a8e15aa3b9b9c707"
+        cheri_spec: CHERI RISC-V Draft 0.9.3
+        images:
+          - label: "Source"
+            link: "https://github.com/CHERI-Alliance/llvm-project/tree/7ca5cdc690a7c41d3c45c53971a766812e730136"
