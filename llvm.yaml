@@ -3,7 +3,7 @@ project_summary:
   # home_url: Omitted as there are multiple. Using home_text instead
   home_text: "_There are multiple homes, see the [Get Involved](#get-involved) section for more info._"
   short_description: "Fork of LLVM adding CHERI support "
-  description: |- 
+  description: |-
     LLVM is a collection of modular and reusable compiler and toolchain technologies.
     These forks integrate CHERI support into LLVM (e.g `clang` and `lld`), enabling the creation of memory-safe software for Morello and RISC-V architectures.
   status: |-
@@ -21,10 +21,10 @@ project_summary:
     The University of Cambridge [CTSRD-CHERI/llvm-project](https://github.com/CTSRD-CHERI/llvm-project) supports the ISAv9 reference spec and contains a lot of the history relating to the development in different branches.
 
     The CHERI Alliance [CHERI-Alliance/llvm-project](https://github.com/CHERI-Alliance/llvm-project) has branches that mirror the work Codasip is doing to increase the LLVM version towards the upstream version (currently what will be LLVM 23).
-    Hence LLVM18 and LLVM19 branches, with LLVM20 due in the near future. 
+    Hence LLVM18 and LLVM19 branches, with LLVM20 due in the near future.
     This work started originally from the Cambridge LLVM15 CHERI compiler but also supports the draft CHERI-RISC-V standard 0.9.3
 
-    There are already shared features and patches between the versions, with an aim to converge these in future (and with the CHERIoT work) to support upstreaming. 
+    There are already shared features and patches between the versions, with an aim to converge these in future (and with the CHERIoT work) to support upstreaming.
     With [CTSRD-CHERI/llvm-project](https://github.com/CTSRD-CHERI/llvm-project) being retained for research.
 
   # vulnerability_contact: "support@thecapablehub.org"
@@ -41,13 +41,13 @@ project_contribution:
     There is no direct LLVM mailing list.
   slack: |-
     Support for CHERI LLVM is provided via the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html).
-      - #cheri-llvm: The main channel for llvm 
+      - #cheri-llvm: The main channel for llvm
   meetings: |-
     There are no public meetings for this project
 
 buildingFromSource: |-
   Instructions for building from source depend on which reference specification you are targeting.
-  
+
   CTSRD and Morello versions are built using the [`cheribuild.py`](https://github.com/CTSRD-CHERI/cheribuild) script.
   Please refer to the [cheribuild](https://github.com/CTSRD-CHERI/cheribuild) repo for usage.
 
@@ -67,7 +67,7 @@ software:
        upstream_version: "17"
        upstream_date: 2023-07-25
        upstream_url: "https://github.com/llvm/llvm-project/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
-       cheri_spec: 
+       cheri_spec:
         - name: University of Cambridge RISC-V ISAv9
           version: 987
        images:
@@ -80,8 +80,8 @@ software:
        upstream_version: "19"
        upstream_date: 2024-07-23
        upstream_url: "https://github.com/llvm/llvm-project/commit/8f701b5df0adb3a2960d78ca2ad9cf53f39ba2fe"
-       cheri_spec: 
-        - name: CHERI RISC-V 
+       cheri_spec:
+        - name: CHERI RISC-V
           version: Draft 0.9.3
        images:
          - label: "Source"
@@ -96,13 +96,13 @@ software:
       upstream_version: "21.1.8"
       upstream_date: 2025-12-16
       upstream_url: "https://github.com/llvm/llvm-project/releases/tag/llvmorg-21.1.8"
-      cheri_spec: 
-        - name: CHERIoT 
+      cheri_spec:
+        - name: CHERIoT
           version: 1.0
       images:
         - label: "Source"
           link: "https://github.com/CHERIoT-Platform/llvm-project"
-          
+
   # Older Releases
   - arch: "aarch64c"
     releases:
@@ -113,7 +113,7 @@ software:
        upstream_version: "17"
        upstream_date: 2024-10-26
        upstream_url: "https://github.com/llvm/llvm-project.git/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
-       cheri_spec: 
+       cheri_spec:
         - name: "ARM Morello"
           version: A.k
        images:
@@ -127,7 +127,7 @@ software:
        upstream_version: "15"
        upstream_date: 2022-07-26
        upstream_url: "https://github.com/llvm/llvm-project.git/commit/1f8ae9d7e7e4afcc4e76728b28e64941660ca3eb"
-       cheri_spec: 
+       cheri_spec:
         - name: "ARM Morello"
           version: A.k
        images:
@@ -148,7 +148,7 @@ software:
        upstream_version: "15"
        upstream_date: 2022-07-26
        upstream_url: "https://github.com/llvm/llvm-project.git/commit/1f8ae9d7e7e4afcc4e76728b28e64941660ca3eb"
-       cheri_spec: 
+       cheri_spec:
         - name: ARM morello
           version: A.k
        images:
@@ -173,7 +173,7 @@ software:
        upstream_version: "15"
        upstream_date: 2022-07-26
        upstream_url: "https://github.com/llvm/llvm-project.git/commit/1f8ae9d7e7e4afcc4e76728b28e64941660ca3eb"
-       cheri_spec: 
+       cheri_spec:
         - name: ARM morello
           version: A.k
        images:
@@ -200,8 +200,8 @@ software:
         upstream_version: "17"
         upstream_date: 2023-07-25
         upstream_url: "https://github.com/llvm/llvm-project/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
-        cheri_spec: 
-        - name: CHERI RISC-V 
+        cheri_spec:
+        - name: CHERI RISC-V
           version: Draft 0.9.3
         images:
           - label: "Source"
@@ -214,8 +214,8 @@ software:
         upstream_version: "18"
         upstream_date: 2024-01-24
         upstream_url: "https://github.com/llvm/llvm-project/commit/93248729cfae82a5ca2323d4a8e15aa3b9b9c707"
-        cheri_spec: 
-        - name: CHERI RISC-V 
+        cheri_spec:
+        - name: CHERI RISC-V
           version: Draft 0.9.3
         images:
           - label: "Source"

@@ -18,10 +18,10 @@ project_contribution:
 
     The layer can be used with its sister distro layer [meta-morello-distro](https://github.com/The-Capable-Hub/meta-morello-distro) that provides CHERIfied user space applications.
   mailing_lists: |-
-    The following lists should be used: 
+    The following lists should be used:
       - [Original ARM Morello mailing list](https://op-lists.linaro.org/mailman3/lists/linux-morello-distros.op-lists.linaro.org)
   slack: |-
-    Support for meta-morello is provided via the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html), please post your questions under the #cheri-linux channel. 
+    Support for meta-morello is provided via the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html), please post your questions under the #cheri-linux channel.
   meetings: |-
     There are no public meetings for this project.
 

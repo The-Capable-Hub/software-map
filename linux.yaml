@@ -3,14 +3,14 @@ project_summary:
   home_url: https://github.com/CHERI-Alliance/linux/
   # home_text: This can be used to provide text if there isn't one home.
   short_description: "CHERI enabled Linux kernel"
-  description: |- 
+  description: |-
     Linux is a free, open-source kernel that serves as the core foundation for a wide variety of operating systems used on everything from servers to smartphones.
     The CHERI forks enhance this foundation by replacing traditional pointers with hardware-enforced capabilities, providing fine-grained memory safety and compartmentalisation.
   status: |-
     Towards the end of 2025, RISC-V support for CHERI Linux by Codasip was open-sourced and published via [CHERI-Alliance/linux](github.com/CHERI-Alliance/linux/) repo.
     These patches are based on the upstream [Linux Kernel](https://github.com/torvalds/linux/), and the CHERI modifications made by the [ARM Morello project](https://git.morello-project.org/morello/kernel/linux).
 
-    The CHERI-enabled RISC-V kernel uses the CHERI enabled purecap UABI and the kernel itself also runs in capability mode. 
+    The CHERI-enabled RISC-V kernel uses the CHERI enabled purecap UABI and the kernel itself also runs in capability mode.
     Support for legacy non-CHERI aware userspace programs is currently incomplete (some driver ioctls are still missing), but running some unmodified binaries is possible as of 6.18.
 
     The code is under continued active development and the history is not guaranteed. Please expect rebases and history re-writes.
@@ -27,7 +27,7 @@ project_contribution:
     - [linux-kernel](https://lists.cheri-alliance.org/mailman3/postorius/lists/linux-kernel.cheri-alliance.org/) CHERI Alliance working group mailing list
   slack: |-
     Support for CHERI Linux is provided via the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html).
-      - #cheri-linux: The main channel for linux 
+      - #cheri-linux: The main channel for linux
   meetings: |-
     The CHERI Alliance [Linux working group](https://cheri-alliance.org/who-we-are/working-groups/cheri-linux/) hold regular meetings
 
@@ -47,7 +47,7 @@ software:
        upstream_version: "6.18"
        upstream_date: 2025-11-30
        upstream_url: "https://github.com/torvalds/linux/commit/7d0a66e4bb9081d75c82ec4957c50034cb0ea449"
-       cheri_spec: 
+       cheri_spec:
         - name: CHERI RISC-V
           version: Draft 0.9.3
        images:
@@ -83,7 +83,7 @@ software:
        upstream_version: "6.7"
        upstream_date: 2024-01-07
        upstream_url: "https://github.com/torvalds/linux/commit/0dd3ee31125508cd67f7e7172247f05b7fd1753a"
-       cheri_spec: 
+       cheri_spec:
         - name: "ARM Morello"
           version: A.k
        images:

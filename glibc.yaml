@@ -3,14 +3,14 @@ project_summary:
   home_url: "https://developer.arm.com/documentation/109399/10-1-Morello-Alp2-2022_11/"
   short_description: "CHERI-enabled forks of glibc"
   description: |-
-    The GNU C Library (glibc), is the GNU Project implementation of the C standard library. 
+    The GNU C Library (glibc), is the GNU Project implementation of the C standard library.
     It provides a wrapper around the system calls of kernels for application use.
   status: |-
     There have been no releases of Morello GNU toolchain (incl glibc) in a long time. It is currently unmaintained and lagging behind upstream.
 
     There were some updates to the [Morello glibc branch](https://sourceware.org/git/?p=glibc.git;a=shortlog;h=refs/heads/arm/morello/main) in 2023 but these are not included in any official releases.
 
-  last_update: "3rd February 2026" 
+  last_update: "3rd February 2026"
 
 project_contribution:
   src_tree: |-
@@ -24,7 +24,7 @@ project_contribution:
 
 buildingFromSource: |-
   Instructions on building glibc from source can be found in the [Morello GNU toolchain docs](https://sdk.morello-project.org/docs/gnu/) as well as the Release Notes for each release.
-  
+
 software:
   - arch: "aarch64c"
     releases:
@@ -32,13 +32,13 @@ software:
         version_date: 2022-11-30
         version_url: "https://developer.arm.com/Tools%20and%20Software/Morello%20Development%20Tools#Downloads"
         latest: true
-        cheri_spec: 
+        cheri_spec:
           - name: ARM Morello
             version: A.k
         upstream_version: "2.36"
         upstream_date: 2022-11-17
         upstream_url: "https://sourceware.org/git/?p=glibc.git;a=shortlog;h=refs/heads/arm/morello/main"
-        images: 
+        images:
           - label: "linux (aarch64 host)"
             link: "https://developer.arm.com/-/cdn-downloads/permalink/Arm-GNU-Toolchain-Morello/10.1.Morello-Alp2_Linux/arm-gnu-toolchain-10.1.morello-alp2-aarch64-aarch64-none-linux-gnu.tar.xz"
           - label: "linux (x86_64 host)"

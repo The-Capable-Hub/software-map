@@ -2,11 +2,11 @@ project_summary:
   category: "tools"
   home_text: "_There are multiple homes for this project, see the [Get Involved](#get-involved) section._"
   short_description: "CHERI-enabled fork of GDB"
-  description: |- 
+  description: |-
     [GNU Debuger](https://www.sourceware.org/gdb/) is a portable debug utility that can run/attach to other processes and inspect but also control how these processes (and their children) are accessing the system memory and how the code ends up in and interacts with the hardware registers. The tool can understand assembly and higher level languages and in general is very good for tracing application execution in real time.
 
   status: |-
-    There are three repositories for GDB, each historically adding support for different architectures, the first development work was done for the University of Cambridge RISC-V architecture (currently at ISAv9) at  [https://github.com/CTSRD-CHERI/gdb](https://github.com/CTSRD-CHERI/gdb) and is currently at version 14.1 of GDB.    
+    There are three repositories for GDB, each historically adding support for different architectures, the first development work was done for the University of Cambridge RISC-V architecture (currently at ISAv9) at  [https://github.com/CTSRD-CHERI/gdb](https://github.com/CTSRD-CHERI/gdb) and is currently at version 14.1 of GDB.
     The `cheri-14` branch supports RISC-V ISAv9 userspace CheriBSD and bare-metal binaries and Morello user space for bare-metal, CheriBSD and Linux. The `cheri-14-kgdb` branch also supports CheriBSD kernel for both RISC-V and Morello. This repository replaced the initial and canonical GBD Morello from ARM which is now very old (version 11.0.5).
 
     The GDB for Morello at [https://git.morello-project.org/morello/binutils-gdb](https://git.morello-project.org/morello/binutils-gdb) lives in a vendor branch [upstream](https://sourceware.org/git/?p=binutils-gdb.git;a=shortlog;h=refs/heads/users/ARM/morello-binutils-gdb-master) and as already mentioned is at version 11.0.5, this project was based of an older implementation of GDB from the CTSRD-CHERI repository.
@@ -16,11 +16,11 @@ project_summary:
 
   vulnerability_contact: "support@thecapablehub.org"
   download_notes: "There are no pre-built binaries or versioned releases, users must build from source."
-  last_update: "2nd February 2026" 
+  last_update: "2nd February 2026"
 
 project_contribution:
   src_tree: |-
-    - [CHERI-Alliance/gdb](https://github.com/CHERI-Alliance/gdb) - 14.1 
+    - [CHERI-Alliance/gdb](https://github.com/CHERI-Alliance/gdb) - 14.1
     - [CTSRD-CHERI/gdb](https://github.com/CTSRD-CHERI/gdb) - 14.1
     - [Morello](https://git.morello-project.org/morello/binutils-gdb) - 11.0.5
   chat: |-
@@ -40,13 +40,13 @@ software:
        version_date: 2025-18-02
        version_url: "https://github.com/CHERI-Alliance/gdb/commit/df929d4d218df826242fc297a69049a7e9462e1f"
        latest: true
-       cheri_spec: 
+       cheri_spec:
         - name: CHERI RISC-V RVY
           version: "0.9.8"
        upstream_version: "v14.1"
        upstream_date: 2023-12-03
        upstream_url: "https://sourceware.org/git/?p=binutils-gdb.git;a=commit;h=6bda1c19bcd16eff8488facb8a67d52a436f70e7"
-       images: 
+       images:
          - label: "Source"
            link: "https://github.com/CHERI-Alliance/gdb/commit/df929d4d218df826242fc297a69049a7e9462e1f"
 
@@ -56,7 +56,7 @@ software:
        version_date: 2025-11-05
        version_url: "https://github.com/CTSRD-CHERI/gdb/commit/a686ecf4aeedc6fe776a2194aa70f8c2751c3801"
        latest: true
-       cheri_spec: 
+       cheri_spec:
         - name: CHERI RISC-V ISAv9
           version: "0.9.8"
         - name: "ARM Morello"
@@ -64,7 +64,7 @@ software:
        upstream_version: "v14.1"
        upstream_date: 2023-12-03
        upstream_url: "https://sourceware.org/git/?p=binutils-gdb.git;a=commit;h=6bda1c19bcd16eff8488facb8a67d52a436f70e7"
-       images: 
+       images:
          - label: "Source"
            link: "https://github.com/CTSRD-CHERI/gdb/commit/a686ecf4aeedc6fe776a2194aa70f8c2751c3801"
 
@@ -74,12 +74,12 @@ software:
        version_date: 2023-12-06
        version_url: "https://git.morello-project.org/morello/binutils-gdb/-/commit/70d0d9f04a51b8c441334f42cd5dfb1f9215be53"
        latest: true
-       cheri_spec: 
+       cheri_spec:
         - name: ARM Morello
           version: "A.k"
        upstream_version: "v11.0.5"
        upstream_date: 2020-10-20
        upstream_url: "https://sourceware.org/git/?p=binutils-gdb.git;a=commit;h=ae86f581c2ac33fc289eb4ac62c0539a7e9c6793"
-       images: 
+       images:
          - label: "Source"
            link: "https://git.morello-project.org/morello/binutils-gdb/-/commit/70d0d9f04a51b8c441334f42cd5dfb1f9215be53"

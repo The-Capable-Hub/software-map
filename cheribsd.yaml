@@ -17,7 +17,7 @@ project_contribution:
 
     Portions of CheriBSD are being posted for upstreaming in a fork of [FreeBSD hosted at the CHERI Alliance](https://github.com/CHERI-Alliance/freebsd-src). This primarily exists for staging purposes and is not currently capable of producing a usable CHERI system, but can be used to examine patches in progress and validate them on non-CHERI targets.  The cheri branch is a rebased branch and may be unstable at times.  Snapshot are posted occasionally.  The latest snaphost is [2025.03.02](https://github.com/CHERI-Alliance/freebsd-src/releases/tag/cheri-2026.03.02).
   mailing_lists: |-
-    The following lists should be used: 
+    The following lists should be used:
       - [CheriBSD announcement mailing list (low volume)](https://lists.cam.ac.uk/sympa/info/cl-cheribsd-announce)
       - [CheriBSD general discussion](https://lists.cam.ac.uk/sympa/info/cl-cheribsd-discuss)
       - [CheriBSD ports and packages discussion](https://lists.cam.ac.uk/sympa/info/cl-cheribsd-ports)

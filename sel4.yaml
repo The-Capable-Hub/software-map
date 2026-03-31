@@ -9,12 +9,12 @@ project_summary:
     Technical discussion and design proposals for integrating CHERI into seL4: [RFC-15: Support CHERI/Morello in seL4](https://github.com/seL4/rfcs/pull/21).
   vulnerability_contact: "hesham.almatary@cl.cam.ac.uk"
   download_notes: "There are no pre-built binaries or versioned releases. Users must build from source using cheribuild"
-  last_update: "21st January 2026" 
+  last_update: "21st January 2026"
 
 project_contribution:
   src_tree: |-
     The active repository is [CHERI-Alliance/CHERI-seL4](https://github.com/CHERI-Alliance/CHERI-seL4) and [CHERI-Alliance/CHERI-Microkit](https://github.com/CHERI-Alliance/CHERI-Microkit).
-    
+
     Builds are managed via the [cheribuild](https://github.com/CTSRD-CHERI/cheribuild) tool. Dependencies include a specific CHERI-forked QEMU, LLVM, and GDB, as well as Rust for the Microkit.
   slack: |-
     Support is generally discussed in the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html) in the `#seL4` channel.
@@ -35,7 +35,7 @@ software:
        upstream_version: "v13.0.0-dev"
        upstream_date: 2025-05-24
        upstream_url: "https://github.com/seL4/seL4/commit/3aafe9e0b9527794c547d12090117e1000302da0"
-       images: 
+       images:
          - label: "Source (seL4)"
            link: "https://github.com/CHERI-Alliance/CHERI-seL4/commit/9d115ee9b6da2ebe949efeae4f1dd347166d0743"
          - label: "Source (microkit)"
@@ -52,7 +52,7 @@ software:
        upstream_version: "v13.0.0-dev"
        upstream_date: 2025-05-24
        upstream_url: "https://github.com/seL4/seL4/commit/3aafe9e0b9527794c547d12090117e1000302da0"
-       images: 
+       images:
          - label: "Source (seL4)"
            link: "https://github.com/CHERI-Alliance/CHERI-seL4/tree/b3ed50ed457be1c950fd3753fe2ad74aa60d55ca"
          - label: "Source (Microkit)"

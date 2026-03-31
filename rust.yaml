@@ -2,16 +2,16 @@ project_summary:
   category: "language"
   home_url: "https://rust.cheriot.org/"
   short_description: "CHERI enabled Rust"
-  description: |- 
+  description: |-
     [Rust](https://rust-lang.org/) is an efficient (on par with C++) system level language with a rich type system that is heavily focused on memory-safety, thread-safety and data ownership. It does not have a garbage collector, hence is well suited for embedded hardware. In practice it means that the engineer will be normally fighting the Rust compiler and its borrow checker during development to find bugs instead of using GDB at program runtime like when working with a C/C++ codebase.
     The CHERI forks complement the language's own and language specific security features. While Rust provides compile-time guarantees for safe code, CHERI provides runtime guarantees for every fragment of unsafe code, as the capabilities are implemented at the hardware level.
   status: |-
     In 2023 work bringing in Rust support to the [ARM Morello](https://git.morello-project.org/morello/) was done at [University of Kent](https://www.cs.kent.ac.uk/people/staff/mjb211/rust/index.htm), funded by [DSbD](https://www.ukri.org/what-we-do/browse-our-areas-of-investment-and-support/digital-security-by-design/) and published at [https://github.com/kent-weak-memory/rust](https://github.com/kent-weak-memory/rust) - its latest release is based on Rust 1.72.1, so it is a dated version at this point (as upstream is 1.93), it also requires an old build of [Morello LLVM](https://git.morello-project.org/morello/llvm-project/-/commit/671d6dbe2b74525702368edfa086e68f5afadc24). The authors point out that the compiler is fully tested but is still experimental and one should expect bugs. The maintenance and support shall be limited on this project.
 
     In 2025 new [UK Innovate and Department for Science, Innovation and Technology funding](https://www.ukri.org/news/21-million-backing-for-technology-to-stop-cyber-attackers/) was announced for bringing in Rust to the CHERIoT platform, work to be done by [SCI Semiconductor](https://www.scisemi.com/), but in collaboration with previous project owners from the University of Kent, who are a subcontractor, so this is a followup for the previous work done in 2023. It shall add extensions specific to [CHERIoT](https://github.com/CHERIoT-Platform) but the goal is to be compatible with _any_ CHERI platform - so this would bring CHERI support for the RVY platform, could support the legacy Morello platform and enable Rust support for _any_ CHERI enabled hardware in the future.
-    
+
     The Rust project under the banner of CHERIoT should be the only stop for CHERI Rust and its development moving forward, the project lives at [https://github.com/CHERIoT-Platform/cheri-rust](https://github.com/CHERIoT-Platform/cheri-rust).
-    
+
     The codebase shall track the [main](https://github.com/rust-lang/rust) and [beta](https://github.com/rust-lang/rust/tree/beta) branches from upstream, so the goal is to be in sync with upstream, which is very nice, we like.
 
     Please keep checking the project [homepage](https://rust.cheriot.org/) for blog posts and news.
@@ -44,13 +44,13 @@ software:
         version_date: 2026-02-02
         latest: true
         version_url: "https://github.com/CHERIoT-Platform/cheri-rust/commit/249405086189a14c13d33b14ba4191e72920d36b"
-        cheri_spec: 
-          - name: CHERIoT 
+        cheri_spec:
+          - name: CHERIoT
             version: ISA v1.0
         upstream_version: "1.93.0"
         upstream_date: 2026-01-22
         upstream_url: "https://github.com/rust-lang/rust/releases/tag/1.93.0"
-        images: 
+        images:
           - label: "Source"
             link: "https://github.com/CHERIoT-Platform/cheri-rust/commit/249405086189a14c13d33b14ba4191e72920d36b"
 
@@ -60,7 +60,7 @@ software:
         version_date: 2025-09-15
         version_url: "https://github.com/kent-weak-memory/rust/tree/1.72.1-20250915-dev"
         latest: true
-        cheri_spec: 
+        cheri_spec:
         - name: ARM morello
           version: A.k
         upstream_version: "1.72.1"
@@ -74,12 +74,12 @@ software:
         docs:
           - label: "Release Notes"
             link: "https://github.com/kent-weak-memory/rust/releases/tag/1.72.1-20250915-dev"
-   
+
       - version: "1.56.0-20240112-dev"
         version_date: 2024-01-12
         version_url: "https://github.com/kent-weak-memory/rust/releases/tag/1.56.0-20240112-dev"
         latest: false
-        cheri_spec: 
+        cheri_spec:
         - name: ARM morello
           version: A.k
         upstream_version: "1.56.0"
@@ -98,7 +98,7 @@ software:
         version_date: 2023-08-04
         version_url: "https://github.com/kent-weak-memory/rust/releases/tag/1.56.0-20230804-dev"
         latest: false
-        cheri_spec: 
+        cheri_spec:
         - name: ARM morello
           version: A.k
         upstream_version: "1.56.0"
