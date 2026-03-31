@@ -40,7 +40,9 @@ software:
        version_date: 2025-18-02
        version_url: "https://github.com/CHERI-Alliance/gdb/commit/df929d4d218df826242fc297a69049a7e9462e1f"
        latest: true
-       cheri_spec: CHERI RISC-V RVY
+       cheri_spec: 
+        - name: CHERI RISC-V RVY
+          version: "0.9.8"
        upstream_version: "v14.1"
        upstream_date: 2023-12-03
        upstream_url: "https://sourceware.org/git/?p=binutils-gdb.git;a=commit;h=6bda1c19bcd16eff8488facb8a67d52a436f70e7"
@@ -54,7 +56,11 @@ software:
        version_date: 2025-11-05
        version_url: "https://github.com/CTSRD-CHERI/gdb/commit/a686ecf4aeedc6fe776a2194aa70f8c2751c3801"
        latest: true
-       cheri_spec: CHERI RISC-V ISAv9, Morello
+       cheri_spec: 
+        - name: CHERI RISC-V ISAv9
+          version: "0.9.8"
+        - name: "ARM Morello"
+          version: "A.k"
        upstream_version: "v14.1"
        upstream_date: 2023-12-03
        upstream_url: "https://sourceware.org/git/?p=binutils-gdb.git;a=commit;h=6bda1c19bcd16eff8488facb8a67d52a436f70e7"
@@ -68,7 +74,9 @@ software:
        version_date: 2023-12-06
        version_url: "https://git.morello-project.org/morello/binutils-gdb/-/commit/70d0d9f04a51b8c441334f42cd5dfb1f9215be53"
        latest: true
-       cheri_spec: Morello
+       cheri_spec: 
+        - name: ARM Morello
+          version: "A.k"
        upstream_version: "v11.0.5"
        upstream_date: 2020-10-20
        upstream_url: "https://sourceware.org/git/?p=binutils-gdb.git;a=commit;h=ae86f581c2ac33fc289eb4ac62c0539a7e9c6793"

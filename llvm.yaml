@@ -67,7 +67,9 @@ software:
        upstream_version: "17"
        upstream_date: 2023-07-25
        upstream_url: "https://github.com/llvm/llvm-project/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
-       cheri_spec: University of Cambridge RISC-V ISAv9
+       cheri_spec: 
+        - name: University of Cambridge RISC-V ISAv9
+          version: 987
        images:
          - label: "Source"
            link: "https://github.com/CTSRD-CHERI/llvm-project/tree/74d200f2bb65b06633ca87f86b1b9145ebf63a46"
@@ -78,7 +80,9 @@ software:
        upstream_version: "19"
        upstream_date: 2024-07-23
        upstream_url: "https://github.com/llvm/llvm-project/commit/8f701b5df0adb3a2960d78ca2ad9cf53f39ba2fe"
-       cheri_spec: CHERI RISC-V Draft 0.9.3
+       cheri_spec: 
+        - name: CHERI RISC-V 
+          version: Draft 0.9.3
        images:
          - label: "Source"
            link: "https://github.com/CHERI-Alliance/llvm-project/tree/a2ac247413e163c49d60b8a111a67b65351b2510"
@@ -92,7 +96,9 @@ software:
       upstream_version: "21.1.8"
       upstream_date: 2025-12-16
       upstream_url: "https://github.com/llvm/llvm-project/releases/tag/llvmorg-21.1.8"
-      cheri_spec: "CHERIoT 1.0"
+      cheri_spec: 
+        - name: CHERIoT 
+          version: 1.0
       images:
         - label: "Source"
           link: "https://github.com/CHERIoT-Platform/llvm-project"
@@ -107,7 +113,9 @@ software:
        upstream_version: "17"
        upstream_date: 2024-10-26
        upstream_url: "https://github.com/llvm/llvm-project.git/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
-       cheri_spec: "ARM Morello"
+       cheri_spec: 
+        - name: "ARM Morello"
+          version: A.k
        images:
          - label: "Source"
            link: "https://git.morello-project.org/morello/llvm-project/tree/morello/dev"
@@ -119,7 +127,9 @@ software:
        upstream_version: "15"
        upstream_date: 2022-07-26
        upstream_url: "https://github.com/llvm/llvm-project.git/commit/1f8ae9d7e7e4afcc4e76728b28e64941660ca3eb"
-       cheri_spec: "ARM Morello"
+       cheri_spec: 
+        - name: "ARM Morello"
+          version: A.k
        images:
          - label: "linux/aarch64c"
            link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/linux-aarch64-release-1.9/llvm-project-releases-morello-linux-aarch64-release-1.9.tar.gz"
@@ -138,7 +148,9 @@ software:
        upstream_version: "15"
        upstream_date: 2022-07-26
        upstream_url: "https://github.com/llvm/llvm-project.git/commit/1f8ae9d7e7e4afcc4e76728b28e64941660ca3eb"
-       cheri_spec: "morello"
+       cheri_spec: 
+        - name: ARM morello
+          version: A.k
        images:
          - label: "linux/aarch64c"
            link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/linux-aarch64-release-1.8/llvm-project-releases-morello-linux-aarch64-release-1.8.tar.gz"
@@ -161,7 +173,9 @@ software:
        upstream_version: "15"
        upstream_date: 2022-07-26
        upstream_url: "https://github.com/llvm/llvm-project.git/commit/1f8ae9d7e7e4afcc4e76728b28e64941660ca3eb"
-       cheri_spec: "morello"
+       cheri_spec: 
+        - name: ARM morello
+          version: A.k
        images:
          - label: "linux/aarch64c"
            link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/linux-aarch64-release-1.6/llvm-project-releases-morello-linux-aarch64-release-1.6.tar.gz"
@@ -186,7 +200,9 @@ software:
         upstream_version: "17"
         upstream_date: 2023-07-25
         upstream_url: "https://github.com/llvm/llvm-project/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
-        cheri_spec: CHERI RISC-V Draft 0.9.3
+        cheri_spec: 
+        - name: CHERI RISC-V 
+          version: Draft 0.9.3
         images:
           - label: "Source"
             link: "https://github.com/CHERI-Alliance/llvm-project/tree/678272e8548fa3f021e591854d062d694086bf83"
@@ -198,7 +214,9 @@ software:
         upstream_version: "18"
         upstream_date: 2024-01-24
         upstream_url: "https://github.com/llvm/llvm-project/commit/93248729cfae82a5ca2323d4a8e15aa3b9b9c707"
-        cheri_spec: CHERI RISC-V Draft 0.9.3
+        cheri_spec: 
+        - name: CHERI RISC-V 
+          version: Draft 0.9.3
         images:
           - label: "Source"
             link: "https://github.com/CHERI-Alliance/llvm-project/tree/7ca5cdc690a7c41d3c45c53971a766812e730136"

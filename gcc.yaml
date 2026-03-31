@@ -34,7 +34,9 @@ software:
         version_date: 2022-11-30
         version_url: "https://developer.arm.com/Tools%20and%20Software/Morello%20Development%20Tools#Downloads"
         latest: true
-        cheri_spec: Morello
+        cheri_spec: 
+          - name: ARM Morello
+            version: A.k
         upstream_version: "10.1.0"
         upstream_date: 2020-05-07
         upstream_url: "https://gcc.gnu.org/git/?p=gcc.git;a=tag;h=refs/tags/releases/gcc-10.1.0"
@@ -56,7 +58,9 @@ software:
         version_date: 2022-06-13
         version_url: "https://developer.arm.com/Tools%20and%20Software/Morello%20Development%20Tools#Downloads"
         latest: false
-        cheri_spec: Morello
+        cheri_spec: 
+          - name: ARM Morello
+            version: A.k
         upstream_version: "10.1.0"
         upstream_date: 2020-05-07
         upstream_url: "https://gcc.gnu.org/git/?p=gcc.git;a=tag;h=refs/tags/releases/gcc-10.1.0"

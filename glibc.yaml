@@ -32,7 +32,9 @@ software:
         version_date: 2022-11-30
         version_url: "https://developer.arm.com/Tools%20and%20Software/Morello%20Development%20Tools#Downloads"
         latest: true
-        cheri_spec: Morello
+        cheri_spec: 
+          - name: ARM Morello
+            version: A.k
         upstream_version: "2.36"
         upstream_date: 2022-11-17
         upstream_url: "https://sourceware.org/git/?p=glibc.git;a=shortlog;h=refs/heads/arm/morello/main"
