@@ -38,7 +38,7 @@ buildingFromSource: |-
 
 software:
 
-  - arch: "CHERIoT"
+  - arch: "riscv32cheriot"
     releases:
       - version: "2494050 (main)"
         version_date: 2026-02-02

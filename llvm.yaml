@@ -87,7 +87,7 @@ software:
          - label: "Source"
            link: "https://github.com/CHERI-Alliance/llvm-project/tree/a2ac247413e163c49d60b8a111a67b65351b2510"
 
-  - arch: "CHERIoT"
+  - arch: "riscv32cheriot"
     releases:
     - version: "6ec39b3"
       version_date: 2026-01-22
@@ -98,7 +98,7 @@ software:
       upstream_url: "https://github.com/llvm/llvm-project/releases/tag/llvmorg-21.1.8"
       cheri_spec:
         - name: CHERIoT
-          version: 1.0
+          version: ISA v1.0
       images:
         - label: "Source"
           link: "https://github.com/CHERIoT-Platform/llvm-project"
