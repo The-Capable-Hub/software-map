@@ -82,7 +82,7 @@ software:
        upstream_url: "https://github.com/llvm/llvm-project/commit/8f701b5df0adb3a2960d78ca2ad9cf53f39ba2fe"
        cheri_spec:
         - name: CHERI RISC-V
-          version: Draft 0.9.3
+          version: 0.9.3
        images:
          - label: "Source"
            link: "https://github.com/CHERI-Alliance/llvm-project/tree/a2ac247413e163c49d60b8a111a67b65351b2510"
@@ -202,7 +202,7 @@ software:
         upstream_url: "https://github.com/llvm/llvm-project/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
         cheri_spec:
         - name: CHERI RISC-V
-          version: Draft 0.9.3
+          version: 0.9.3
         images:
           - label: "Source"
             link: "https://github.com/CHERI-Alliance/llvm-project/tree/678272e8548fa3f021e591854d062d694086bf83"
@@ -216,7 +216,7 @@ software:
         upstream_url: "https://github.com/llvm/llvm-project/commit/93248729cfae82a5ca2323d4a8e15aa3b9b9c707"
         cheri_spec:
         - name: CHERI RISC-V
-          version: Draft 0.9.3
+          version: 0.9.3
         images:
           - label: "Source"
             link: "https://github.com/CHERI-Alliance/llvm-project/tree/7ca5cdc690a7c41d3c45c53971a766812e730136"

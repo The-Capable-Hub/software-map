@@ -44,7 +44,7 @@ software:
        latest: true
        cheri_spec:
         - name: CHERI RISC-V
-          version: Draft 0.9.3
+          version: 0.9.3
        upstream_version: "v1.2.4"
        upstream_date: 2023-05-01
        upstream_url: "https://git.musl-libc.org/cgit/musl/tag/?h=v1.2.4"

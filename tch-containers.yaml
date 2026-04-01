@@ -60,7 +60,7 @@ software:
         latest: true
         cheri_spec:
         - name: CHERI RISC-V
-          version: Draft 0.9.3
+          version: 0.9.3
         images:
           - label: "Dockerhub"
             link: "https://hub.docker.com/layers/capablehub/cheri-zephyr/v0.2.0-riscv64c-rvy/images/sha256-d46d74561cc43b616ef2a2315c74eeaf322c8d0a5edf995476676fdc17a577bc"
@@ -86,7 +86,7 @@ software:
         latest: true
         cheri_spec:
         - name: CHERI RISC-V
-          version: Draft 0.9.3
+          version: 0.9.3
         images:
           - label: "Dockerhub"
             link: "https://hub.docker.com/layers/capablehub/cheri-ca-llvm/17-riscv64-latest/images/sha256-2f87f05a7723d2f27523c916645142bcd5732a92a07fa3f213764db34b8c4b32"
@@ -99,7 +99,7 @@ software:
         latest: true
         cheri_spec:
         - name: CHERI RISC-V
-          version: Draft 0.9.3
+          version: 0.9.3
         images:
           - label: "Dockerhub"
             link: "https://hub.docker.com/layers/capablehub/cheri-ca-llvm/18-riscv64-latest/images/sha256-e51b4c4573ffd7411b4ab1d19021e85a025360979cc0dad6dc7bcf1cae2b3a3d"
@@ -112,7 +112,7 @@ software:
         latest: true
         cheri_spec:
         - name: CHERI RISC-V
-          version: Draft 0.9.3
+          version: 0.9.3
         images:
           - label: "Dockerhub"
             link: "https://hub.docker.com/layers/capablehub/cheri-ca-llvm/19-riscv64-latest/images/sha256-c4369574491eca6eb070d59e4bf987a2d37027c0ae01c94ffb77b324a92a4ef2"

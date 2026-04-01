@@ -49,7 +49,7 @@ software:
        upstream_url: "https://github.com/torvalds/linux/commit/7d0a66e4bb9081d75c82ec4957c50034cb0ea449"
        cheri_spec:
         - name: CHERI RISC-V
-          version: Draft 0.9.3
+          version: 0.9.3
        images:
          - label: "Source"
            link: "https://github.com/CHERI-Alliance/linux/tree/codasip-cheri-riscv-6.18"
