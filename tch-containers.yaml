@@ -46,7 +46,7 @@ software:
         version_url: "https://github.com/The-Capable-Hub/tch-containers/tree/main/zephyr"
         latest: true
         cheri_spec:
-        - name: University of Cambridge RISC-V ISAv9
+        - name: UoC RISC-V ISAv9
           version: 987
         images:
           - label: "Dockerhub"
@@ -72,7 +72,7 @@ software:
         version_url: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"
         latest: true
         cheri_spec:
-        - name: University of Cambridge RISC-V ISAv9
+        - name: UoC RISC-V ISAv9
           version: 987
         images:
           - label: "Dockerhub"

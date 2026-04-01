@@ -68,7 +68,7 @@ software:
        upstream_date: 2023-07-25
        upstream_url: "https://github.com/llvm/llvm-project/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
        cheri_spec:
-        - name: University of Cambridge RISC-V ISAv9
+        - name: UoC RISC-V ISAv9
           version: 987
        images:
          - label: "Source"

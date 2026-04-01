@@ -87,7 +87,7 @@ software:
        cheri_spec:
         - name: ARM morello
           version: A.k
-        - name: University of Cambridge RISC-V ISAv9
+        - name: UoC RISC-V ISAv9
           version: 987
        upstream_version: "v7.0.0"
        upstream_date: 2022-04-19
