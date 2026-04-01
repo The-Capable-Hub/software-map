@@ -53,6 +53,10 @@ software:
         images:
           - label: "Source"
             link: "https://github.com/CHERIoT-Platform/cheri-rust/commit/249405086189a14c13d33b14ba4191e72920d36b"
+        docs:
+          - label: "README"
+            link: "https://github.com/CHERIoT-Platform/cheri-rust/blob/beta/README.md"
+
 
   - arch: "aarch64, aarch64c"
     releases:
