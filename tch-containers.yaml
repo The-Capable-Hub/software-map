@@ -47,7 +47,7 @@ software:
         latest: true
         cheri_spec:
         - name: UoC RISC-V ISAv9
-          version: 987
+          version: "9"
         images:
           - label: "Dockerhub"
             link: "https://hub.docker.com/layers/capablehub/cheri-zephyr/v0.2.0-riscv64c-isav9/images/sha256-b59cd48faaa8e47fa8c51b364b2d53b71cac7397f83b427d46fa8a3030053589"
@@ -73,7 +73,7 @@ software:
         latest: true
         cheri_spec:
         - name: UoC RISC-V ISAv9
-          version: 987
+          version: "9"
         images:
           - label: "Dockerhub"
             link: "https://hub.docker.com/layers/capablehub/cheri-ctsrd-llvm/17-riscv64-latest/images/sha256-0c657a3d915c4311f27414370cb6bba71994ed76371c8a3f58d406ffbe060bf2"

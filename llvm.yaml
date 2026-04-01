@@ -69,7 +69,7 @@ software:
        upstream_url: "https://github.com/llvm/llvm-project/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
        cheri_spec:
         - name: UoC RISC-V ISAv9
-          version: 987
+          version: "987"
        images:
          - label: "Source"
            link: "https://github.com/CTSRD-CHERI/llvm-project/tree/74d200f2bb65b06633ca87f86b1b9145ebf63a46"

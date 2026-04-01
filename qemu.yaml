@@ -69,6 +69,8 @@ software:
        version_url: "https://github.com/CHERI-Alliance/qemu"
        latest: true
        cheri_spec:
+        - name: ARM morello
+          version: A.k
         - name: CHERI RISC-V
           version: 0.9.3
        upstream_version: "v7.0.0"
@@ -91,7 +93,7 @@ software:
         - name: ARM morello
           version: A.k
         - name: UoC RISC-V ISAv9
-          version: 987
+          version: "9"
        images:
          - label: "Source"
            link: "https://github.com/CTSRD-CHERI/qemu/commit/0f0babda7d12acacccc43cca341645dd8c47e693"

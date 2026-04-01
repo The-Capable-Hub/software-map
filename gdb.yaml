@@ -63,7 +63,7 @@ software:
        upstream_url: "https://sourceware.org/git/?p=binutils-gdb.git;a=commit;h=6bda1c19bcd16eff8488facb8a67d52a436f70e7"
        cheri_spec:
         - name: UoC RISC-V ISAv9
-          version: 987
+          version: "987"
         - name: "ARM Morello"
           version: "A.k"
        images:
