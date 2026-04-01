@@ -26,7 +26,7 @@ project_contribution:
 buildingFromSource: "Please keep an eye out for our [blog](/blog/) as we will soon share instructions for building from source."
 
 software:
-  - arch: "riscv64, aarch64c"
+  - arch: "riscv64c, aarch64c"
     releases:
      - version: "9d115ee"
        version_date: 2025-01-21
@@ -48,7 +48,7 @@ software:
        docs:
          - label: "seL4 Exercises"
            link: "https://cheri-alliance.github.io/CHERI-seL4-Exercises"
-  - arch: "riscv64, aarch64c"
+  - arch: "riscv64c, aarch64c"
     releases:
      - version: "b3ed50e"
        version_date: 2025-07-29
