@@ -53,6 +53,11 @@ software:
        images:
          - label: "Source"
            link: "https://github.com/CHERI-Alliance/linux/tree/codasip-cheri-riscv-6.18"
+       docs:
+        - label: README
+          link: https://github.com/CHERI-Alliance/linux/blob/codasip-cheri-riscv-6.18/README.md
+        - label: TODO
+          link: https://github.com/CHERI-Alliance/linux/blob/codasip-cheri-riscv-6.18/TODO
 
   # Morello Master
   - arch: "aarch64, aarch64c"
