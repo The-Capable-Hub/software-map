@@ -33,7 +33,7 @@ project_contribution:
 buildingFromSource: "Please keep an eye out for our [blog](/blog/) as we will soon share instructions for building from source."
 
 software:
-  - arch: "aarch64c, riscv64c"
+  - arch: "riscv64c, aarch64c"
     releases:
      - version: "25.03"
        version_date: 2025-03-28
@@ -55,7 +55,7 @@ software:
            link: "https://www.cheribsd.org/release-notes/25.03/index.html"
          - label: "Installation Guide"
            link: "https://ctsrd-cheri.github.io/cheribsd-getting-started/morello-install/index.html"
-     - arch: "aarch64c"
+     - arch: "riscv64c, aarch64c"
        version: "24.05"
        version_date: 2024-07-19
        version_url: "https://github.com/CTSRD-CHERI/cheribsd/releases/tag/release%2F24.05"
@@ -75,7 +75,7 @@ software:
            link: "https://www.cheribsd.org/release-notes/24.05/index.html"
          - label: "Installation Guide"
            link: "https://ctsrd-cheri.github.io/cheribsd-getting-started/morello-install/index.html"
-     - arch: "aarch64c"
+     - arch: "riscv64c, aarch64c"
        version: "23.11"
        version_date: 2023-12-12
        version_url: "https://github.com/CTSRD-CHERI/cheribsd/releases/tag/release%2F23.11"
@@ -95,7 +95,7 @@ software:
            link: "https://www.cheribsd.org/release-notes/23.11/index.html"
          - label: "Installation Guide"
            link: "https://ctsrd-cheri.github.io/cheribsd-getting-started/morello-install/index.html"
-     - arch: "aarch64c"
+     - arch: "riscv64c, aarch64c"
        version: "22.12"
        version_date: 2022-12-14
        version_url: "https://github.com/CTSRD-CHERI/cheribsd/releases/tag/release%2F22.12"
@@ -115,7 +115,7 @@ software:
            link: "https://www.cheribsd.org/release-notes/22.12/index.html"
          - label: "Installation Guide"
            link: "https://ctsrd-cheri.github.io/cheribsd-getting-started/morello-install/index.html"
-     - arch: "aarch64c"
+     - arch: "riscv64c, aarch64c"
        version: "22.05p1"
        version_date: 2022-07-05
        version_url: "https://github.com/CTSRD-CHERI/cheribsd/releases/tag/release%2F22.05p1"
@@ -135,7 +135,7 @@ software:
            link: "https://www.cheribsd.org/release-notes/22.05p1/index.html"
          - label: "Installation Guide"
            link: "https://ctsrd-cheri.github.io/cheribsd-getting-started/morello-install/index.html"
-     - arch: "aarch64c"
+     - arch: "riscv64c, aarch64c"
        version: "22.05"
        version_date: 2022-05-23
        version_url: "https://github.com/CTSRD-CHERI/cheribsd/releases/tag/release%2F22.05"
