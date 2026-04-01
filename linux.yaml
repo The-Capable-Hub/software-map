@@ -48,7 +48,7 @@ software:
        upstream_date: 2025-11-30
        upstream_url: "https://github.com/torvalds/linux/commit/7d0a66e4bb9081d75c82ec4957c50034cb0ea449"
        cheri_spec:
-        - name: CHERI RISC-V
+        - name: CHERI RISC-V (RVY)
           version: 0.9.3
        images:
          - label: "Source"

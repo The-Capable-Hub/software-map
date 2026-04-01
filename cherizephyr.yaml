@@ -30,6 +30,9 @@ software:
        upstream_version: "4.1.0"
        upstream_date: 2025-05-20
        upstream_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/commit/90a48e814b9699d34d41e42038bef0132427a5c3"
+       cheri_spec:
+        - name: CHERI RISC-V (RVY)
+          version: 0.9.3
        images:
          - label: "Source"
            link: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/v0.3.0-cheri-branch"
@@ -46,6 +49,9 @@ software:
        upstream_version: "4.1.0"
        upstream_date: 2025-05-20
        upstream_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/commit/90a48e814b9699d34d41e42038bef0132427a5c3"
+       cheri_spec:
+        - name: CHERI RISC-V (RVY)
+          version: 0.9.3
        images:
          - label: "Source"
            link: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/CHERI-Zephyr-v0.2.0"
@@ -59,6 +65,9 @@ software:
        upstream_version: "3.5.0"
        upstream_date: 2023-11-07
        upstream_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/commit/ec031029f4cab3c0fbb116f5cd63afcf59205a84"
+       cheri_spec:
+        - name: CHERI RISC-V (RVY)
+          version: 0.9.3
        images:
          - label: "Source"
            link: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/CHERI-Zephyr-v0.1.0"

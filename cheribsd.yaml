@@ -33,7 +33,7 @@ project_contribution:
 buildingFromSource: "Please keep an eye out for our [blog](/blog/) as we will soon share instructions for building from source."
 
 software:
-  - arch: "aarch64c"
+  - arch: "aarch64c, riscv64c"
     releases:
      - version: "25.03"
        version_date: 2025-03-28

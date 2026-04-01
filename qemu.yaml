@@ -84,14 +84,14 @@ software:
        version_date: 2026-01-08
        version_url: "https://github.com/CTSRD-CHERI/qemu/commit/0f0babda7d12acacccc43cca341645dd8c47e693"
        latest: true
+       upstream_version: "v7.0.0"
+       upstream_date: 2022-04-19
+       upstream_url: "https://github.com/qemu/qemu/releases/tag/v7.0.0"
        cheri_spec:
         - name: ARM morello
           version: A.k
         - name: UoC RISC-V ISAv9
           version: 987
-       upstream_version: "v7.0.0"
-       upstream_date: 2022-04-19
-       upstream_url: "https://github.com/qemu/qemu/releases/tag/v7.0.0"
        images:
          - label: "Source"
            link: "https://github.com/CTSRD-CHERI/qemu/commit/0f0babda7d12acacccc43cca341645dd8c47e693"

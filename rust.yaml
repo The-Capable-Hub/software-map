@@ -44,12 +44,12 @@ software:
         version_date: 2026-02-02
         latest: true
         version_url: "https://github.com/CHERIoT-Platform/cheri-rust/commit/249405086189a14c13d33b14ba4191e72920d36b"
-        cheri_spec:
-          - name: CHERIoT
-            version: ISA v1.0
         upstream_version: "1.93.0"
         upstream_date: 2026-01-22
         upstream_url: "https://github.com/rust-lang/rust/releases/tag/1.93.0"
+        cheri_spec:
+          - name: CHERIoT
+            version: ISA v1.0
         images:
           - label: "Source"
             link: "https://github.com/CHERIoT-Platform/cheri-rust/commit/249405086189a14c13d33b14ba4191e72920d36b"
@@ -60,12 +60,12 @@ software:
         version_date: 2025-09-15
         version_url: "https://github.com/kent-weak-memory/rust/tree/1.72.1-20250915-dev"
         latest: true
-        cheri_spec:
-        - name: ARM morello
-          version: A.k
         upstream_version: "1.72.1"
         upstream_date: 2024-08-24
         upstream_url: "https://github.com/rust-lang/rust/releases/tag/1.72.0"
+        cheri_spec:
+        - name: ARM morello
+          version: A.k
         images:
           - label: "linux/x86"
             link: "https://github.com/kent-weak-memory/rust/releases/download/1.72.1-20250915-dev/rust-build-1.72.1.tar.gz"
@@ -79,12 +79,12 @@ software:
         version_date: 2024-01-12
         version_url: "https://github.com/kent-weak-memory/rust/releases/tag/1.56.0-20240112-dev"
         latest: false
-        cheri_spec:
-        - name: ARM morello
-          version: A.k
         upstream_version: "1.56.0"
         upstream_date: 2021-10-21
         upstream_url: "https://github.com/rust-lang/rust/releases/tag/1.56.0"
+        cheri_spec:
+        - name: ARM morello
+          version: A.k
         images:
           - label: "linux/x86"
             link: "https://github.com/kent-weak-memory/rust/releases/download/1.56.0-20240112-dev/rust-build-1.56.0.tar.gz"

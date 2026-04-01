@@ -26,7 +26,7 @@ project_contribution:
 buildingFromSource: "Please keep an eye out for our [blog](/blog/) as we will soon share instructions for building from source."
 
 software:
-  - arch: "riscv64, morello"
+  - arch: "riscv64, aarch64c"
     releases:
      - version: "9d115ee"
        version_date: 2025-01-21
@@ -35,6 +35,11 @@ software:
        upstream_version: "v13.0.0-dev"
        upstream_date: 2025-05-24
        upstream_url: "https://github.com/seL4/seL4/commit/3aafe9e0b9527794c547d12090117e1000302da0"
+       cheri_spec:
+        - name: CHERI RISC-V (RVY)
+          version: 0.9.3
+        - name: ARM Morello
+          version: A.k
        images:
          - label: "Source (seL4)"
            link: "https://github.com/CHERI-Alliance/CHERI-seL4/commit/9d115ee9b6da2ebe949efeae4f1dd347166d0743"
@@ -43,7 +48,7 @@ software:
        docs:
          - label: "seL4 Exercises"
            link: "https://cheri-alliance.github.io/CHERI-seL4-Exercises"
-  - arch: "riscv64, morello"
+  - arch: "riscv64, aarch64c"
     releases:
      - version: "b3ed50e"
        version_date: 2025-07-29
@@ -52,6 +57,11 @@ software:
        upstream_version: "v13.0.0-dev"
        upstream_date: 2025-05-24
        upstream_url: "https://github.com/seL4/seL4/commit/3aafe9e0b9527794c547d12090117e1000302da0"
+       cheri_spec:
+        - name: CHERI RISC-V (RVY)
+          version: 0.9.3
+        - name: ARM Morello
+          version: A.k
        images:
          - label: "Source (seL4)"
            link: "https://github.com/CHERI-Alliance/CHERI-seL4/tree/b3ed50ed457be1c950fd3753fe2ad74aa60d55ca"

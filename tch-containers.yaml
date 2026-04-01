@@ -59,7 +59,7 @@ software:
         version_url: "https://github.com/The-Capable-Hub/tch-containers/tree/main/zephyr"
         latest: true
         cheri_spec:
-        - name: CHERI RISC-V
+        - name: CHERI RISC-V (RVY)
           version: 0.9.3
         images:
           - label: "Dockerhub"
@@ -85,7 +85,7 @@ software:
         version_url: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"
         latest: true
         cheri_spec:
-        - name: CHERI RISC-V
+        - name: CHERI RISC-V (RVY)
           version: 0.9.3
         images:
           - label: "Dockerhub"
@@ -98,7 +98,7 @@ software:
         version_url: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"
         latest: true
         cheri_spec:
-        - name: CHERI RISC-V
+        - name: CHERI RISC-V (RVY)
           version: 0.9.3
         images:
           - label: "Dockerhub"
@@ -111,7 +111,7 @@ software:
         version_url: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"
         latest: true
         cheri_spec:
-        - name: CHERI RISC-V
+        - name: CHERI RISC-V (RVY)
           version: 0.9.3
         images:
           - label: "Dockerhub"
