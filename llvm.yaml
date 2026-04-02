@@ -57,36 +57,6 @@ buildingFromSource: |-
   Instructions on building CHERIoT LLVM can be found in their [Getting Started Guide](https://github.com/CHERIoT-Platform/cheriot-rtos/blob/main/docs/GettingStarted.md#building-cheriot-llvm).
 
 software:
-
-  - arch: "riscv64c"
-    releases:
-     - version: "74d200f (master)"
-       version_date: 2025-10-20
-       latest: true
-       version_url: "https://github.com/CTSRD-CHERI/llvm-project/commit/74d200f2bb65b06633ca87f86b1b9145ebf63a46"
-       upstream_version: "17"
-       upstream_date: 2023-07-25
-       upstream_url: "https://github.com/llvm/llvm-project/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
-       cheri_spec:
-        - name: UoC RISC-V ISAv9
-          version: "987"
-       images:
-         - label: "Source"
-           link: "https://github.com/CTSRD-CHERI/llvm-project/tree/74d200f2bb65b06633ca87f86b1b9145ebf63a46"
-     - version: "a2ac247 (codasip-cheri-riscv-19)"
-       version_date: 2025-12-03
-       latest: true
-       version_url: "https://github.com/CHERI-Alliance/llvm-project/commit/a2ac247413e163c49d60b8a111a67b65351b2510"
-       upstream_version: "19"
-       upstream_date: 2024-07-23
-       upstream_url: "https://github.com/llvm/llvm-project/commit/8f701b5df0adb3a2960d78ca2ad9cf53f39ba2fe"
-       cheri_spec:
-        - name: CHERI RISC-V (RVY)
-          version: 0.9.3
-       images:
-         - label: "Source"
-           link: "https://github.com/CHERI-Alliance/llvm-project/tree/a2ac247413e163c49d60b8a111a67b65351b2510"
-
   - arch: "riscv32cheriot"
     releases:
     - version: "6ec39b3"
@@ -102,6 +72,34 @@ software:
       images:
         - label: "Source"
           link: "https://github.com/CHERIoT-Platform/llvm-project"
+  - arch: "riscv64c"
+    releases:
+     - version: "a2ac247 (codasip-cheri-riscv-19)"
+       version_date: 2025-12-03
+       latest: true
+       version_url: "https://github.com/CHERI-Alliance/llvm-project/commit/a2ac247413e163c49d60b8a111a67b65351b2510"
+       upstream_version: "19"
+       upstream_date: 2024-07-23
+       upstream_url: "https://github.com/llvm/llvm-project/commit/8f701b5df0adb3a2960d78ca2ad9cf53f39ba2fe"
+       cheri_spec:
+        - name: CHERI RISC-V (RVY)
+          version: 0.9.3
+       images:
+         - label: "Source"
+           link: "https://github.com/CHERI-Alliance/llvm-project/tree/a2ac247413e163c49d60b8a111a67b65351b2510"
+     - version: "74d200f (master)"
+       version_date: 2025-10-20
+       latest: true
+       version_url: "https://github.com/CTSRD-CHERI/llvm-project/commit/74d200f2bb65b06633ca87f86b1b9145ebf63a46"
+       upstream_version: "17"
+       upstream_date: 2023-07-25
+       upstream_url: "https://github.com/llvm/llvm-project/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
+       cheri_spec:
+        - name: UoC RISC-V ISAv9
+          version: "9"
+       images:
+         - label: "Source"
+           link: "https://github.com/CTSRD-CHERI/llvm-project/tree/74d200f2bb65b06633ca87f86b1b9145ebf63a46"
 
   # Older Releases
   - arch: "aarch64c"
