@@ -7,7 +7,7 @@ project_summary:
     Active development takes place in the [CHERI-Alliance/u-boot repository](https://github.com/CHERI-Alliance/u-boot) on the codasip-cheri-riscv branch.
   vulnerability_contact: "support@thecapablehub.org"
   download_notes: "There are no pre-built binaries or versioned releases."
-  last_update: "28th January 2026" 
+  last_update: "28th January 2026"
 
 project_contribution:
   src_tree: |-
@@ -33,6 +33,9 @@ software:
        upstream_version: "2024.10"
        upstream_date: 2024-10-07
        upstream_url: "https://github.com/u-boot/u-boot/commit/f919c3a889f0ec7d63a48b5d0ed064386b0980bd"
-       images: 
+       cheri_spec:
+        - name: CHERI RISC-V (RVY)
+          version: 0.9.3
+       images:
          - label: "Source"
            link: "https://github.com/CHERI-Alliance/u-boot/commit/57524f1599083d95809c3bc4345ebfecbf31ea7e"

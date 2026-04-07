@@ -18,10 +18,10 @@ project_contribution:
 
     The layer can be used with its sister distro layer [meta-morello-distro](https://github.com/The-Capable-Hub/meta-morello-distro) that provides CHERIfied user space applications.
   mailing_lists: |-
-    The following lists should be used: 
+    The following lists should be used:
       - [Original ARM Morello mailing list](https://op-lists.linaro.org/mailman3/lists/linux-morello-distros.op-lists.linaro.org)
   slack: |-
-    Support for meta-morello is provided via the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html), please post your questions under the #cheri-linux channel. 
+    Support for meta-morello is provided via the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html), please post your questions under the #cheri-linux channel.
   meetings: |-
     There are no public meetings for this project.
 
@@ -37,6 +37,9 @@ software:
        upstream_version: "5.0.16 Scarthgap LTS"
        upstream_date: 2026-02-16
        upstream_url: "https://downloads.yoctoproject.org/releases/yocto/yocto-5.0.16/poky-1d54d1c4736a114e1cecbe85a0306e3814d5ce70.tar.bz2"
+       cheri_spec:
+        - name: "ARM Morello"
+          version: A.k
        images:
          - label: "Board firmware"
            link: "https://yocto-morello.dl.thecapablehub.org/morello-release-2.0/board-firmware-sd-image.img"
@@ -48,6 +51,9 @@ software:
        upstream_version: "4.0.32 Kikrstone LTS"
        upstream_date: 2025-12-24
        upstream_url: "https://downloads.yoctoproject.org/releases/yocto/yocto-4.0.32/poky-2c05660b21c7cc1082aeac8b75d8a2d82e249f63.tar.bz2"
+       cheri_spec:
+        - name: "ARM Morello"
+          version: A.k
        images:
          - label: "Board firmware"
            link: "https://yocto-morello.dl.thecapablehub.org/morello-release-1.9/board-firmware-sd-image.img"

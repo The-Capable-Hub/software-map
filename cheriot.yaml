@@ -1,7 +1,7 @@
 project_summary:
   category: "rtos"
   home_url: "https://cheriot.org/"
-  # home_text: 
+  # home_text:
   short_description: "The core RTOS for the CHERIoT platform"
   description: |-
     [CHERIoT-RTOS](https://github.com/CHERIoT-Platform/cheriot-rtos) is a real-time operating system implementation, designed to make full use of CHERIoT ISA architecture.
@@ -12,13 +12,13 @@ project_summary:
     MMUs also typically need page tables, which are very large on resource-constrained systems.
     Embedded systems often have a memory-protection unit (MPU) instead, which provides access control to a fixed number of regions.
     CHERIoT was designed assuming CHERI from the ground up and so does not require either: it can use CHERI for object-granularity protection and safe sharing, without needing additional look-aside structures.
-    
+
     The full CHERIoT platform consists of three major components:
     - [The CHERIoT ISA](https://github.com/CHERIoT-Platform/cheriot-sail) - Extends the RISC-V ISA with a core CHERI implementation suitable for small-scale embedded devices.
       This has two open-source implementations:
       - [CHERIoT Ibex](https://github.com/microsoft/cheriot-ibex) is a mature production-quality (area-optimised) reference implementation.
       - [CHERIoT Kudu](https://github.com/microsoft/cheriot-kudu) is a newer higher-performance dual-issue implementation.
-      
+
       The first CHERIoT devices are expected to be available in quantity in 2026.
     - [CHERIoT-LLVM](https://github.com/CHERIoT-Platform/llvm-project) - Compiler toolchain targeting CHERIoT.
     - [CHERIoT-RTOS](https://github.com/CHERIoT-Platform/cheriot-rtos) - The core of the system.
@@ -30,10 +30,10 @@ project_summary:
     Track the current progress towards a 1.0 release on their [GitHub](https://github.com/orgs/CHERIoT-Platform/projects/2).
 
     You can keep up to date the with latest news for CHERIoT Platform via the project [website](https://cheriot.org/news.html) and via their [public Signal chat](https://signal.group/#CjQKIElxAs3t3MUEMOEmQEuMHRK4rErUk2xVeFzjAjFXAShzEhCK9qQwEMFKGLGZnCjrQ7zm).
-       
+
   #vulnerability_contact: N/A There is no coordinated vulnerability disclosure for this project.
   #download_notes: N/A - No extra notes needed there is the devcontainer that is an equivalent to a pre-built binary really
-  last_update: "29th January 2026" 
+  last_update: "29th January 2026"
 
 project_contribution:
   src_tree: |-
@@ -53,21 +53,23 @@ project_contribution:
 
 buildingFromSource: |-
   CHERIoT-RTOS provides a development environment container which includes all of the necessary dependencies pre-built to allow you to quickly begin development of CHERIoT-RTOS applications, without the need to build LLVM and the Sail-based emulator first.
-  
-  If you're looking to quickly get started developing with CHERIoT-RTOS, we recommend using the devcontainer. 
-  
+
+  If you're looking to quickly get started developing with CHERIoT-RTOS, we recommend using the devcontainer.
+
   Their [Getting Started guide](https://github.com/CHERIoT-Platform/cheriot-rtos/blob/main/docs/GettingStarted.md) covers setting this up, as well as building dependencies from source.
 
 software:
 
-  - arch: "CHERIoT"
+  - arch: "riscv32cheriot"
     releases:
       - version: "HEAD"
         version_date: 2026-01-06
         version_url: "https://github.com/CHERIoT-Platform/cheriot-rtos/"
         latest: true
-        cheri_spec: CHERIoT ISA v1.0
-        images: 
+        cheri_spec:
+          - name: CHERIoT ISA
+            version: "1.0"
+        images:
           - label: "Source (incl devcontainer)"
             link: "https://github.com/CHERIoT-Platform/cheriot-rtos/"
         docs:

@@ -7,7 +7,7 @@ project_summary:
     Active development takes place in the [CHERI-Alliance/opensbi repository](https://github.com/CHERI-Alliance/opensbi) on the codasip-cheri-riscv branch.
   vulnerability_contact: "support@thecapablehub.org"
   download_notes: "There are no pre-built binaries or versioned releases."
-  last_update: "29th January 2026" 
+  last_update: "29th January 2026"
 
 project_contribution:
   src_tree: |-
@@ -33,6 +33,9 @@ software:
        upstream_version: "1.5"
        upstream_date: 2024-08-02
        upstream_url: "https://github.com/riscv-software-src/opensbi/commit/43cace6c3671e5172d0df0a8963e552bb04b7b20"
-       images: 
+       cheri_spec:
+        - name: CHERI RISC-V (RVY)
+          version: 0.9.3
+       images:
          - label: "Source"
            link: "https://github.com/CHERI-Alliance/opensbi/commit/669eba10526ea9fd2f0442e0bb9aab433f3fb59a"
