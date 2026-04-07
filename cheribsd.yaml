@@ -48,7 +48,7 @@ software:
         - name: "ARM Morello"
           version: A.k
        images:
-         - label: "Installer Image"
+         - label: "Installer aarch64c"
            link: "https://download.cheribsd.org/releases/arm64/aarch64c/25.03/cheribsd-memstick-arm64-aarch64c-25.03.img.xz"
        docs:
          - label: "Release Notes"
