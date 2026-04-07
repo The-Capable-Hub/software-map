@@ -43,7 +43,7 @@ software:
        upstream_date: 2024-10-26
        upstream_url: "https://github.com/freebsd/freebsd-src/commit/87c2aab0a0b3db2a4690773b869e8cfc8b3ac6c2"
        cheri_spec:
-        - name: UoC RISC-V ISAv9
+        - name: UoC RISC-V ISA
           version: "9"
         - name: "ARM Morello"
           version: A.k
@@ -63,7 +63,7 @@ software:
        upstream_date: 2024-01-20
        upstream_url: "https://github.com/freebsd/freebsd-src/commit/4b3ffc5918b9968ea6ddee6f6cdf3538072e5ef4"
        cheri_spec:
-        - name: UoC RISC-V ISAv9
+        - name: UoC RISC-V ISA
           version: "9"
         - name: "ARM Morello"
           version: A.k
@@ -83,7 +83,7 @@ software:
        upstream_date: 2023-08-18
        upstream_url: "https://github.com/freebsd/freebsd-src/commit/d8bb58586d90a27852cc79f37aa890ac6397cc03"
        cheri_spec:
-        - name: UoC RISC-V ISAv9
+        - name: UoC RISC-V ISA
           version: "9"
         - name: "ARM Morello"
           version: A.k
@@ -103,7 +103,7 @@ software:
        upstream_date: 2022-07-29
        upstream_url: "https://github.com/freebsd/freebsd-src/commit/43eebd036447f5399dd4bfa9b9d3e4e6f6596f48"
        cheri_spec:
-        - name: UoC RISC-V ISAv9
+        - name: UoC RISC-V ISA
           version: "9"
         - name: "ARM Morello"
           version: A.k
@@ -123,7 +123,7 @@ software:
        upstream_date: 2022-03-04
        upstream_url: "https://github.com/freebsd/freebsd-src/commit/25375b1415f8a0b0290b56c00c31d20e218ffab9"
        cheri_spec:
-        - name: UoC RISC-V ISAv9
+        - name: UoC RISC-V ISA
           version: "9"
         - name: "ARM Morello"
           version: A.k
@@ -143,7 +143,7 @@ software:
        upstream_date: 2022-03-04
        upstream_url: "https://github.com/freebsd/freebsd-src/commit/25375b1415f8a0b0290b56c00c31d20e218ffab9"
        cheri_spec:
-        - name: UoC RISC-V ISAv9
+        - name: UoC RISC-V ISA
           version: "9"
         - name: "ARM Morello"
           version: A.k

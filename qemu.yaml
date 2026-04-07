@@ -92,7 +92,7 @@ software:
        cheri_spec:
         - name: ARM morello
           version: A.k
-        - name: UoC RISC-V ISAv9
+        - name: UoC RISC-V ISA
           version: "9"
        images:
          - label: "Source"
