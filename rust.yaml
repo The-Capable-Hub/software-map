@@ -48,8 +48,8 @@ software:
         upstream_date: 2026-01-22
         upstream_url: "https://github.com/rust-lang/rust/releases/tag/1.93.0"
         cheri_spec:
-          - name: CHERIoT
-            version: ISA v1.0
+          - name: CHERIoT ISA
+            version: "1.0"
         images:
           - label: "Source"
             link: "https://github.com/CHERIoT-Platform/cheri-rust/commit/249405086189a14c13d33b14ba4191e72920d36b"

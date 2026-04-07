@@ -67,8 +67,8 @@ software:
       upstream_date: 2025-12-16
       upstream_url: "https://github.com/llvm/llvm-project/releases/tag/llvmorg-21.1.8"
       cheri_spec:
-        - name: CHERIoT
-          version: ISA v1.0
+        - name: CHERIoT ISA
+          version: "1.0"
       images:
         - label: "Source"
           link: "https://github.com/CHERIoT-Platform/llvm-project"

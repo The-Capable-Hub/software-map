@@ -67,8 +67,8 @@ software:
         version_url: "https://github.com/CHERIoT-Platform/cheriot-rtos/"
         latest: true
         cheri_spec:
-          - name: CHERIoT
-            version: ISA v1.0
+          - name: CHERIoT ISA
+            version: "1.0"
         images:
           - label: "Source (incl devcontainer)"
             link: "https://github.com/CHERIoT-Platform/cheriot-rtos/"
