@@ -1,0 +1,44 @@
+project_summary:
+  category: "distribution"
+  home_url: "https://github.com/CHERI-Alliance/meta-cheri"
+  short_description: "BSP and distro layer for CHERI linux on Yocto"
+  description: "This layer is an implementation of a Yocto distribution for the CHERI enabled RISC-V RVY."
+  status: |-
+    It is being built against the scarthgap version of Yocto. 
+    
+    Currently work is being tested against QEMU and there is ongoing work to porting more libraries into the user-space.
+
+  vulnerability_contact: "pawel.zalewski@thecapablehub.org"
+  download_notes: "No official SDK exists and must be built from source according to the README file"
+  last_update: "7th April 2026"
+
+project_contribution:
+  src_tree: |-
+    [The CHERI Alliance repository](https://github.com/CHERI-Alliance/meta-cheri) is the main source tree for meta-cheri.
+
+    Issues can be [reported on github](https://github.com/CHERI-Alliance/meta-cheri/issues).
+  mailing_lists: |-
+    There is no official "mailing list" however bugs can be reported to the [github issue tracker](https://github.com/CHERI-Alliance/meta-cheri/issues)
+  slack: |-
+    Support for meta-cheri is provided via the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html), where the topic-specific channel is #cheri-linux
+  meetings: |-
+    The CHERI Alliance [Linux working group](https://cheri-alliance.org/who-we-are/working-groups/cheri-linux/) hold regular meetings
+
+buildingFromSource: "Please keep an eye on our [blog](/blog/) as we will soon share instructions for building from source."
+
+software:
+  - arch: "riscv64c"
+    releases:
+     - version: "c81a323"
+       version_date: 2025-02-03
+       version_url: "https://github.com/CHERI-Alliance/meta-cheri/commit/c81a323888357acc1ee244fbf8f23df4b1c1288b"
+       latest: true
+       cheri_spec:
+        - name: CHERI RISC-V (RVY)
+          version: 0.9.3
+       images:
+        - label: "Source"
+          link: https://github.com/CHERI-Alliance/meta-cheri/archive/refs/heads/codasip-scarthgap.zip
+       docs:
+         - label: "Installation Guide"
+           link: "https://github.com/CHERI-Alliance/meta-cheri/blob/codasip-scarthgap/README.md"
