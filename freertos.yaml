@@ -1,0 +1,60 @@
+project_summary:
+  category: "rtos"
+  home_text: "_There are multiple homes, see the [Get Involved](#get-involved) section for more info._"
+  short_description: "CHERI-enabled fork of FreeRTOS"
+  description: |-
+    FreeRTOS is an open-source real-time operating system kernel for microcontrollers.
+    It provides a deterministic scheduler and a suite of inter-task communication primitives, such as queues and semaphores, to manage multitasking on resource-constrained hardware.
+
+  status: |-
+    Most of the initial CHERI-FreeRTOS development took place at the University of Cambridge.
+    While this work introduced the concept of compartmentalisation, the project hasn't been updated in over five years and has fallen behind the official FreeRTOS releases.
+    The concept of compartmentalisation continued on within the [CHERIoT project](/software/cheriot/).
+    
+    The [CHERI-Alliance FreeRTOS working group](https://cheri-alliance.org/who-we-are/working-groups/cheri-freertos/) has recently created a new fork, focusing on a simple and clean set of patches in the hopes that they can be pushed upstream in the near future.
+    This set of patches will focus on adding CHERI support, rather than introducing new concepts.
+    The final touches on this are being prepared on Codasip's [GitHub repo](https://github.com/Codasip/FreeRTOS-Kernel), but will be hosted on the CHERI Alliance GitHub in the near future.
+
+  download_notes: "There are no pre-built binaries or versioned releases yet, users must build from source."
+  last_update: "3rd February 2026" 
+
+project_contribution:
+  src_tree: |-
+    - [CTSRD/FreeRTOS-Kernel](https://github.com/CTSRD-CHERI/FreeRTOS-Kernel)
+    - [Codasip/FreeRTOS-Kernel](https://github.com/Codasip/FreeRTOS-Kernel)
+  chat: |-
+    -  Support is generally discussed in the [CHERI CPU Slack](https://www.cl.cam.ac.uk/research/security/ctsrd/cheri/cheri-slack.html)
+  meetings: "There aren't yet any regular meetings for this project"
+
+buildingFromSource: |-
+  - Instructions for building from source can be found in each version's repository.
+
+software:
+  # Codasip's version
+  - arch: "riscv64c"
+    releases:
+      - version: "Codasip-V11.2.0-1.0"
+        version_date: 2026-01-28
+        version_url: "https://github.com/Codasip/FreeRTOS-Kernel/releases/tag/Codasip-V11.2.0-1.0"
+        latest: true
+        cheri_spec: CHERI RISC-V Draft Standard 0.9.3
+        upstream_version: V11.2.0
+        upstream_date: 2025-03-04
+        upstream_url: "https://github.com/FreeRTOS/FreeRTOS-Kernel/releases/tag/V11.2.0"
+        images: 
+         - label: "Source"
+           link: "https://github.com/Codasip/FreeRTOS-Kernel/releases/tag/Codasip-V11.2.0-1.0"
+  # CTSRD version
+  - arch: "aarch64c"
+    releases:
+      - version: "HEAD (branch)"
+        version_date: 2022-01-07
+        version_url: "https://github.com/CTSRD-CHERI/FreeRTOS-Kernel/tree/hmka2"
+        latest: true
+        cheri_spec: University of Cambridge ISAv9
+        upstream_version: V10.4.3
+        upstream_date: 2020-12-15
+        upstream_url: "https://github.com/FreeRTOS/FreeRTOS-Kernel/releases/tag/V10.4.3"
+        images: 
+         - label: "Source" 
+           link: "https://github.com/CTSRD-CHERI/FreeRTOS-Kernel/tree/hmka2"
