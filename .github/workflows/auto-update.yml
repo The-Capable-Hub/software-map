@@ -1,16 +1,84 @@
 name: auto-update-software-map
 on:
+  push:
+    branches:
+     - main
+     - mcobb/auto-update
   workflow_dispatch:
 
 jobs:
-  clone-repos:
+  auto-update:
     runs-on: the-capable-hub-aws-ci
     steps:
-      - run: |
-          echo "Hello world"
-          pwd
-          ls -la $PWD
-          ls -la $GITHUB_ACTION_PATH
-          ls -la $GITHUB_WORKSPACE
-          exit 1
+      - name: Checkout auto updater
+        uses: actions/checkout@v4
+        with:
+          path: "software-map"
+
+      - name: Checkout Auto Updater
+        uses: actions/checkout@v4
+        with:
+          repository: "michaelcobb-capablehub/auto-update-software-map"
+          fetch-depth: 1
+          path: "auto-updater"
+
+      - name: Act workaround
+        if: ${{ env.ACT }}
         shell: bash
+        run: |
+          mkdir ${HOME}/.ssh && curl --silent https://api.github.com/meta | jq --raw-output '"github.com "+.ssh_keys[]' >> ${HOME}/.ssh/known_hosts
+
+      - name: Setup Auto Updater
+        shell: bash
+        run: |
+          cd ${GITHUB_WORKSPACE}/auto-updater
+          # Create python3 venv and install requirements:
+          python3 -m venv ./venv
+          . ./venv/bin/activate
+          python3 -m pip install -r requirements.txt
+
+      - name: Run Auto Updater
+        shell: bash
+        run: |
+          cd ${GITHUB_WORKSPACE}/auto-updater
+          . ./venv/bin/activate
+          
+          ./main.py ${GITHUB_WORKSPACE}/software-map/qemu.yaml
+
+      - name: Commit changes
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd ${GITHUB_WORKSPACE}/software-map
+          BRANCH_NAME="auto-updater/$(date +"%Y-%m-%d-%H-%m-%S")"
+          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+
+          # set up git
+          git config user.name "github-actions[bot]"
+          git config user.email "example@example.com"
+
+          ### DEBUG
+          git remote set-url origin git@github.com:The-Capable-Hub/software-map.git
+          ## DEBUG
+
+          # Create PR branch
+          git checkout -b ${BRANCH_NAME}
+          git add .
+          git commit -m "Auto update software map"
+          echo "Pushing..."
+          git push --set-upstream origin ${BRANCH_NAME}
+          echo "Done."
+
+      - name: Create PR
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd ${GITHUB_WORKSPACE}/software-map
+          # Create the PR
+          gh pr create \
+            --title "Auto update software map" \
+            --body "Pull request body" \
+            --base main \
+            --head ${BRANCH_NAME}
