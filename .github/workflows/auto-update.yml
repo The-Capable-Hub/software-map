@@ -1,0 +1,16 @@
+name: auto-update-software-map
+on:
+  workflow_dispatch:
+
+jobs:
+  clone-repos:
+    runs-on: the-capable-hub-aws-ci
+    steps:
+      - run: |
+          echo "Hello world"
+          pwd
+          ls -la $PWD
+          ls -la $GITHUB_ACTION_PATH
+          ls -la $GITHUB_WORKSPACE
+          exit 1
+        shell: bash
