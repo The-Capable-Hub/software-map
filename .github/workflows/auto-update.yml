@@ -6,13 +6,12 @@ on:
      - mcobb/auto-update
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
   auto-update:
     runs-on: the-capable-hub-aws-ci
-    permissions: write-all
+    permissions:
+      contents: write
+      pull-requests: write
     steps:
       - name: Install Github CLI
         shell: bash
