@@ -85,7 +85,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd ${GITHUB_WORKSPACE}/software-map
-           Create the PR
+          # Create the PR
           gh pr create \
             --title "Auto update software map" \
             --body "Pull request body" \
