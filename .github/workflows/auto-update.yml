@@ -26,7 +26,11 @@ jobs:
         if: ${{ env.ACT }}
         shell: bash
         run: |
-          mkdir ${HOME}/.ssh && curl --silent https://api.github.com/meta | jq --raw-output '"github.com "+.ssh_keys[]' >> ${HOME}/.ssh/known_hosts
+          #mkdir /home/ubuntu/.ssh && curl --silent https://api.github.com/meta | jq --raw-output '"github.com "+.ssh_keys[]' >> /home/ubuntu/.ssh/known_hosts
+          #mkdir -p /home/ubuntu/.ssh
+          #ssh-keyscan -t ed25519 github.com >> /home/ubuntu/.ssh/known_hosts
+          #chmod 600 /home/ubuntu/.ssh/known_hosts
+          :
 
       - name: Setup Auto Updater
         shell: bash
@@ -45,6 +49,9 @@ jobs:
           
           ./main.py ${GITHUB_WORKSPACE}/software-map/qemu.yaml
 
+          mv qemu.yaml.new $GITHUB_WORKSPACE/software-map/qemu.yaml
+          #touch $GITHUB_WORKSPACE/software-map/foo.yaml.new
+
       - name: Commit changes
         shell: bash
         env:
@@ -59,16 +66,15 @@ jobs:
           git config user.email "example@example.com"
 
           ### DEBUG
-          git remote set-url origin git@github.com:The-Capable-Hub/software-map.git
+          #git remote set-url origin git@github.com:The-Capable-Hub/software-map.git
           ## DEBUG
 
           # Create PR branch
           git checkout -b ${BRANCH_NAME}
-          git add .
+          git add *.yaml
+          #git add *.yaml.new
           git commit -m "Auto update software map"
-          echo "Pushing..."
           git push --set-upstream origin ${BRANCH_NAME}
-          echo "Done."
 
       - name: Create PR
         shell: bash
@@ -77,8 +83,8 @@ jobs:
         run: |
           cd ${GITHUB_WORKSPACE}/software-map
           # Create the PR
-          gh pr create \
-            --title "Auto update software map" \
-            --body "Pull request body" \
-            --base main \
-            --head ${BRANCH_NAME}
+          #gh pr create \
+          #  --title "Auto update software map" \
+          #  --body "Pull request body" \
+          #  --base main \
+          #  --head ${BRANCH_NAME}
