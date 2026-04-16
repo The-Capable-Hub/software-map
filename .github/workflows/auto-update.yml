@@ -20,7 +20,7 @@ jobs:
           sudo yum-config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
           sudo yum -y install gh
 
-      - name: Checkout auto updater
+      - name: Checkout Repo
         uses: actions/checkout@v4
         with:
           path: "software-map"
@@ -57,7 +57,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if [[ -n $(git status -s -uall) ]]; then
-            echo "::set-output name=CREATE_PR::true"
+            echo "CREATE_PR=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Commit changes
