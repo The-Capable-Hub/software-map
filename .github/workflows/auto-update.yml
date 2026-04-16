@@ -57,7 +57,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if [[ -n $(git status -s -uall) ]]; then
-            echo "::set-output name=CREATE_PR::true"
+            echo "CREATE_PR=true" >> $GITHUB_OUTPUT
           fi
 
       - name: Commit changes
