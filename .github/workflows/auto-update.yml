@@ -49,7 +49,7 @@ jobs:
           
           ./main.py ${GITHUB_WORKSPACE}/software-map/qemu.yaml
 
-          mv qemu.yaml.new $GITHUB_WORKSPACE/software-map/qemu.yaml
+          #mv qemu.yaml.new $GITHUB_WORKSPACE/software-map/qemu.yaml
           #touch $GITHUB_WORKSPACE/software-map/foo.yaml.new
 
       - name: Commit changes
