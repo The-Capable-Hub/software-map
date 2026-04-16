@@ -49,12 +49,25 @@ jobs:
           ./main.py ${GITHUB_WORKSPACE}/software-map/qemu.yaml
           #touch $GITHUB_WORKSPACE/software-map/foo.yaml
 
-      - name: Commit changes
+      - name: Determine if there are changes
+        id: determine_changes
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd ${GITHUB_WORKSPACE}/software-map
+          if [[ -n $(git status -s -uall) ]]; then
+            echo "::set-output name=CREATE_PR::true"
+          fi
+
+      - name: Commit changes
+        if: ${{ steps.determine_changes.outputs.CREATE_PR == 'true' }}
+        shell: bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd ${GITHUB_WORKSPACE}/software-map
+
           BRANCH_NAME="auto-updater/${{github.run_id}}_${{github.run_attempt}}"
           echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
 
@@ -70,6 +83,7 @@ jobs:
           git push --set-upstream origin ${BRANCH_NAME}
 
       - name: Create PR
+        if: ${{ steps.determine_changes.outputs.CREATE_PR == 'true' }}
         shell: bash
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
