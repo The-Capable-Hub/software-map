@@ -32,16 +32,6 @@ jobs:
           fetch-depth: 1
           path: "auto-updater"
 
-      - name: Act workaround
-        if: ${{ env.ACT }}
-        shell: bash
-        run: |
-          #mkdir /home/ubuntu/.ssh && curl --silent https://api.github.com/meta | jq --raw-output '"github.com "+.ssh_keys[]' >> /home/ubuntu/.ssh/known_hosts
-          #mkdir -p /home/ubuntu/.ssh
-          #ssh-keyscan -t ed25519 github.com >> /home/ubuntu/.ssh/known_hosts
-          #chmod 600 /home/ubuntu/.ssh/known_hosts
-          :
-
       - name: Setup Auto Updater
         shell: bash
         run: |
