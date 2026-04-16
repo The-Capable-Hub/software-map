@@ -34,8 +34,8 @@ jobs:
 
       - name: Setup Auto Updater
         shell: bash
+        working-directory: ./auto-updater
         run: |
-          cd ${GITHUB_WORKSPACE}/auto-updater
           # Create python3 venv and install requirements:
           python3 -m venv ./venv
           . ./venv/bin/activate
@@ -43,8 +43,8 @@ jobs:
 
       - name: Run Auto Updater
         shell: bash
+        working-directory: ./auto-updater
         run: |
-          cd ${GITHUB_WORKSPACE}/auto-updater
           . ./venv/bin/activate
           ./main.py ${GITHUB_WORKSPACE}/software-map/qemu.yaml
           #touch $GITHUB_WORKSPACE/software-map/foo.yaml
@@ -52,10 +52,10 @@ jobs:
       - name: Determine if there are changes
         id: determine_changes
         shell: bash
+        working-directory: ./software-map
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cd ${GITHUB_WORKSPACE}/software-map
           if [[ -n $(git status -s -uall) ]]; then
             echo "::set-output name=CREATE_PR::true"
           fi
@@ -63,11 +63,10 @@ jobs:
       - name: Commit changes
         if: ${{ steps.determine_changes.outputs.CREATE_PR == 'true' }}
         shell: bash
+        working-directory: ./software-map
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cd ${GITHUB_WORKSPACE}/software-map
-
           BRANCH_NAME="auto-updater/${{github.run_id}}_${{github.run_attempt}}"
           echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
 
@@ -85,10 +84,10 @@ jobs:
       - name: Create PR
         if: ${{ steps.determine_changes.outputs.CREATE_PR == 'true' }}
         shell: bash
+        working-directory: ./software-map
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cd ${GITHUB_WORKSPACE}/software-map
           # Create the PR
           gh pr create \
             --title "Auto update software map" \
