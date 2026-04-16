@@ -58,13 +58,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd ${GITHUB_WORKSPACE}/software-map
-          BRANCH_NAME="auto-updater/$(date +"%Y-%m-%d-%H-%m-%S")"
+          BRANCH_NAME="auto-updater/${{github.run_id}}_${{github.run_attempt}}"
           echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
 
           # set up git
           git config user.name "github-actions[bot]"
           git config user.email "example@example.com"
 
+          echo "Pushing to branch: ${BRANCH_NAME}..."
           # Create PR branch
           git checkout -b ${BRANCH_NAME}
           git add *.yaml
