@@ -6,6 +6,9 @@ on:
      - mcobb/auto-update
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   auto-update:
     runs-on: the-capable-hub-aws-ci
