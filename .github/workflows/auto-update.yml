@@ -20,7 +20,7 @@ jobs:
           sudo yum-config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
           sudo yum -y install gh
 
-      - name: Checkout auto updater
+      - name: Checkout Repo
         uses: actions/checkout@v4
         with:
           path: "software-map"
