@@ -47,10 +47,10 @@ jobs:
           cd ${GITHUB_WORKSPACE}/auto-updater
           . ./venv/bin/activate
           
-          ./main.py ${GITHUB_WORKSPACE}/software-map/qemu.yaml
+          #./main.py ${GITHUB_WORKSPACE}/software-map/qemu.yaml
 
           #mv qemu.yaml.new $GITHUB_WORKSPACE/software-map/qemu.yaml
-          #touch $GITHUB_WORKSPACE/software-map/foo.yaml.new
+          touch $GITHUB_WORKSPACE/software-map/foo.yaml
 
       - name: Commit changes
         shell: bash
