@@ -12,6 +12,7 @@ permissions:
 jobs:
   auto-update:
     runs-on: the-capable-hub-aws-ci
+    permissions: write-all
     steps:
       - name: Install Github CLI
         shell: bash
