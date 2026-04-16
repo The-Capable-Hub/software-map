@@ -62,7 +62,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "example@example.com"
 
-          echo "Pushing to branch: ${BRANCH_NAME}..."
+          echo "Pushing to branch: '${BRANCH_NAME}'..."
           # Create PR branch
           git checkout -b ${BRANCH_NAME}
           git add *.yaml
