@@ -75,7 +75,7 @@ project_versions:
 software:
   - arch: "aarch64c, riscv32c, riscv64c"
     releases:
-     - version: "HEAD"
+     - version: "HEAD TEST"
        version_date: 2026-01-08
        version_url: "https://github.com/CHERI-Alliance/qemu"
        version_repo: "https://github.com/CHERI-Alliance/qemu.git"
