@@ -75,14 +75,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "example@example.com"
 
-          ### DEBUG
-          #git remote set-url origin git@github.com:The-Capable-Hub/software-map.git
-          ## DEBUG
-
           # Create PR branch
           git checkout -b ${BRANCH_NAME}
           git add *.yaml
-          #git add *.yaml.new
           git commit -m "Auto update software map"
           git push --set-upstream origin ${BRANCH_NAME}
 
