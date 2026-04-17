@@ -36,49 +36,49 @@ buildingFromSource: |-
 
 software:
   # CHERI-Alliance / Codasip RISC-V
-  - arch: "riscv64c"
-    releases:
-     - version: "788ff7c (HEAD)"
-       version_date: 2026-01-21
-       version_url: "https://github.com/CHERI-Alliance/musl"
-       latest: true
-       upstream_version: "v1.2.4"
-       upstream_date: 2023-05-01
-       upstream_url: "https://git.musl-libc.org/cgit/musl/tag/?h=v1.2.4"
-       cheri_spec:
-        - name: CHERI RISC-V (RVY)
-          version: 0.9.3
-       images:
-         - label: "Source"
-           link: "https://github.com/CHERI-Alliance/musl"
+- arch: "riscv64c"
+  releases:
+  - version: "788ff7c (HEAD)"
+    version_date: 2026-01-21
+    version_url: "https://github.com/CHERI-Alliance/musl"
+    latest: true
+    upstream_version: "v1.2.4"
+    upstream_date: 2023-05-01
+    upstream_url: "https://git.musl-libc.org/cgit/musl/tag/?h=v1.2.4"
+    cheri_spec:
+    - name: CHERI RISC-V (RVY)
+      version: 0.9.3
+    images:
+    - label: "Source"
+      link: "https://github.com/CHERI-Alliance/musl"
 
   # Morello musl-libc
-  - arch: "aarch64c"
-    releases:
-     - version: "e379080 (HEAD)"
-       version_date: 2025-09-18
-       version_url: "https://git.morello-project.org/morello/musl-libc"
-       latest: true
-       upstream_version: "v1.2.4"
-       upstream_date: 2023-05-01
-       upstream_url: "https://git.musl-libc.org/cgit/musl/tag/?h=v1.2.4"
-       cheri_spec:
-        - name: ARM morello
-          version: A.k
-       images:
-         - label: "Source"
-           link: "https://git.morello-project.org/morello/musl-libc"
-     - version: "morello-release-1.9.0"
-       version_date: 2024-07-24
-       version_url: "https://git.morello-project.org/morello/musl-libc/-/tree/morello-release-1.9.0?ref_type=tags"
-       latest: false
-       upstream_version: "v1.2.4"
-       upstream_date: 2023-05-01
-       upstream_url: "https://git.musl-libc.org/cgit/musl/tag/?h=v1.2.4"
-       cheri_spec:
-        - name: ARM morello
-          version: A.k
-       images:
-         - label: "Source"
-           link: "https://git.morello-project.org/morello/musl-libc/-/tree/morello-release-1.9.0?ref_type=tags"
+- arch: "aarch64c"
+  releases:
+  - version: "e379080 (HEAD)"
+    version_date: 2025-09-18
+    version_url: "https://git.morello-project.org/morello/musl-libc"
+    latest: true
+    upstream_version: "v1.2.4"
+    upstream_date: 2023-05-01
+    upstream_url: "https://git.musl-libc.org/cgit/musl/tag/?h=v1.2.4"
+    cheri_spec:
+    - name: ARM morello
+      version: A.k
+    images:
+    - label: "Source"
+      link: "https://git.morello-project.org/morello/musl-libc"
+  - version: "morello-release-1.9.0"
+    version_date: 2024-07-24
+    version_url: "https://git.morello-project.org/morello/musl-libc/-/tree/morello-release-1.9.0?ref_type=tags"
+    latest: false
+    upstream_version: "v1.2.4"
+    upstream_date: 2023-05-01
+    upstream_url: "https://git.musl-libc.org/cgit/musl/tag/?h=v1.2.4"
+    cheri_spec:
+    - name: ARM morello
+      version: A.k
+    images:
+    - label: "Source"
+      link: "https://git.morello-project.org/morello/musl-libc/-/tree/morello-release-1.9.0?ref_type=tags"
 

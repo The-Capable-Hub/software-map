@@ -24,18 +24,18 @@ project_contribution:
 buildingFromSource: "Please keep an eye out for our [blog](/blog/) as we will soon share instructions for building from source."
 
 software:
-  - arch: "riscv64c"
-    releases:
-     - version: "57524f1 (codasip-cheri-riscv)"
-       version_date: 2025-02-15
-       version_url: "https://github.com/CHERI-Alliance/u-boot/commit/57524f1599083d95809c3bc4345ebfecbf31ea7e"
-       latest: true
-       upstream_version: "2024.10"
-       upstream_date: 2024-10-07
-       upstream_url: "https://github.com/u-boot/u-boot/commit/f919c3a889f0ec7d63a48b5d0ed064386b0980bd"
-       cheri_spec:
-        - name: CHERI RISC-V (RVY)
-          version: 0.9.3
-       images:
-         - label: "Source"
-           link: "https://github.com/CHERI-Alliance/u-boot/commit/57524f1599083d95809c3bc4345ebfecbf31ea7e"
+- arch: "riscv64c"
+  releases:
+  - version: "57524f1 (codasip-cheri-riscv)"
+    version_date: 2025-02-15
+    version_url: "https://github.com/CHERI-Alliance/u-boot/commit/57524f1599083d95809c3bc4345ebfecbf31ea7e"
+    latest: true
+    upstream_version: "2024.10"
+    upstream_date: 2024-10-07
+    upstream_url: "https://github.com/u-boot/u-boot/commit/f919c3a889f0ec7d63a48b5d0ed064386b0980bd"
+    cheri_spec:
+    - name: CHERI RISC-V (RVY)
+      version: 0.9.3
+    images:
+    - label: "Source"
+      link: "https://github.com/CHERI-Alliance/u-boot/commit/57524f1599083d95809c3bc4345ebfecbf31ea7e"

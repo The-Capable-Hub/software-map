@@ -26,9 +26,9 @@ project_contribution:
   chat: |-
     [Signal chat for CHERIoT](https://signal.group/#CjQKIElxAs3t3MUEMOEmQEuMHRK4rErUk2xVeFzjAjFXAShzEhCK9qQwEMFKGLGZnCjrQ7zm) for live discussions (these messages are ephemeral and will be auto-deleted)
   mailing_lists: |-
-      - [WG - rust](https://lists.cheri-alliance.org/mailman3/postorius/lists/wg-rust.cheri-alliance.org/)
+    - [WG - rust](https://lists.cheri-alliance.org/mailman3/postorius/lists/wg-rust.cheri-alliance.org/)
   meetings: |-
-      The [Rust + CHERI working group](https://cheri-alliance.org/who-we-are/working-groups/rust-cheri/) arranges a meeting every month, subscribe to their mailing list above to get updates and reminders.
+    The [Rust + CHERI working group](https://cheri-alliance.org/who-we-are/working-groups/rust-cheri/) arranges a meeting every month, subscribe to their mailing list above to get updates and reminders.
 
 buildingFromSource: |-
   For instructions on building the Morello 1.72.1 Rust project see the README.md in their [github repository](https://github.com/kent-weak-memory/rust).
@@ -38,89 +38,89 @@ buildingFromSource: |-
 
 software:
 
-  - arch: "riscv32cheriot"
-    releases:
-      - version: "2494050 (main)"
-        version_date: 2026-02-02
-        latest: true
-        version_url: "https://github.com/CHERIoT-Platform/cheri-rust/commit/249405086189a14c13d33b14ba4191e72920d36b"
-        upstream_version: "1.93.0"
-        upstream_date: 2026-01-22
-        upstream_url: "https://github.com/rust-lang/rust/releases/tag/1.93.0"
-        cheri_spec:
-          - name: CHERIoT ISA
-            version: "1.0"
-        images:
-          - label: "Source"
-            link: "https://github.com/CHERIoT-Platform/cheri-rust/commit/249405086189a14c13d33b14ba4191e72920d36b"
-        docs:
-          - label: "README"
-            link: "https://github.com/CHERIoT-Platform/cheri-rust/blob/beta/README.md"
+- arch: "riscv32cheriot"
+  releases:
+  - version: "2494050 (main)"
+    version_date: 2026-02-02
+    latest: true
+    version_url: "https://github.com/CHERIoT-Platform/cheri-rust/commit/249405086189a14c13d33b14ba4191e72920d36b"
+    upstream_version: "1.93.0"
+    upstream_date: 2026-01-22
+    upstream_url: "https://github.com/rust-lang/rust/releases/tag/1.93.0"
+    cheri_spec:
+    - name: CHERIoT ISA
+      version: "1.0"
+    images:
+    - label: "Source"
+      link: "https://github.com/CHERIoT-Platform/cheri-rust/commit/249405086189a14c13d33b14ba4191e72920d36b"
+    docs:
+    - label: "README"
+      link: "https://github.com/CHERIoT-Platform/cheri-rust/blob/beta/README.md"
 
 
-  - arch: "aarch64, aarch64c"
-    releases:
-      - version: "1.72.1-20250915-dev"
-        version_date: 2025-09-15
-        version_url: "https://github.com/kent-weak-memory/rust/tree/1.72.1-20250915-dev"
-        latest: true
-        upstream_version: "1.72.1"
-        upstream_date: 2024-08-24
-        upstream_url: "https://github.com/rust-lang/rust/releases/tag/1.72.0"
-        cheri_spec:
-        - name: ARM morello
-          version: A.k
-        images:
-          - label: "linux/x86"
-            link: "https://github.com/kent-weak-memory/rust/releases/download/1.72.1-20250915-dev/rust-build-1.72.1.tar.gz"
-          - label: "Source"
-            link: "https://github.com/kent-weak-memory/rust/commit/b3d65ccdacb171f2339284eddf3bb721108e9050"
-        docs:
-          - label: "Release Notes"
-            link: "https://github.com/kent-weak-memory/rust/releases/tag/1.72.1-20250915-dev"
+- arch: "aarch64, aarch64c"
+  releases:
+  - version: "1.72.1-20250915-dev"
+    version_date: 2025-09-15
+    version_url: "https://github.com/kent-weak-memory/rust/tree/1.72.1-20250915-dev"
+    latest: true
+    upstream_version: "1.72.1"
+    upstream_date: 2024-08-24
+    upstream_url: "https://github.com/rust-lang/rust/releases/tag/1.72.0"
+    cheri_spec:
+    - name: ARM morello
+      version: A.k
+    images:
+    - label: "linux/x86"
+      link: "https://github.com/kent-weak-memory/rust/releases/download/1.72.1-20250915-dev/rust-build-1.72.1.tar.gz"
+    - label: "Source"
+      link: "https://github.com/kent-weak-memory/rust/commit/b3d65ccdacb171f2339284eddf3bb721108e9050"
+    docs:
+    - label: "Release Notes"
+      link: "https://github.com/kent-weak-memory/rust/releases/tag/1.72.1-20250915-dev"
 
-      - version: "1.56.0-20240112-dev"
-        version_date: 2024-01-12
-        version_url: "https://github.com/kent-weak-memory/rust/releases/tag/1.56.0-20240112-dev"
-        latest: false
-        upstream_version: "1.56.0"
-        upstream_date: 2021-10-21
-        upstream_url: "https://github.com/rust-lang/rust/releases/tag/1.56.0"
-        cheri_spec:
-        - name: ARM morello
-          version: A.k
-        images:
-          - label: "linux/x86"
-            link: "https://github.com/kent-weak-memory/rust/releases/download/1.56.0-20240112-dev/rust-build-1.56.0.tar.gz"
-          - label: "Source"
-            link: "https://github.com/kent-weak-memory/rust/commit/eea0b99f48c32ed4f28a11ca8ef378f25670e630"
-        docs:
-          - label: "Release Notes"
-            link: "https://github.com/kent-weak-memory/rust/releases/tag/1.56.0-20240112-dev"
+  - version: "1.56.0-20240112-dev"
+    version_date: 2024-01-12
+    version_url: "https://github.com/kent-weak-memory/rust/releases/tag/1.56.0-20240112-dev"
+    latest: false
+    upstream_version: "1.56.0"
+    upstream_date: 2021-10-21
+    upstream_url: "https://github.com/rust-lang/rust/releases/tag/1.56.0"
+    cheri_spec:
+    - name: ARM morello
+      version: A.k
+    images:
+    - label: "linux/x86"
+      link: "https://github.com/kent-weak-memory/rust/releases/download/1.56.0-20240112-dev/rust-build-1.56.0.tar.gz"
+    - label: "Source"
+      link: "https://github.com/kent-weak-memory/rust/commit/eea0b99f48c32ed4f28a11ca8ef378f25670e630"
+    docs:
+    - label: "Release Notes"
+      link: "https://github.com/kent-weak-memory/rust/releases/tag/1.56.0-20240112-dev"
 
-      - version: "1.56.0-20230804-dev"
-        version_date: 2023-08-04
-        version_url: "https://github.com/kent-weak-memory/rust/releases/tag/1.56.0-20230804-dev"
-        latest: false
-        cheri_spec:
-        - name: ARM morello
-          version: A.k
-        upstream_version: "1.56.0"
-        upstream_date: 2021-10-21
-        upstream_url: "https://github.com/rust-lang/rust/releases/tag/1.56.0"
-        images:
-          - label: "apple/aarch64"
-            link: "https://github.com/kent-weak-memory/rust/releases/download/1.56.0-20230804-dev/cargo-1.56.0-dev-aarch64-apple-darwin.tar.gz"
-          - label: "apple/aarch64"
-            link: "https://github.com/kent-weak-memory/rust/releases/download/1.56.0-20230804-dev/rust-std-1.56.0-dev-aarch64-apple-darwin.tar.gz"
-          - label: "freebsd/aarch64c"
-            link: "https://github.com/kent-weak-memory/rust/releases/download/1.56.0-20230804-dev/rust-std-1.56.0-dev-aarch64-unknown-freebsd-purecap.tar.gz"
-          - label: "freebsd/aarch64"
-            link: "https://github.com/kent-weak-memory/rust/releases/download/1.56.0-20230804-dev/rust-std-1.56.0-dev-aarch64-unknown-freebsd.tar.gz"
-          - label: "apple/aarch64"
-            link: "https://github.com/kent-weak-memory/rust/releases/download/1.56.0-20230804-dev/rustc-1.56.0-dev-aarch64-apple-darwin.tar.gz"
-          - label: "Source"
-            link: "https://github.com/kent-weak-memory/rust/commit/42f7732ddad25a3c7095e28598bf752d0a0cbeb5"
-        docs:
-          - label: "Release Notes"
-            link: "https://github.com/kent-weak-memory/rust/releases/tag/1.56.0-20230804-dev"
+  - version: "1.56.0-20230804-dev"
+    version_date: 2023-08-04
+    version_url: "https://github.com/kent-weak-memory/rust/releases/tag/1.56.0-20230804-dev"
+    latest: false
+    cheri_spec:
+    - name: ARM morello
+      version: A.k
+    upstream_version: "1.56.0"
+    upstream_date: 2021-10-21
+    upstream_url: "https://github.com/rust-lang/rust/releases/tag/1.56.0"
+    images:
+    - label: "apple/aarch64"
+      link: "https://github.com/kent-weak-memory/rust/releases/download/1.56.0-20230804-dev/cargo-1.56.0-dev-aarch64-apple-darwin.tar.gz"
+    - label: "apple/aarch64"
+      link: "https://github.com/kent-weak-memory/rust/releases/download/1.56.0-20230804-dev/rust-std-1.56.0-dev-aarch64-apple-darwin.tar.gz"
+    - label: "freebsd/aarch64c"
+      link: "https://github.com/kent-weak-memory/rust/releases/download/1.56.0-20230804-dev/rust-std-1.56.0-dev-aarch64-unknown-freebsd-purecap.tar.gz"
+    - label: "freebsd/aarch64"
+      link: "https://github.com/kent-weak-memory/rust/releases/download/1.56.0-20230804-dev/rust-std-1.56.0-dev-aarch64-unknown-freebsd.tar.gz"
+    - label: "apple/aarch64"
+      link: "https://github.com/kent-weak-memory/rust/releases/download/1.56.0-20230804-dev/rustc-1.56.0-dev-aarch64-apple-darwin.tar.gz"
+    - label: "Source"
+      link: "https://github.com/kent-weak-memory/rust/commit/42f7732ddad25a3c7095e28598bf752d0a0cbeb5"
+    docs:
+    - label: "Release Notes"
+      link: "https://github.com/kent-weak-memory/rust/releases/tag/1.56.0-20230804-dev"

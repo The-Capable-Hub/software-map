@@ -13,7 +13,7 @@ project_summary:
     - [Zephyr](https://github.com/The-Capable-Hub/tch-containers/blob/main/zephyr) - CHERI-Zephyr SDK configured for building Zephyr applications targetting CHERI Alliance 0.9.3 spec or CTSRD ISAv9
     - [LLVM](https://github.com/The-Capable-Hub/tch-containers/blob/main/llvm) - CHERI Alliance 0.9.3 or CTSRD ISAv9 builds of the LLVM toolchain
 
-  status: |-
+  status: |2-
 
     The initial goals of the tch-containers repository are:
       - Create Dockerfiles suitable for re-use within CI environments - For time optimising CI usage
@@ -32,7 +32,7 @@ project_contribution:
   chat: |-
     Feel free to create an Issue or open a PR with any comments / changes
   mailing_lists: |-
-      - [cheri-discuss](https://www.thecapablehub.org/docs/mailinglists/) - For general CHERI related discussion
+    - [cheri-discuss](https://www.thecapablehub.org/docs/mailinglists/) - For general CHERI related discussion
   meetings: |-
     There are no regular meetings for this project.
 
@@ -40,82 +40,82 @@ buildingFromSource: "Instructions on how to build the containers yourself can be
 
 software:
 
-  - arch: "riscv64c"
-    releases:
-      - version: "cheri-zephyr:v0.2.0-riscv64c-isav9"
-        version_url: "https://github.com/The-Capable-Hub/tch-containers/tree/main/zephyr"
-        latest: true
-        cheri_spec:
-        - name: UoC RISC-V ISA
-          version: "9"
-        images:
-          - label: "Dockerhub"
-            link: "https://hub.docker.com/layers/capablehub/cheri-zephyr/v0.2.0-riscv64c-isav9/images/sha256-b59cd48faaa8e47fa8c51b364b2d53b71cac7397f83b427d46fa8a3030053589"
-        docs:
-          - label: "Docs"
-            link: "https://github.com/The-Capable-Hub/tch-containers/tree/main/zephyr"
+- arch: "riscv64c"
+  releases:
+  - version: "cheri-zephyr:v0.2.0-riscv64c-isav9"
+    version_url: "https://github.com/The-Capable-Hub/tch-containers/tree/main/zephyr"
+    latest: true
+    cheri_spec:
+    - name: UoC RISC-V ISA
+      version: "9"
+    images:
+    - label: "Dockerhub"
+      link: "https://hub.docker.com/layers/capablehub/cheri-zephyr/v0.2.0-riscv64c-isav9/images/sha256-b59cd48faaa8e47fa8c51b364b2d53b71cac7397f83b427d46fa8a3030053589"
+    docs:
+    - label: "Docs"
+      link: "https://github.com/The-Capable-Hub/tch-containers/tree/main/zephyr"
 
-      - version: "cheri-zephyr:v0.2.0-riscv64c-rvy"
-        version_url: "https://github.com/The-Capable-Hub/tch-containers/tree/main/zephyr"
-        latest: true
-        cheri_spec:
-        - name: CHERI RISC-V (RVY)
-          version: 0.9.3
-        images:
-          - label: "Dockerhub"
-            link: "https://hub.docker.com/layers/capablehub/cheri-zephyr/v0.2.0-riscv64c-rvy/images/sha256-d46d74561cc43b616ef2a2315c74eeaf322c8d0a5edf995476676fdc17a577bc"
-        docs:
-          - label: "Docs"
-            link: "https://github.com/The-Capable-Hub/tch-containers/tree/main/zephyr"
+  - version: "cheri-zephyr:v0.2.0-riscv64c-rvy"
+    version_url: "https://github.com/The-Capable-Hub/tch-containers/tree/main/zephyr"
+    latest: true
+    cheri_spec:
+    - name: CHERI RISC-V (RVY)
+      version: 0.9.3
+    images:
+    - label: "Dockerhub"
+      link: "https://hub.docker.com/layers/capablehub/cheri-zephyr/v0.2.0-riscv64c-rvy/images/sha256-d46d74561cc43b616ef2a2315c74eeaf322c8d0a5edf995476676fdc17a577bc"
+    docs:
+    - label: "Docs"
+      link: "https://github.com/The-Capable-Hub/tch-containers/tree/main/zephyr"
 
-      - version: "cheri-ctsrd-llvm:17-riscv64-latest"
-        version_url: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"
-        latest: true
-        cheri_spec:
-        - name: UoC RISC-V ISA
-          version: "9"
-        images:
-          - label: "Dockerhub"
-            link: "https://hub.docker.com/layers/capablehub/cheri-ctsrd-llvm/17-riscv64-latest/images/sha256-0c657a3d915c4311f27414370cb6bba71994ed76371c8a3f58d406ffbe060bf2"
-        docs:
-          - label: "Docs"
-            link: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"
+  - version: "cheri-ctsrd-llvm:17-riscv64-latest"
+    version_url: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"
+    latest: true
+    cheri_spec:
+    - name: UoC RISC-V ISA
+      version: "9"
+    images:
+    - label: "Dockerhub"
+      link: "https://hub.docker.com/layers/capablehub/cheri-ctsrd-llvm/17-riscv64-latest/images/sha256-0c657a3d915c4311f27414370cb6bba71994ed76371c8a3f58d406ffbe060bf2"
+    docs:
+    - label: "Docs"
+      link: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"
 
-      - version: "cheri-ca-llvm:17-riscv64-latest"
-        version_url: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"
-        latest: false
-        cheri_spec:
-        - name: CHERI RISC-V (RVY)
-          version: 0.9.3
-        images:
-          - label: "Dockerhub"
-            link: "https://hub.docker.com/layers/capablehub/cheri-ca-llvm/17-riscv64-latest/images/sha256-2f87f05a7723d2f27523c916645142bcd5732a92a07fa3f213764db34b8c4b32"
-        docs:
-          - label: "Docs"
-            link: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"
+  - version: "cheri-ca-llvm:17-riscv64-latest"
+    version_url: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"
+    latest: false
+    cheri_spec:
+    - name: CHERI RISC-V (RVY)
+      version: 0.9.3
+    images:
+    - label: "Dockerhub"
+      link: "https://hub.docker.com/layers/capablehub/cheri-ca-llvm/17-riscv64-latest/images/sha256-2f87f05a7723d2f27523c916645142bcd5732a92a07fa3f213764db34b8c4b32"
+    docs:
+    - label: "Docs"
+      link: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"
 
-      - version: "cheri-ca-llvm:18-riscv64-latest"
-        version_url: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"
-        latest: false
-        cheri_spec:
-        - name: CHERI RISC-V (RVY)
-          version: 0.9.3
-        images:
-          - label: "Dockerhub"
-            link: "https://hub.docker.com/layers/capablehub/cheri-ca-llvm/18-riscv64-latest/images/sha256-e51b4c4573ffd7411b4ab1d19021e85a025360979cc0dad6dc7bcf1cae2b3a3d"
-        docs:
-          - label: "Docs"
-            link: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"
+  - version: "cheri-ca-llvm:18-riscv64-latest"
+    version_url: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"
+    latest: false
+    cheri_spec:
+    - name: CHERI RISC-V (RVY)
+      version: 0.9.3
+    images:
+    - label: "Dockerhub"
+      link: "https://hub.docker.com/layers/capablehub/cheri-ca-llvm/18-riscv64-latest/images/sha256-e51b4c4573ffd7411b4ab1d19021e85a025360979cc0dad6dc7bcf1cae2b3a3d"
+    docs:
+    - label: "Docs"
+      link: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"
 
-      - version: "cheri-ca-llvm:19-riscv64-latest"
-        version_url: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"
-        latest: true
-        cheri_spec:
-        - name: CHERI RISC-V (RVY)
-          version: 0.9.3
-        images:
-          - label: "Dockerhub"
-            link: "https://hub.docker.com/layers/capablehub/cheri-ca-llvm/19-riscv64-latest/images/sha256-c4369574491eca6eb070d59e4bf987a2d37027c0ae01c94ffb77b324a92a4ef2"
-        docs:
-          - label: "Docs"
-            link: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"
+  - version: "cheri-ca-llvm:19-riscv64-latest"
+    version_url: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"
+    latest: true
+    cheri_spec:
+    - name: CHERI RISC-V (RVY)
+      version: 0.9.3
+    images:
+    - label: "Dockerhub"
+      link: "https://hub.docker.com/layers/capablehub/cheri-ca-llvm/19-riscv64-latest/images/sha256-c4369574491eca6eb070d59e4bf987a2d37027c0ae01c94ffb77b324a92a4ef2"
+    docs:
+    - label: "Docs"
+      link: "https://github.com/The-Capable-Hub/tch-containers/tree/main/llvm"

@@ -23,7 +23,7 @@ project_summary:
     - [CHERIoT-LLVM](https://github.com/CHERIoT-Platform/llvm-project) - Compiler toolchain targeting CHERIoT.
     - [CHERIoT-RTOS](https://github.com/CHERIoT-Platform/cheriot-rtos) - The core of the system.
 
-  status: |-
+  status: |2-
 
     The CHERIoT-RTOS is currently under active development and does not yet have versioned releases.
     Care is taken to ensure backwards source compatibility with prior git releases (in particular to ensure that examples from the print edition of the CHERIoT Programmers' Guide still work) but this is not guaranteed until 1.0 is released.
@@ -60,19 +60,19 @@ buildingFromSource: |-
 
 software:
 
-  - arch: "riscv32cheriot"
-    releases:
-      - version: "HEAD"
-        version_date: 2026-01-06
-        version_url: "https://github.com/CHERIoT-Platform/cheriot-rtos/"
-        latest: true
-        cheri_spec:
-          - name: CHERIoT ISA
-            version: "1.0"
-        images:
-          - label: "Source (incl devcontainer)"
-            link: "https://github.com/CHERIoT-Platform/cheriot-rtos/"
-        docs:
-          - label: "Getting Started"
-            link: "https://github.com/CHERIoT-Platform/cheriot-rtos/blob/main/docs/GettingStarted.md"
+- arch: "riscv32cheriot"
+  releases:
+  - version: "HEAD"
+    version_date: 2026-01-06
+    version_url: "https://github.com/CHERIoT-Platform/cheriot-rtos/"
+    latest: true
+    cheri_spec:
+    - name: CHERIoT ISA
+      version: "1.0"
+    images:
+    - label: "Source (incl devcontainer)"
+      link: "https://github.com/CHERIoT-Platform/cheriot-rtos/"
+    docs:
+    - label: "Getting Started"
+      link: "https://github.com/CHERIoT-Platform/cheriot-rtos/blob/main/docs/GettingStarted.md"
 

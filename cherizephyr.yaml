@@ -21,56 +21,56 @@ project_contribution:
 buildingFromSource: "Please see our [blog post](/blog/cheri-zephyr-getting-started/) for instructions for building from source."
 
 software:
-  - arch: "riscv64c, riscv32c"
-    releases:
-     - version: "v0.3.0"
-       version_date: 2026-02-24
-       version_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/v0.3.0-cheri-branch"
-       latest: true
-       upstream_version: "4.1.0"
-       upstream_date: 2025-05-20
-       upstream_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/commit/90a48e814b9699d34d41e42038bef0132427a5c3"
-       cheri_spec:
-        - name: CHERI RISC-V (RVY)
-          version: 0.9.3
-       images:
-         - label: "Source"
-           link: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/v0.3.0-cheri-branch"
-       docs:
-         - label: "Release Notes"
-           link: "https://github.com/CHERI-Alliance/CHERI-zephyr/releases/tag/CHERI-Zephyr-v0.3.0"
+- arch: "riscv64c, riscv32c"
+  releases:
+  - version: "v0.3.0"
+    version_date: 2026-02-24
+    version_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/v0.3.0-cheri-branch"
+    latest: true
+    upstream_version: "4.1.0"
+    upstream_date: 2025-05-20
+    upstream_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/commit/90a48e814b9699d34d41e42038bef0132427a5c3"
+    cheri_spec:
+    - name: CHERI RISC-V (RVY)
+      version: 0.9.3
+    images:
+    - label: "Source"
+      link: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/v0.3.0-cheri-branch"
+    docs:
+    - label: "Release Notes"
+      link: "https://github.com/CHERI-Alliance/CHERI-zephyr/releases/tag/CHERI-Zephyr-v0.3.0"
 
-  - arch: "riscv64c"
-    releases:
-     - version: "v0.2.0"
-       version_date: 2025-08-22
-       version_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/CHERI-Zephyr-v0.2.0"
-       latest: false
-       upstream_version: "4.1.0"
-       upstream_date: 2025-05-20
-       upstream_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/commit/90a48e814b9699d34d41e42038bef0132427a5c3"
-       cheri_spec:
-        - name: CHERI RISC-V (RVY)
-          version: 0.9.3
-       images:
-         - label: "Source"
-           link: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/CHERI-Zephyr-v0.2.0"
-       docs:
-         - label: "Release Notes"
-           link: "https://github.com/CHERI-Alliance/CHERI-zephyr/releases/tag/CHERI-Zephyr-v0.2.0"
-     - version: "v0.1.0"
-       version_date: 2024-08-22
-       version_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/CHERI-Zephyr-v0.1.0"
-       latest: false
-       upstream_version: "3.5.0"
-       upstream_date: 2023-11-07
-       upstream_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/commit/ec031029f4cab3c0fbb116f5cd63afcf59205a84"
-       cheri_spec:
-        - name: CHERI RISC-V (RVY)
-          version: 0.9.3
-       images:
-         - label: "Source"
-           link: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/CHERI-Zephyr-v0.1.0"
-       docs:
-         - label: "Release Notes"
-           link: "https://github.com/CHERI-Alliance/CHERI-zephyr/releases/tag/CHERI-Zephyr-v0.1.0"
+- arch: "riscv64c"
+  releases:
+  - version: "v0.2.0"
+    version_date: 2025-08-22
+    version_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/CHERI-Zephyr-v0.2.0"
+    latest: false
+    upstream_version: "4.1.0"
+    upstream_date: 2025-05-20
+    upstream_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/commit/90a48e814b9699d34d41e42038bef0132427a5c3"
+    cheri_spec:
+    - name: CHERI RISC-V (RVY)
+      version: 0.9.3
+    images:
+    - label: "Source"
+      link: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/CHERI-Zephyr-v0.2.0"
+    docs:
+    - label: "Release Notes"
+      link: "https://github.com/CHERI-Alliance/CHERI-zephyr/releases/tag/CHERI-Zephyr-v0.2.0"
+  - version: "v0.1.0"
+    version_date: 2024-08-22
+    version_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/CHERI-Zephyr-v0.1.0"
+    latest: false
+    upstream_version: "3.5.0"
+    upstream_date: 2023-11-07
+    upstream_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/commit/ec031029f4cab3c0fbb116f5cd63afcf59205a84"
+    cheri_spec:
+    - name: CHERI RISC-V (RVY)
+      version: 0.9.3
+    images:
+    - label: "Source"
+      link: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/CHERI-Zephyr-v0.1.0"
+    docs:
+    - label: "Release Notes"
+      link: "https://github.com/CHERI-Alliance/CHERI-zephyr/releases/tag/CHERI-Zephyr-v0.1.0"

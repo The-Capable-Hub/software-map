@@ -57,164 +57,164 @@ buildingFromSource: |-
   Instructions on building CHERIoT LLVM can be found in their [Getting Started Guide](https://github.com/CHERIoT-Platform/cheriot-rtos/blob/main/docs/GettingStarted.md#building-cheriot-llvm).
 
 software:
-  - arch: "riscv32cheriot"
-    releases:
-    - version: "6ec39b3"
-      version_date: 2026-01-22
-      version_url: "https://github.com/CHERIoT-Platform/llvm-project/commit/6ec39b37369d8810f958ef9e2cf74781aa176f72"
-      latest: true
-      upstream_version: "21.1.8"
-      upstream_date: 2025-12-16
-      upstream_url: "https://github.com/llvm/llvm-project/releases/tag/llvmorg-21.1.8"
-      cheri_spec:
-        - name: CHERIoT ISA
-          version: "1.0"
-      images:
-        - label: "Source"
-          link: "https://github.com/CHERIoT-Platform/llvm-project"
-  - arch: "riscv64c"
-    releases:
-     - version: "a2ac247 (codasip-cheri-riscv-19)"
-       version_date: 2025-12-03
-       latest: true
-       version_url: "https://github.com/CHERI-Alliance/llvm-project/commit/a2ac247413e163c49d60b8a111a67b65351b2510"
-       upstream_version: "19"
-       upstream_date: 2024-07-23
-       upstream_url: "https://github.com/llvm/llvm-project/commit/8f701b5df0adb3a2960d78ca2ad9cf53f39ba2fe"
-       cheri_spec:
-        - name: CHERI RISC-V (RVY)
-          version: 0.9.3
-       images:
-         - label: "Source"
-           link: "https://github.com/CHERI-Alliance/llvm-project/tree/a2ac247413e163c49d60b8a111a67b65351b2510"
-     - version: "74d200f (master)"
-       version_date: 2025-10-20
-       latest: true
-       version_url: "https://github.com/CTSRD-CHERI/llvm-project/commit/74d200f2bb65b06633ca87f86b1b9145ebf63a46"
-       upstream_version: "17"
-       upstream_date: 2023-07-25
-       upstream_url: "https://github.com/llvm/llvm-project/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
-       cheri_spec:
-        - name: UoC RISC-V ISA
-          version: "9"
-       images:
-         - label: "Source"
-           link: "https://github.com/CTSRD-CHERI/llvm-project/tree/74d200f2bb65b06633ca87f86b1b9145ebf63a46"
+- arch: "riscv32cheriot"
+  releases:
+  - version: "6ec39b3"
+    version_date: 2026-01-22
+    version_url: "https://github.com/CHERIoT-Platform/llvm-project/commit/6ec39b37369d8810f958ef9e2cf74781aa176f72"
+    latest: true
+    upstream_version: "21.1.8"
+    upstream_date: 2025-12-16
+    upstream_url: "https://github.com/llvm/llvm-project/releases/tag/llvmorg-21.1.8"
+    cheri_spec:
+    - name: CHERIoT ISA
+      version: "1.0"
+    images:
+    - label: "Source"
+      link: "https://github.com/CHERIoT-Platform/llvm-project"
+- arch: "riscv64c"
+  releases:
+  - version: "a2ac247 (codasip-cheri-riscv-19)"
+    version_date: 2025-12-03
+    latest: true
+    version_url: "https://github.com/CHERI-Alliance/llvm-project/commit/a2ac247413e163c49d60b8a111a67b65351b2510"
+    upstream_version: "19"
+    upstream_date: 2024-07-23
+    upstream_url: "https://github.com/llvm/llvm-project/commit/8f701b5df0adb3a2960d78ca2ad9cf53f39ba2fe"
+    cheri_spec:
+    - name: CHERI RISC-V (RVY)
+      version: 0.9.3
+    images:
+    - label: "Source"
+      link: "https://github.com/CHERI-Alliance/llvm-project/tree/a2ac247413e163c49d60b8a111a67b65351b2510"
+  - version: "74d200f (master)"
+    version_date: 2025-10-20
+    latest: true
+    version_url: "https://github.com/CTSRD-CHERI/llvm-project/commit/74d200f2bb65b06633ca87f86b1b9145ebf63a46"
+    upstream_version: "17"
+    upstream_date: 2023-07-25
+    upstream_url: "https://github.com/llvm/llvm-project/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
+    cheri_spec:
+    - name: UoC RISC-V ISA
+      version: "9"
+    images:
+    - label: "Source"
+      link: "https://github.com/CTSRD-CHERI/llvm-project/tree/74d200f2bb65b06633ca87f86b1b9145ebf63a46"
 
   # Older Releases
-  - arch: "aarch64c"
-    releases:
-     - version: "morello/dev"
-       version_date: 2025-05-19
-       version_url: "https://git.morello-project.org/morello/llvm-project/-/commit/d8be2b0ab199c07b6bd3eb38a5b2ca5bc9cc62e5"
-       latest: false
-       upstream_version: "17"
-       upstream_date: 2024-10-26
-       upstream_url: "https://github.com/llvm/llvm-project.git/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
-       cheri_spec:
-        - name: "ARM Morello"
-          version: A.k
-       images:
-         - label: "Source"
-           link: "https://git.morello-project.org/morello/llvm-project/tree/morello/dev"
+- arch: "aarch64c"
+  releases:
+  - version: "morello/dev"
+    version_date: 2025-05-19
+    version_url: "https://git.morello-project.org/morello/llvm-project/-/commit/d8be2b0ab199c07b6bd3eb38a5b2ca5bc9cc62e5"
+    latest: false
+    upstream_version: "17"
+    upstream_date: 2024-10-26
+    upstream_url: "https://github.com/llvm/llvm-project.git/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
+    cheri_spec:
+    - name: "ARM Morello"
+      version: A.k
+    images:
+    - label: "Source"
+      link: "https://git.morello-project.org/morello/llvm-project/tree/morello/dev"
 
-     - version: "morello/linux-release-1.9"
-       version_date: 2025-01-21
-       version_url: "https://git.morello-project.org/morello/llvm-project-releases/-/tree/morello/linux-release-1.9"
-       latest: false
-       upstream_version: "15"
-       upstream_date: 2022-07-26
-       upstream_url: "https://github.com/llvm/llvm-project.git/commit/1f8ae9d7e7e4afcc4e76728b28e64941660ca3eb"
-       cheri_spec:
-        - name: "ARM Morello"
-          version: A.k
-       images:
-         - label: "linux/aarch64c"
-           link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/linux-aarch64-release-1.9/llvm-project-releases-morello-linux-aarch64-release-1.9.tar.gz"
-         - label: "linux/x86"
-           link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/linux-release-1.9/llvm-project-releases-morello-linux-release-1.9.tar.gz"
-       docs:
-         - label: "Release Notes"
-           link: "https://git.morello-project.org/morello/llvm-project-releases"
-         - label: "Source"
-           link: "https://git.morello-project.org/morello/llvm-project/-/tree/morello/release-1.9"
+  - version: "morello/linux-release-1.9"
+    version_date: 2025-01-21
+    version_url: "https://git.morello-project.org/morello/llvm-project-releases/-/tree/morello/linux-release-1.9"
+    latest: false
+    upstream_version: "15"
+    upstream_date: 2022-07-26
+    upstream_url: "https://github.com/llvm/llvm-project.git/commit/1f8ae9d7e7e4afcc4e76728b28e64941660ca3eb"
+    cheri_spec:
+    - name: "ARM Morello"
+      version: A.k
+    images:
+    - label: "linux/aarch64c"
+      link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/linux-aarch64-release-1.9/llvm-project-releases-morello-linux-aarch64-release-1.9.tar.gz"
+    - label: "linux/x86"
+      link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/linux-release-1.9/llvm-project-releases-morello-linux-release-1.9.tar.gz"
+    docs:
+    - label: "Release Notes"
+      link: "https://git.morello-project.org/morello/llvm-project-releases"
+    - label: "Source"
+      link: "https://git.morello-project.org/morello/llvm-project/-/tree/morello/release-1.9"
 
-     - version: "morello/linux-release-1.8"
-       version_date: 2024-02-20
-       version_url: "https://git.morello-project.org/morello/llvm-project-releases/-/tree/morello/linux-release-1.8"
-       latest: false
-       upstream_version: "15"
-       upstream_date: 2022-07-26
-       upstream_url: "https://github.com/llvm/llvm-project.git/commit/1f8ae9d7e7e4afcc4e76728b28e64941660ca3eb"
-       cheri_spec:
-        - name: ARM morello
-          version: A.k
-       images:
-         - label: "linux/aarch64c"
-           link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/linux-aarch64-release-1.8/llvm-project-releases-morello-linux-aarch64-release-1.8.tar.gz"
-         - label: "linux/x86"
-           link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/linux-release-1.8/llvm-project-releases-morello-linux-release-1.8.tar.gz"
-         - label: "baremetal/x86"
-           link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/baremetal-release-1.8/llvm-project-releases-morello-baremetal-release-1.8.tar.gz"
-       docs:
-         - label: "Release Notes"
-           link: "https://git.morello-project.org/morello/llvm-project-releases"
-         - label: "Source"
-           link: "https://git.morello-project.org/morello/llvm-project/-/tree/morello/release-1.8"
+  - version: "morello/linux-release-1.8"
+    version_date: 2024-02-20
+    version_url: "https://git.morello-project.org/morello/llvm-project-releases/-/tree/morello/linux-release-1.8"
+    latest: false
+    upstream_version: "15"
+    upstream_date: 2022-07-26
+    upstream_url: "https://github.com/llvm/llvm-project.git/commit/1f8ae9d7e7e4afcc4e76728b28e64941660ca3eb"
+    cheri_spec:
+    - name: ARM morello
+      version: A.k
+    images:
+    - label: "linux/aarch64c"
+      link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/linux-aarch64-release-1.8/llvm-project-releases-morello-linux-aarch64-release-1.8.tar.gz"
+    - label: "linux/x86"
+      link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/linux-release-1.8/llvm-project-releases-morello-linux-release-1.8.tar.gz"
+    - label: "baremetal/x86"
+      link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/baremetal-release-1.8/llvm-project-releases-morello-baremetal-release-1.8.tar.gz"
+    docs:
+    - label: "Release Notes"
+      link: "https://git.morello-project.org/morello/llvm-project-releases"
+    - label: "Source"
+      link: "https://git.morello-project.org/morello/llvm-project/-/tree/morello/release-1.8"
 
-  - arch: "aarch64c"
-    releases:
-     - version: "morello/linux-release-1.6"
-       version_date: 2024-02-20
-       version_url: "https://git.morello-project.org/morello/llvm-project-releases/-/tree/morello/linux-release-1.8"
-       latest: false
-       upstream_version: "15"
-       upstream_date: 2022-07-26
-       upstream_url: "https://github.com/llvm/llvm-project.git/commit/1f8ae9d7e7e4afcc4e76728b28e64941660ca3eb"
-       cheri_spec:
-        - name: ARM morello
-          version: A.k
-       images:
-         - label: "linux/aarch64c"
-           link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/linux-aarch64-release-1.6/llvm-project-releases-morello-linux-aarch64-release-1.6.tar.gz"
-         - label: "linux/x86"
-           link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/linux-release-1.6/llvm-project-releases-morello-linux-release-1.6.tar.gz"
-         - label: "baremetal/x86"
-           link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/baremetal-release-1.6/llvm-project-releases-morello-baremetal-release-1.6.tar.gz"
-         - label: "android/x86"
-           link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/android-release-1.6/llvm-project-releases-morello-android-release-1.6.tar.gz"
-       docs:
-         - label: "Release Notes"
-           link: "https://git.morello-project.org/morello/llvm-project-releases"
-         - label: "Source"
-           link: "https://git.morello-project.org/morello/llvm-project/-/tree/morello/release-1.6"
+- arch: "aarch64c"
+  releases:
+  - version: "morello/linux-release-1.6"
+    version_date: 2024-02-20
+    version_url: "https://git.morello-project.org/morello/llvm-project-releases/-/tree/morello/linux-release-1.8"
+    latest: false
+    upstream_version: "15"
+    upstream_date: 2022-07-26
+    upstream_url: "https://github.com/llvm/llvm-project.git/commit/1f8ae9d7e7e4afcc4e76728b28e64941660ca3eb"
+    cheri_spec:
+    - name: ARM morello
+      version: A.k
+    images:
+    - label: "linux/aarch64c"
+      link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/linux-aarch64-release-1.6/llvm-project-releases-morello-linux-aarch64-release-1.6.tar.gz"
+    - label: "linux/x86"
+      link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/linux-release-1.6/llvm-project-releases-morello-linux-release-1.6.tar.gz"
+    - label: "baremetal/x86"
+      link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/baremetal-release-1.6/llvm-project-releases-morello-baremetal-release-1.6.tar.gz"
+    - label: "android/x86"
+      link: "https://git.morello-project.org/morello/llvm-project-releases/-/archive/morello/android-release-1.6/llvm-project-releases-morello-android-release-1.6.tar.gz"
+    docs:
+    - label: "Release Notes"
+      link: "https://git.morello-project.org/morello/llvm-project-releases"
+    - label: "Source"
+      link: "https://git.morello-project.org/morello/llvm-project/-/tree/morello/release-1.6"
 
-  - arch: "riscv64c"
-    releases:
-      - version: "678272e (codasip-cheri-riscv)"
-        version_date: 2025-11-19
-        latest: false
-        version_url: "https://github.com/CHERI-Alliance/llvm-project/commit/678272e8548fa3f021e591854d062d694086bf83"
-        upstream_version: "17"
-        upstream_date: 2023-07-25
-        upstream_url: "https://github.com/llvm/llvm-project/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
-        cheri_spec:
-        - name: CHERI RISC-V (RVY)
-          version: 0.9.3
-        images:
-          - label: "Source"
-            link: "https://github.com/CHERI-Alliance/llvm-project/tree/678272e8548fa3f021e591854d062d694086bf83"
+- arch: "riscv64c"
+  releases:
+  - version: "678272e (codasip-cheri-riscv)"
+    version_date: 2025-11-19
+    latest: false
+    version_url: "https://github.com/CHERI-Alliance/llvm-project/commit/678272e8548fa3f021e591854d062d694086bf83"
+    upstream_version: "17"
+    upstream_date: 2023-07-25
+    upstream_url: "https://github.com/llvm/llvm-project/commit/d0b54bb50e5110a004b41fc06dadf3fee70834b7"
+    cheri_spec:
+    - name: CHERI RISC-V (RVY)
+      version: 0.9.3
+    images:
+    - label: "Source"
+      link: "https://github.com/CHERI-Alliance/llvm-project/tree/678272e8548fa3f021e591854d062d694086bf83"
 
-      - version: "7ca5cdc (codasip-cheri-riscv-18)"
-        version_date: 2025-12-03
-        latest: false
-        version_url: "https://github.com/CHERI-Alliance/llvm-project/commit/7ca5cdc690a7c41d3c45c53971a766812e730136"
-        upstream_version: "18"
-        upstream_date: 2024-01-24
-        upstream_url: "https://github.com/llvm/llvm-project/commit/93248729cfae82a5ca2323d4a8e15aa3b9b9c707"
-        cheri_spec:
-        - name: CHERI RISC-V (RVY)
-          version: 0.9.3
-        images:
-          - label: "Source"
-            link: "https://github.com/CHERI-Alliance/llvm-project/tree/7ca5cdc690a7c41d3c45c53971a766812e730136"
+  - version: "7ca5cdc (codasip-cheri-riscv-18)"
+    version_date: 2025-12-03
+    latest: false
+    version_url: "https://github.com/CHERI-Alliance/llvm-project/commit/7ca5cdc690a7c41d3c45c53971a766812e730136"
+    upstream_version: "18"
+    upstream_date: 2024-01-24
+    upstream_url: "https://github.com/llvm/llvm-project/commit/93248729cfae82a5ca2323d4a8e15aa3b9b9c707"
+    cheri_spec:
+    - name: CHERI RISC-V (RVY)
+      version: 0.9.3
+    images:
+    - label: "Source"
+      link: "https://github.com/CHERI-Alliance/llvm-project/tree/7ca5cdc690a7c41d3c45c53971a766812e730136"

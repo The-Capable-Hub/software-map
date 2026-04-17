@@ -28,47 +28,47 @@ buildingFromSource: |-
 
 software:
 
-  - arch: "bare-metal/aarch64c, linux/aarch64c"
-    releases:
-      - version: "10.1.Morello-Alp2_Linux"
-        version_date: 2022-11-30
-        version_url: "https://developer.arm.com/Tools%20and%20Software/Morello%20Development%20Tools#Downloads"
-        latest: true
-        upstream_version: "10.1.0"
-        upstream_date: 2020-05-07
-        upstream_url: "https://gcc.gnu.org/git/?p=gcc.git;a=tag;h=refs/tags/releases/gcc-10.1.0"
-        cheri_spec:
-          - name: ARM Morello
-            version: A.k
-        images:
-          - label: "bare-metal (aarch64 host)"
-            link: "https://developer.arm.com/-/cdn-downloads/permalink/Arm-GNU-Toolchain-Morello/10.1.Morello-Alp2_Linux/arm-gnu-toolchain-10.1.morello-alp2-aarch64-aarch64-none-elf.tar.xz"
-          - label: "linux (aarch64 host)"
-            link: "https://developer.arm.com/-/cdn-downloads/permalink/Arm-GNU-Toolchain-Morello/10.1.Morello-Alp2_Linux/arm-gnu-toolchain-10.1.morello-alp2-aarch64-aarch64-none-linux-gnu.tar.xz"
-          - label: "bare-metal (x86_64 host)"
-            link: "https://developer.arm.com/-/cdn-downloads/permalink/Arm-GNU-Toolchain-Morello/10.1.Morello-Alp2_Linux/arm-gnu-toolchain-10.1.morello-alp2-x86_64-aarch64-none-elf.tar.xz"
-          - label: "linux (x86_64 host)"
-            link: "https://developer.arm.com/-/cdn-downloads/permalink/Arm-GNU-Toolchain-Morello/10.1.Morello-Alp2_Linux/arm-gnu-toolchain-10.1.morello-alp2-x86_64-aarch64-none-linux-gnu.tar.xz"
-        docs:
-          - label: "Release Notes"
-            link: "https://developer.arm.com/documentation/109399/10-1-Morello-Alp2-2022_11/"
-  - arch: "bare-metal/aarch64c"
-    releases:
-      - version: "10.1.Morello-Alp1_Linux"
-        version_date: 2022-06-13
-        version_url: "https://developer.arm.com/Tools%20and%20Software/Morello%20Development%20Tools#Downloads"
-        latest: false
-        upstream_version: "10.1.0"
-        upstream_date: 2020-05-07
-        upstream_url: "https://gcc.gnu.org/git/?p=gcc.git;a=tag;h=refs/tags/releases/gcc-10.1.0"
-        cheri_spec:
-          - name: ARM Morello
-            version: A.k
-        images:
-          - label: "bare-metal (aarch64 host)"
-            link: "https://developer.arm.com/-/cdn-downloads/permalink/Arm-GNU-Toolchain-Morello/10.1.Morello-Alp1_Linux/arm-gnu-toolchain-10.1.Morello-Alp1-aarch64-aarch64-none-elf.tar.xz"
-          - label: "bare-metal (x86_64 host)"
-            link: "https://developer.arm.com/-/cdn-downloads/permalink/Arm-GNU-Toolchain-Morello/10.1.Morello-Alp1_Linux/arm-gnu-toolchain-10.1.Morello-Alp1-x86_64-aarch64-none-elf.tar.xz"
-        docs:
-          - label: "Release Notes"
-            link: "https://developer.arm.com/documentation/109399/10-1-Morello-Alp2-2022_11/"
+- arch: "bare-metal/aarch64c, linux/aarch64c"
+  releases:
+  - version: "10.1.Morello-Alp2_Linux"
+    version_date: 2022-11-30
+    version_url: "https://developer.arm.com/Tools%20and%20Software/Morello%20Development%20Tools#Downloads"
+    latest: true
+    upstream_version: "10.1.0"
+    upstream_date: 2020-05-07
+    upstream_url: "https://gcc.gnu.org/git/?p=gcc.git;a=tag;h=refs/tags/releases/gcc-10.1.0"
+    cheri_spec:
+    - name: ARM Morello
+      version: A.k
+    images:
+    - label: "bare-metal (aarch64 host)"
+      link: "https://developer.arm.com/-/cdn-downloads/permalink/Arm-GNU-Toolchain-Morello/10.1.Morello-Alp2_Linux/arm-gnu-toolchain-10.1.morello-alp2-aarch64-aarch64-none-elf.tar.xz"
+    - label: "linux (aarch64 host)"
+      link: "https://developer.arm.com/-/cdn-downloads/permalink/Arm-GNU-Toolchain-Morello/10.1.Morello-Alp2_Linux/arm-gnu-toolchain-10.1.morello-alp2-aarch64-aarch64-none-linux-gnu.tar.xz"
+    - label: "bare-metal (x86_64 host)"
+      link: "https://developer.arm.com/-/cdn-downloads/permalink/Arm-GNU-Toolchain-Morello/10.1.Morello-Alp2_Linux/arm-gnu-toolchain-10.1.morello-alp2-x86_64-aarch64-none-elf.tar.xz"
+    - label: "linux (x86_64 host)"
+      link: "https://developer.arm.com/-/cdn-downloads/permalink/Arm-GNU-Toolchain-Morello/10.1.Morello-Alp2_Linux/arm-gnu-toolchain-10.1.morello-alp2-x86_64-aarch64-none-linux-gnu.tar.xz"
+    docs:
+    - label: "Release Notes"
+      link: "https://developer.arm.com/documentation/109399/10-1-Morello-Alp2-2022_11/"
+- arch: "bare-metal/aarch64c"
+  releases:
+  - version: "10.1.Morello-Alp1_Linux"
+    version_date: 2022-06-13
+    version_url: "https://developer.arm.com/Tools%20and%20Software/Morello%20Development%20Tools#Downloads"
+    latest: false
+    upstream_version: "10.1.0"
+    upstream_date: 2020-05-07
+    upstream_url: "https://gcc.gnu.org/git/?p=gcc.git;a=tag;h=refs/tags/releases/gcc-10.1.0"
+    cheri_spec:
+    - name: ARM Morello
+      version: A.k
+    images:
+    - label: "bare-metal (aarch64 host)"
+      link: "https://developer.arm.com/-/cdn-downloads/permalink/Arm-GNU-Toolchain-Morello/10.1.Morello-Alp1_Linux/arm-gnu-toolchain-10.1.Morello-Alp1-aarch64-aarch64-none-elf.tar.xz"
+    - label: "bare-metal (x86_64 host)"
+      link: "https://developer.arm.com/-/cdn-downloads/permalink/Arm-GNU-Toolchain-Morello/10.1.Morello-Alp1_Linux/arm-gnu-toolchain-10.1.Morello-Alp1-x86_64-aarch64-none-elf.tar.xz"
+    docs:
+    - label: "Release Notes"
+      link: "https://developer.arm.com/documentation/109399/10-1-Morello-Alp2-2022_11/"
