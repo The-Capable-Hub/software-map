@@ -59,12 +59,14 @@ buildingFromSource: |-
   Their [Getting Started guide](https://github.com/CHERIoT-Platform/cheriot-rtos/blob/main/docs/GettingStarted.md) covers setting this up, as well as building dependencies from source.
 
 software:
-
 - arch: "riscv32cheriot"
   releases:
   - version: "HEAD"
     version_date: 2026-01-06
     version_url: "https://github.com/CHERIoT-Platform/cheriot-rtos/"
+    version_repo: "https://github.com/CHERIoT-Platform/cheriot-rtos.git"
+    version_branch: "main"
+    version_hash: "fcb1e9b85e12edb919667f297a830f1627de5152"
     latest: true
     cheri_spec:
     - name: CHERIoT ISA

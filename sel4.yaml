@@ -31,10 +31,16 @@ software:
   - version: "9d115ee"
     version_date: 2025-01-21
     version_url: "https://github.com/CHERI-Alliance/CHERI-seL4/commit/9d115ee9b6da2ebe949efeae4f1dd347166d0743"
+    version_repo: "https://github.com/CHERI-Alliance/CHERI-seL4.git"
+    version_branch: "cheri-microkit"
+    version_hash: "9d115ee9b6da2ebe949efeae4f1dd347166d0743"
     latest: true
     upstream_version: "v13.0.0-dev"
     upstream_date: 2025-05-24
     upstream_url: "https://github.com/seL4/seL4/commit/3aafe9e0b9527794c547d12090117e1000302da0"
+    upstream_repo: "https://github.com/seL4/seL4.git"
+    upstream_branch: "microkit"
+    upstream_hash: "3aafe9e0b9527794c547d12090117e1000302da0"
     cheri_spec:
     - name: CHERI RISC-V (RVY)
       version: 0.9.3
@@ -53,10 +59,16 @@ software:
   - version: "b3ed50e"
     version_date: 2025-07-29
     version_url: "https://github.com/CHERI-Alliance/CHERI-seL4/tree/b3ed50ed457be1c950fd3753fe2ad74aa60d55ca"
+    version_repo: "https://github.com/CHERI-Alliance/CHERI-seL4.git"
+    version_branch: "cheri-microkit"
+    version_hash: "b3ed50ed457be1c950fd3753fe2ad74aa60d55ca"
     latest: false
     upstream_version: "v13.0.0-dev"
     upstream_date: 2025-05-24
     upstream_url: "https://github.com/seL4/seL4/commit/3aafe9e0b9527794c547d12090117e1000302da0"
+    upstream_repo: "https://github.com/seL4/seL4.git"
+    upstream_branch: "microkit"
+    upstream_hash: "3aafe9e0b9527794c547d12090117e1000302da0"
     cheri_spec:
     - name: CHERI RISC-V (RVY)
       version: 0.9.3

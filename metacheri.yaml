@@ -32,6 +32,9 @@ software:
   - version: "c81a323"
     version_date: 2025-02-03
     version_url: "https://github.com/CHERI-Alliance/meta-cheri/commit/c81a323888357acc1ee244fbf8f23df4b1c1288b"
+    version_repo: "https://github.com/CHERI-Alliance/meta-cheri.git"
+    version_branch: "codasip-scarthgap"
+    version_hash: "c81a323888357acc1ee244fbf8f23df4b1c1288b"
     latest: true
     cheri_spec:
     - name: CHERI RISC-V (RVY)

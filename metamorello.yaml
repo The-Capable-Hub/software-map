@@ -33,6 +33,9 @@ software:
   - version: "2.0"
     version_date: 2026-03-23
     version_url: "https://github.com/The-Capable-Hub/meta-morello/releases/tag/v2.0"
+    version_repo: "https://github.com/The-Capable-Hub/meta-morello.git"
+    version_branch: "scarthgap"
+    version_hash: "5aeb29176e96e6c9726bf2cd23a6049bf88e804e"
     latest: true
     upstream_version: "5.0.16 Scarthgap LTS"
     upstream_date: 2026-02-16
@@ -48,6 +51,9 @@ software:
   - version: "1.9"
     version_date: 2025-12-30
     version_url: "https://github.com/The-Capable-Hub/meta-morello/tree/morello-release-1.9"
+    version_repo: "https://github.com/The-Capable-Hub/meta-morello.git"
+    version_branch: "morello-release-1.9"
+    version_hash: "3c04a2e22a7c3074de56e213b5abd757958967eb"
     upstream_version: "4.0.32 Kikrstone LTS"
     upstream_date: 2025-12-24
     upstream_url: "https://downloads.yoctoproject.org/releases/yocto/yocto-4.0.32/poky-2c05660b21c7cc1082aeac8b75d8a2d82e249f63.tar.bz2"

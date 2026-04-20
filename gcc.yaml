@@ -27,12 +27,12 @@ buildingFromSource: |-
   Instructions on building gcc from source can be found in the [Morello GNU toolchain docs](https://sdk.morello-project.org/docs/gnu/) as well as the Release Notes for each release.
 
 software:
-
 - arch: "bare-metal/aarch64c, linux/aarch64c"
   releases:
   - version: "10.1.Morello-Alp2_Linux"
     version_date: 2022-11-30
     version_url: "https://developer.arm.com/Tools%20and%20Software/Morello%20Development%20Tools#Downloads"
+
     latest: true
     upstream_version: "10.1.0"
     upstream_date: 2020-05-07

@@ -26,10 +26,16 @@ software:
   - version: "v0.3.0"
     version_date: 2026-02-24
     version_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/tree/v0.3.0-cheri-branch"
+    version_repo: "https://github.com/CHERI-Alliance/CHERI-zephyr.git"
+    version_branch: "v0.3.0-cheri-branch"
+    version_hash: "e3e6e5f89da1ee25850063fd3ccf192106320e8b"
     latest: true
     upstream_version: "4.1.0"
     upstream_date: 2025-05-20
     upstream_url: "https://github.com/CHERI-Alliance/CHERI-zephyr/commit/90a48e814b9699d34d41e42038bef0132427a5c3"
+    upstream_repo: "https://github.com/zephyrproject-rtos/zephyr.git"
+    upstream_branch: "main"
+    upstream_hash: "90a48e814b9699d34d41e42038bef0132427a5c3"
     cheri_spec:
     - name: CHERI RISC-V (RVY)
       version: 0.9.3

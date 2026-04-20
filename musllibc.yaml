@@ -41,10 +41,16 @@ software:
   - version: "788ff7c (HEAD)"
     version_date: 2026-01-21
     version_url: "https://github.com/CHERI-Alliance/musl"
+    version_repo: "https://github.com/CHERI-Alliance/musl.git"
+    version_branch: "codasip-cheri-riscv"
+    version_hash: "788ff7c7cdaf57cd9abba7a3cfb9f7e8b9417dec"
     latest: true
     upstream_version: "v1.2.4"
     upstream_date: 2023-05-01
     upstream_url: "https://git.musl-libc.org/cgit/musl/tag/?h=v1.2.4"
+    upstream_repo: "https://git.musl-libc.org/cgit/musl"
+    upstream_branch: "master"
+    upstream_hash: "f5f55d6589940fd2c2188d76686efe3a530e64e0"
     cheri_spec:
     - name: CHERI RISC-V (RVY)
       version: 0.9.3
@@ -58,10 +64,16 @@ software:
   - version: "e379080 (HEAD)"
     version_date: 2025-09-18
     version_url: "https://git.morello-project.org/morello/musl-libc"
+    version_repo: "https://git.morello-project.org/morello/musl-libc.git"
+    version_branch: "morello/master"
+    version_hash: "35dd559acf3435c200a5fb2938a8045d5644ed33"
     latest: true
     upstream_version: "v1.2.4"
     upstream_date: 2023-05-01
     upstream_url: "https://git.musl-libc.org/cgit/musl/tag/?h=v1.2.4"
+    upstream_repo: "https://git.musl-libc.org/cgit/musl"
+    upstream_branch: "master"
+    upstream_hash: "f5f55d6589940fd2c2188d76686efe3a530e64e0"
     cheri_spec:
     - name: ARM morello
       version: A.k

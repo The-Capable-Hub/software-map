@@ -43,9 +43,15 @@ software:
   - version: "codasip-cheri-riscv"
     version_date: 2026-01-26
     latest: true
+    version_repo: "https://github.com/CHERI-Alliance/linux.git"
+    version_branch: "codasip-cheri-riscv-6.18"
+    version_hash: "e6dd64e983ab4e7ad97109ecb97bc96ad210e7a0"
     version_url: "https://github.com/CHERI-Alliance/linux/tree/codasip-cheri-riscv-6.18"
     upstream_version: "6.18"
     upstream_date: 2025-11-30
+    upstream_repo: "https://github.com/torvalds/linux.git"
+    upstream_hash: "7d0a66e4bb9081d75c82ec4957c50034cb0ea449"
+    upstream_branch: "master"
     upstream_url: "https://github.com/torvalds/linux/commit/7d0a66e4bb9081d75c82ec4957c50034cb0ea449"
     cheri_spec:
     - name: CHERI RISC-V (RVY)
@@ -64,10 +70,16 @@ software:
   releases:
   - version: "morello/master"
     version_date: 2025-10-22
+    version_repo: "https://git.morello-project.org/morello/kernel/linux.git"
+    version_branch: "morello/master"
+    version_hash: "5c1e26bca388372ca365e3e01ad32a930c4c92fa"
     version_url: "https://git.morello-project.org/morello/kernel/linux"
     latest: true
     upstream_version: "6.7"
     upstream_date: 2024-01-07
+    upstream_repo: "https://github.com/torvalds/linux.git"
+    upstream_branch: "master"
+    upstream_hash: "0dd3ee31125508cd67f7e7172247f05b7fd1753a"
     upstream_url: "https://github.com/torvalds/linux/commit/0dd3ee31125508cd67f7e7172247f05b7fd1753a"
     cheri_spec:
     - name: "ARM Morello"
@@ -83,10 +95,16 @@ software:
   # Morello Last release
   - version: "morello/linux-release-1.8.1"
     version_date: 2024-04-26
+    version_repo: "https://git.morello-project.org/morello/kernel/linux.git"
+    version_branch: "morello-linux-release-1.8.1"
+    version_hash: ""
     version_url: "https://git.morello-project.org/morello/kernel/linux/-/commits/morello-release-1.8.1?ref_type=tags"
     latest: false
     upstream_version: "6.7"
     upstream_date: 2024-01-07
+    upstream_repo: "https://github.com/torvalds/linux.git"
+    upstream_branch: "master"
+    upstream_hash: "0dd3ee31125508cd67f7e7172247f05b7fd1753a"
     upstream_url: "https://github.com/torvalds/linux/commit/0dd3ee31125508cd67f7e7172247f05b7fd1753a"
     cheri_spec:
     - name: "ARM Morello"
