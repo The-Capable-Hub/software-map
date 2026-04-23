@@ -25,16 +25,16 @@ buildingFromSource: "Please keep an eye out for our [blog](/blog/) as we will so
 
 project_versions:
   version_methods:
-    - method: "latest_matching_tag"
-      version_type: "semantic"
-      args:
-        - "^refs/tags/v(?P<major>\\d+)\\.(?P<minor>\\d+)(\\.(?P<patch>\\d+))?"
-    - method: "match_file"
-      version_type: "semantic"
-      args:
-        - "include/sbi/sbi_version.h"
-        - - "^#define OPENSBI_VERSION_MAJOR (?P<major>\\d+)"
-          - "^#define OPENSBI_VERSION_MINOR (?P<minor>\\d+)"
+  - method: "latest_matching_tag"
+    version_type: "semantic"
+    args:
+    - "^refs/tags/v(?P<major>\\d+)\\.(?P<minor>\\d+)(\\.(?P<patch>\\d+))?"
+  - method: "match_file"
+    version_type: "semantic"
+    args:
+    - "include/sbi/sbi_version.h"
+    - - "^#define OPENSBI_VERSION_MAJOR (?P<major>\\d+)"
+      - "^#define OPENSBI_VERSION_MINOR (?P<minor>\\d+)"
 
 software:
 - arch: "riscv64c"
