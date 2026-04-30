@@ -41,19 +41,19 @@ project_versions:
 software:
 - arch: "riscv64c"
   releases:
-  - version: "57524f1 (codasip-cheri-riscv)"
-    version_date: 2025-02-15
+  - version: "57524f1"
+    version_date: '2025-02-15'
     version_url: "https://github.com/CHERI-Alliance/u-boot/commit/57524f1599083d95809c3bc4345ebfecbf31ea7e"
     version_repo: "https://github.com/CHERI-Alliance/u-boot.git"
-    version_branch: "codasip-cheri-riscv"
+    version_branch: "origin/codasip-cheri-riscv"
     version_hash: "57524f1599083d95809c3bc4345ebfecbf31ea7e"
     version_applicable_version_methods: ["match_file"]
     latest: true
     upstream_version: "2024.10"
-    upstream_date: 2024-10-07
+    upstream_date: '2024-10-07'
     upstream_url: "https://github.com/u-boot/u-boot/commit/f919c3a889f0ec7d63a48b5d0ed064386b0980bd"
     upstream_repo: "https://github.com/u-boot/u-boot.git"
-    upstream_branch: "master"
+    upstream_branch: "origin/master"
     upstream_hash: "f919c3a889f0ec7d63a48b5d0ed064386b0980bd"
     upstream_applicable_version_methods: ["latest_matching_tag"]
     cheri_spec:
