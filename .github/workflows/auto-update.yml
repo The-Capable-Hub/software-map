@@ -41,13 +41,21 @@ jobs:
           . ./venv/bin/activate
           python3 -m pip install -r requirements.txt
 
+          # Set global env vars:
+          echo "OUTPUT_DIR=${{ github.workspace }}" >> $GITHUB_ENV
       - name: Run Auto Updater
         shell: bash
         working-directory: ./auto-updater
         run: |
           . ./venv/bin/activate
-          ./main.py ${GITHUB_WORKSPACE}/software-map/qemu.yaml
-          #touch $GITHUB_WORKSPACE/software-map/foo.yaml
+
+          # Create file to contain output from auto-updater (for use in PR body)
+          export OUTPUT_FILE="${OUTPUT_DIR}"/auto-update
+          echo "OUTPUT_FILE=${OUTPUT_FILE}" >> $GITHUB_ENV
+
+          for input_yaml in ${GITHUB_WORKSPACE}/software-map/*.yaml; do
+            ./main.py ${input_yaml} | tee -a ${OUTPUT_FILE}
+          done
 
       - name: Determine if there are changes
         id: determine_changes
@@ -67,19 +75,20 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          BRANCH_NAME="auto-updater/${{github.run_id}}_${{github.run_attempt}}"
-          echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+          # Create a unique branch name for this run
+          TARGET_BRANCH_NAME="auto-updater/${{github.run_id}}_${{github.run_attempt}}"
+          echo "TARGET_BRANCH_NAME=$TARGET_BRANCH_NAME" >> $GITHUB_ENV
 
-          # set up git
+          # Set up git
           git config user.name "github-actions[bot]"
-          git config user.email "example@example.com"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          echo "Pushing to branch: '${BRANCH_NAME}'..."
+          echo "Pushing to branch: '${TARGET_BRANCH_NAME}'..."
           # Create PR branch
-          git checkout -b ${BRANCH_NAME}
+          git checkout -b ${TARGET_BRANCH_NAME}
           git add *.yaml
           git commit -m "Auto update software map"
-          git push --set-upstream origin ${BRANCH_NAME}
+          git push --set-upstream origin ${TARGET_BRANCH_NAME}
 
       - name: Create PR
         if: ${{ steps.determine_changes.outputs.CREATE_PR == 'true' }}
@@ -87,10 +96,11 @@ jobs:
         working-directory: ./software-map
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_BRANCH: mcobb/auto-update
         run: |
           # Create the PR
           gh pr create \
             --title "Auto update software map" \
-            --body "Pull request body" \
-            --base mcobb/auto-update \
-            --head ${BRANCH_NAME}
+            --body-file ${OUTPUT_FILE} \
+            --base ${BASE_BRANCH} \
+            --head ${TARGET_BRANCH_NAME}
