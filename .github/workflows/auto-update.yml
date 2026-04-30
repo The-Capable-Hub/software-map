@@ -73,6 +73,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           if [[ -n $(git status -s -uall) ]]; then
+            echo "Auto updater modified files. A PR will be created..."
             echo "CREATE_PR=true" >> $GITHUB_OUTPUT
           fi
 
@@ -107,6 +108,11 @@ jobs:
           BASE_BRANCH: mcobb/auto-update
         run: |
           # Create the PR
+          echo "Creating PR to merge branch '${TARGET_BRANCH_NAME}' into '${BASE_BRANCH}'..."
+          echo "PR will contain the message body:"
+          cat ${OUTPUT_FILE}
+          echo ""
+          echo ""
           gh pr create \
             --title "Auto update software map" \
             --body-file ${OUTPUT_FILE} \
