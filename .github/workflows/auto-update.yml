@@ -62,7 +62,7 @@ jobs:
           ./main.py ${GITHUB_WORKSPACE}/software-map/opensbi.yaml | tee -a ${OUTPUT_FILE}
           echo "===================="
           echo "Contents of output file:"
-          cat ${OUTPUT_FILE}"
+          cat ${OUTPUT_FILE}
           echo "===================="
 
       - name: Determine if there are changes
