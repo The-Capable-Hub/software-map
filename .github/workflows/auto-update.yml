@@ -56,6 +56,13 @@ jobs:
           #for input_yaml in ${GITHUB_WORKSPACE}/software-map/*.yaml; do
           #  ./main.py ${input_yaml} | tee -a ${OUTPUT_FILE}
           #done
+          echo "===================="
+          echo "Outputting to file: ${OUTPUT_FILE}"
+          ./main.py ${GITHUB_WORKSPACE}/software-map/opensbi.yaml | tee -a ${OUTPUT_FILE}
+          echo "===================="
+          echo "Contents of output file:"
+          cat ${OUTPUT_FILE}"
+          echo "===================="
 
       - name: Determine if there are changes
         id: determine_changes
