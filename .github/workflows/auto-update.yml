@@ -59,7 +59,7 @@ jobs:
           #done
           echo "===================="
           echo "Outputting to file: ${OUTPUT_FILE}"
-          ./main.py ${GITHUB_WORKSPACE}/software-map/opensbi.yaml | tee -a ${OUTPUT_FILE}
+          ./main.py ${GITHUB_WORKSPACE}/software-map/opensbi.yaml 2>&1 | tee -a ${OUTPUT_FILE}
           echo "===================="
           echo "Contents of output file:"
           cat ${OUTPUT_FILE}
