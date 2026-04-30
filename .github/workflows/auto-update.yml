@@ -50,7 +50,7 @@ jobs:
           . ./venv/bin/activate
 
           # Create file to contain output from auto-updater (for use in PR body)
-          export OUTPUT_FILE="${OUTPUT_DIR}"/auto-update
+          export OUTPUT_FILE="${OUTPUT_DIR}/auto-update"
           echo "OUTPUT_FILE=${OUTPUT_FILE}" >> $GITHUB_ENV
 
           #for input_yaml in ${GITHUB_WORKSPACE}/software-map/*.yaml; do
