@@ -28,7 +28,7 @@ jobs:
       - name: Checkout Auto Updater
         uses: actions/checkout@v4
         with:
-          repository: "michaelcobb-capablehub/auto-update-software-map"
+          repository: "The-Capable-Hub/auto-update-software-map"
           fetch-depth: 1
           path: "auto-updater"
 
