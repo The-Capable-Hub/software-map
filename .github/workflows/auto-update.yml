@@ -32,6 +32,38 @@ jobs:
           fetch-depth: 1
           path: "auto-updater"
 
+      - name: Setup environment
+        shell: bash
+        working-directory: ./auto-updater
+        run: |
+          # Set global env vars:
+          export RUN_ID="${{ github.run_id }}_${{ github.run_attempt }}"
+          echo "RUN_ID=${RUN_ID}" >> $GITHUB_ENV
+
+          export OUTPUT_DIR="${{ github.workspace }}/${RUN_ID}"
+          echo "OUTPUT_DIR=${OUTPUT_DIR}" >> $GITHUB_ENV
+          
+          #export OUTPUT_LOGS_DIR="${OUTPUT_DIR}/logs"
+          #echo "OUTPUT_LOGS_DIR=${OUTPUT_LOGS_DIR}" >> $GITHUB_ENV
+          
+          export FAILURES_FILE="${OUTPUT_DIR}/failures.txt"
+          echo "FAILURES_FILE=${FAILURES_FILE}" >> $GITHUB_ENV
+
+          export SUMMARY_FILE="${OUTPUT_DIR}/summary.md"
+          echo "SUMMARY_FILE=${SUMMARY_FILE}" >> $GITHUB_ENV
+
+          export BASE_BRANCH_NAME="mcobb/auto-update"
+          echo "BASE_BRANCH_NAME=${BASE_BRANCH_NAME}" >> $GITHUB_ENV
+
+          # Create a unique branch name for this run
+          TARGET_BRANCH_NAME="auto-updater/${RUN_ID}"
+          echo "TARGET_BRANCH_NAME=$TARGET_BRANCH_NAME" >> $GITHUB_ENV
+
+          # Set up workspace
+          mkdir -p ${OUTPUT_DIR}
+          #mkdir -p ${OUTPUT_LOGS_DIR}
+          touch "${FAILURES_FILE}"
+
       - name: Setup Auto Updater
         shell: bash
         working-directory: ./auto-updater
@@ -41,8 +73,7 @@ jobs:
           . ./venv/bin/activate
           python3 -m pip install -r requirements.txt
 
-          # Set global env vars:
-          echo "OUTPUT_DIR=${{ github.workspace }}" >> $GITHUB_ENV
+
       - name: Run Auto Updater
         shell: bash
         working-directory: ./auto-updater
@@ -50,20 +81,29 @@ jobs:
           . ./venv/bin/activate
 
           # Create file to contain output from auto-updater (for use in PR body)
-          export OUTPUT_FILE="${OUTPUT_DIR}/auto-update.out"
-          echo "OUTPUT_FILE=${OUTPUT_FILE}" >> $GITHUB_ENV
-          echo "OUTPUT_FILE=${OUTPUT_FILE}"
+          #export OUTPUT_FILE="${OUTPUT_DIR}/auto-update.out"
+          #echo "OUTPUT_FILE=${OUTPUT_FILE}" >> $GITHUB_ENV
+          #echo "OUTPUT_FILE=${OUTPUT_FILE}"
 
-          #for input_yaml in ${GITHUB_WORKSPACE}/software-map/*.yaml; do
-          #  ./main.py ${input_yaml} | tee -a ${OUTPUT_FILE}
-          #done
-          echo "===================="
-          echo "Outputting to file: ${OUTPUT_FILE}"
-          ./main.py ${GITHUB_WORKSPACE}/software-map/opensbi.yaml 2>&1 | tee -a ${OUTPUT_FILE}
-          echo "===================="
-          echo "Contents of output file:"
-          cat ${OUTPUT_FILE}
-          echo "===================="
+          # Run auto-updater
+          set +e # Don't exit on failure
+          for input_yaml in ${GITHUB_WORKSPACE}/software-map/*.yaml; do
+            echo "Processing: ${input_yaml}"
+
+            filename="$(basename "${input_yaml}")"
+            log_file="${OUTPUT_DIR}/${filename}.log"
+
+            ./main.py ${input_yaml} --output-summary ${SUMMARY_FILE} 2>&1 | tee "${log_file}"
+            exit_code=${PIPESTATUS[0]}
+
+            if [ $exit_code -ne 0 ]; then
+              echo "FAILED: ${input_yaml} (exit code ${exit_code})"
+              echo "${input_yaml}|${exit_code}|${log_file}" >> "${FAILURES_FILE}"
+            else
+              echo "SUCCESS: ${input_yaml}"
+            fi
+          done
+          set -e
 
       - name: Determine if there are changes
         id: determine_changes
@@ -83,16 +123,16 @@ jobs:
         working-directory: ./software-map
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_USER_NAME: "github-actions[bot]"
+          GIT_USER_EMAIL: "github-actions[bot]@users.noreply.github.com"
         run: |
-          # Create a unique branch name for this run
-          TARGET_BRANCH_NAME="auto-updater/${{github.run_id}}_${{github.run_attempt}}"
-          echo "TARGET_BRANCH_NAME=$TARGET_BRANCH_NAME" >> $GITHUB_ENV
 
           # Set up git
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name ${GIT_USER_NAME}
+          git config user.email ${GIT_USER_EMAIL}
 
           echo "Pushing to branch: '${TARGET_BRANCH_NAME}'..."
+
           # Create PR branch
           git checkout -b ${TARGET_BRANCH_NAME}
           git add *.yaml
@@ -105,16 +145,36 @@ jobs:
         working-directory: ./software-map
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BASE_BRANCH: mcobb/auto-update
         run: |
           # Create the PR
-          echo "Creating PR to merge branch '${TARGET_BRANCH_NAME}' into '${BASE_BRANCH}'..."
+          #export OUTPUT_FILE="${OUTPUT_DIR}/full_summary.md"
+          if [ -s "${FAILURES_FILE}" ]; then
+            echo "# Files which failed to process:"
+            while IFS="|" read -r input_yaml exit_code log_file; do
+              echo ""
+              echo "========================================"
+              echo "FAILED: ${input_yaml}"
+              echo "Exit code: ${exit_code}"
+              echo "========================================"
+
+              cat "${log_file}"
+
+            done < "${FAILURES_FILE}" >> "${SUMMARY_FILE}"
+          fi
+
+          echo "Creating PR to merge branch '${TARGET_BRANCH_NAME}' into '${BASE_BRANCH_NAME}'..."
           echo "PR will contain the message body:"
-          cat ${OUTPUT_FILE}
+          cat ${SUMMARY_FILE}
           echo ""
           echo ""
           gh pr create \
             --title "Auto update software map" \
-            --body-file ${OUTPUT_FILE} \
-            --base ${BASE_BRANCH} \
+            --body-file ${SUMMARY_FILE} \
+            --base ${BASE_BRANCH_NAME} \
             --head ${TARGET_BRANCH_NAME}
+
+      - name: Cleanup
+        if: always()
+        shell: bash
+        run: |
+          rm -rf "${OUTPUT_DIR}"
