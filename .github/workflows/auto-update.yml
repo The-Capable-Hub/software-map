@@ -88,9 +88,10 @@ jobs:
           # Run auto-updater
           set +e # Don't exit on failure
           for input_yaml in ${GITHUB_WORKSPACE}/software-map/*.yaml; do
-            echo "Processing: ${input_yaml}"
-
             filename="$(basename "${input_yaml}")"
+
+            echo "::group::Processing '${filename}'"
+
             log_file="${OUTPUT_DIR}/${filename}.log"
 
             ./main.py ${input_yaml} --output-summary ${SUMMARY_FILE} 2>&1 | tee "${log_file}"
@@ -100,8 +101,10 @@ jobs:
               echo "FAILED: ${input_yaml} (exit code ${exit_code})"
               echo "${input_yaml}|${exit_code}|${log_file}" >> "${FAILURES_FILE}"
             else
-              echo "SUCCESS: ${input_yaml}"
+              echo "SUCCESS: ${filename}"
+
             fi
+            echo "::endgroup::"
           done
           set -e
 
